@@ -31,6 +31,8 @@
 
 <style>
 
+@import url("https://use.typekit.net/skh5qas.css");
+@import url('https://fonts.googleapis.com/css?family=Rozha+One');
 
 <?php the_field( 'review_css','option'); ?>
 
