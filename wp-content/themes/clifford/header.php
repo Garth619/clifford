@@ -67,7 +67,9 @@
 			
 			<div class="consult_phone_wrapper">
 				
-				<span class="consult_title">call now for a free consultation</span><!-- consult_title -->
+				<span class="consult_title desktop">call now for a free consultation</span><!-- consult_title -->
+				
+				<span class="consult_title tablet">free consultation</span><!-- consult_title -->
 				
 				<a class="phone" href="tel:(312) 899-9090">(312) 899-9090</a><!-- phone -->
 				
@@ -79,6 +81,16 @@
 				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?>
 			
 			</nav>
+			
+			<div class="mobile_menu">
+				
+				<span class="menu_bars"></span><!-- menu_bars -->
+				<span class="menu_bars"></span><!-- menu_bars -->
+				<span class="menu_bars"></span><!-- menu_bars -->
+				
+				<span class="menu_title">Menu</span><!-- menu_title -->
+				
+			</div><!-- mobile_menu -->
 			
 			
 		</div><!-- header_right -->

@@ -189,42 +189,23 @@ jQuery(document).ready(function($){
 --------------------------------------------------------------------------------------- */
 
 
-/*
-$('.sec_three_slider').slick({
+
+$('.sp_single_slide').slick({
   infinite: true,
-  slidesToShow: 6,
-  slidesToScroll: 6,
-	arrows:true,
-	prevArrow:".arrow_left",
-	nextArrow:".arrow_right",
+  slidesToShow: 1,
+  slidesToScroll: 1,
+	arrows:false,
+	dots:true,
+	mobileFirst:true,
 	responsive: [
     {
-      breakpoint: 1450,
-      settings: {
-      slidesToShow: 5,
-      slidesToScroll: 5,
+      breakpoint: 1066,
+      settings:"unslick",
      }
-   },
-   {
-      breakpoint: 1100,
-      settings: {
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      dots:true,
-     }
-   },
-   {
-      breakpoint: 767,
-      settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots:true,
-     }
-   }
-	]
+		]
  });
  
-*/
+
  
 
 	
