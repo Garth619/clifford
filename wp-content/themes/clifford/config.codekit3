@@ -7,7 +7,7 @@
 		"uuidString": "F1EAF449-20D8-4501-8F17-8D3849369E21"
 		}
 	],
-"creatorBuild": "28841",
+"creatorBuild": "28901",
 "files": {
 	"/404.php": {
 		"cB": 0,
@@ -213,7 +213,7 @@
 		"oAP": "/images/hero-desktop.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/hero-mobile.jpg": {

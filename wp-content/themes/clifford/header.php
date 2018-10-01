@@ -51,7 +51,40 @@
 	
 	<header>
 		
-		<?php // wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?>
+		
+		<div class="header_left">
+			
+			<a href="<?php bloginfo('url');?>">
+				
+				<img class="logo" src="<?php bloginfo('template_directory');?>/images/logo.svg"/>
+				
+			</a>
+			
+		</div><!-- header_left -->
+		
+		
+		<div class="header_right">
+			
+			<div class="consult_phone_wrapper">
+				
+				<span class="consult_title">call now for a free consultation</span><!-- consult_title -->
+				
+				<a class="phone" href="tel:(312) 899-9090">(312) 899-9090</a><!-- phone -->
+				
+			</div><!-- consult_phone_wrapper -->
+			
+
+			<nav>
+				
+				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?>
+			
+			</nav>
+			
+			
+		</div><!-- header_right -->
+		
+		
+		
 		
 	</header>
 				
