@@ -96,11 +96,21 @@
 			
 			<div class="mobile_menu">
 				
-				<span class="menu_bars"></span><!-- menu_bars -->
-				<span class="menu_bars"></span><!-- menu_bars -->
-				<span class="menu_bars"></span><!-- menu_bars -->
+				<div class="mobile_inner">
 				
-				<span class="menu_title">Menu</span><!-- menu_title -->
+					<span class="menu_bars"></span><!-- menu_bars -->
+					<span class="menu_bars"></span><!-- menu_bars -->
+					<span class="menu_bars"></span><!-- menu_bars -->
+				
+					<span class="menu_title">Menu</span><!-- menu_title -->
+				
+				</div><!-- mobile_inner -->
+				
+				<div class="mobile_close fade">
+					
+					<div class="mobile_close_inner"></div><!-- mobile_close_inner -->
+					
+				</div><!-- mobile_close -->
 				
 			</div><!-- mobile_menu -->
 			

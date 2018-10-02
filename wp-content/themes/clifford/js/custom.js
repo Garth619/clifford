@@ -232,13 +232,12 @@ $("ul > li.menu-item-has-children > a[href='#']").removeAttr("href");
     
     if (windowWidth < 1066) {
 	    
-	    
 	    	$('nav ul.menu > li.menu-item-has-children > a').on('click', function(e) {
-		    	
-		    		$(this).next('ul.sub-menu').slideToggle(200);
 	    	  
-	    	});
-        
+	    		$(this).next('ul.sub-menu').toggleClass('open');
+	    		
+	    	
+	    	});   
 	   		
     		
     } 
@@ -248,6 +247,20 @@ $("ul > li.menu-item-has-children > a[href='#']").removeAttr("href");
 	
 
 checkWidthcase();
+
+
+
+$('.mobile_menu').on('click', function(e) {
+  
+
+	$('nav').slideToggle();
+	
+	$('.mobile_inner').toggleClass('fade');
+	
+	$('.mobile_close').toggleClass('fade');
+
+
+});
 
 
 
