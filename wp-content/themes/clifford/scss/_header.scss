@@ -372,6 +372,13 @@ header {
 		justify-content: center;
 		align-items: center;
 		flex-shrink: 0;
+		a {
+			display: block;
+			img {
+				width:30px;
+				height:30px;
+			}
+		}
 	}
 	
 	.mobile_menu {

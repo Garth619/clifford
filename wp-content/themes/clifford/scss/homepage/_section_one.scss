@@ -6,7 +6,7 @@
 		height:100%;
 		object-position: 50% 0%;
 	}
-	img.laptop, img.tablet {
+	img.laptop, img.tablet, img.mobile {
 		display: none;
 	}
 }
@@ -328,7 +328,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005941', end
 	
 .sec_one_inner {
 	margin: 276px auto 0;
-	
 	span.sec_one_title {
 		border-bottom:1px solid #004533;
 		padding-bottom:35px;
@@ -421,6 +420,170 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005941', end
 
 
 
+	
+	
+} /* Media Query */
+
+
+
+
+@media screen and (max-width: 767px) {
+	
+	
+	#section_one {
+		height: 864px;
+	}
+	
+	
+	.sec_one_inner {
+		padding-left:15px;
+		padding-right:15px;
+	}
+	
+	
+.sec_one_inner {
+	span.sec_one_title {
+		font-size:72px;
+		line-height: 64px;
+		max-width: 410px;
+		padding-bottom: 52px;
+		&:after {
+		top: 54px;
+		}
+	}
+	a.request {
+		font-size:15px;
+		padding: 23px 27px;
+		&:hover {
+			&:before {
+			
+			}
+		}
+		&:after {
+			
+		}
+		&:before {
+			
+		}
+		&:hover {
+		
+		}
+	}
+}
+
+
+.selling_points_wrapper {
+   margin-top: 45px;
+}
+
+.sp_slider {
+
+	.sp_single_slide {
+		
+		
+		span.sp_title, span.sp_desctiption {
+			max-width: 370px;
+		}
+		span.sp_desctiption {
+			
+			&:after {
+				
+			}
+		}
+	}
+	.slick-dots {
+	
+		li.slick-active {
+			button {
+				&:before {
+					
+				}
+			}
+		}
+		li:hover {
+			button {
+				&:before {
+					
+				}
+			}
+		}
+		li {
+			
+			button {
+				
+				&:before {
+					
+				}
+			}
+		}
+	}
+}
+	
+	   
+	   
+	
+	
+} /* Media Query */
+
+
+
+@media screen and (max-width: 500px) {
+	
+	
+	#section_one {
+		img.tablet {
+			display: none;
+		}
+		img.mobile {
+			display: block;
+		}
+		img {
+			//object-position: 50% 100%;
+		}
+	}
+	
+	
+	
+} /* Media Query */
+
+
+
+
+@media screen and (max-width: 390px) {
+	
+	
+.sec_one_inner {
+	span.sec_one_title {
+		font-size: 55px;
+    line-height: 51px;
+    max-width: 320px;
+    padding-bottom: 24px;
+		&:after {
+		 top: 26px;
+		}
+	}
+	a.request {
+		padding-left:0;
+		padding-right:0;
+		width:100%;
+		font-size: 13px;
+		&:hover {
+			&:before {
+			
+			}
+		}
+		&:after {
+			
+		}
+		&:before {
+			
+		}
+		&:hover {
+		
+		}
+	}
+}
+	
 	
 	
 } /* Media Query */

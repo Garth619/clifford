@@ -86,7 +86,11 @@
 			
 			<div class="phone_icon">
 				
-				<img src="<?php bloginfo('template_directory');?>/images/"/>
+				<a href="tel:(312) 899-9090">
+				
+					<img src="<?php bloginfo('template_directory');?>/images/icon-phone.svg"/>
+				
+				</a>
 				
 			</div><!-- phone_icon -->
 			

@@ -47,6 +47,7 @@
 		<img class="sec_one_bg" src="<?php bloginfo('template_directory');?>/images/hero-desktop.jpg"/>
 		<img class="laptop" src="<?php bloginfo('template_directory');?>/images/hero-laptop.jpg"/>
 		<img class="tablet" src="<?php bloginfo('template_directory');?>/images/hero-tablet.jpg"/>
+		<img class="mobile" src="<?php bloginfo('template_directory');?>/images/hero-mobile.jpg"/>
 
 </section><!-- section_one -->
 
