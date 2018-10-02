@@ -217,5 +217,40 @@ $('.sp_slider').slick({
 $("ul > li.menu-item-has-children > a[href='#']").removeAttr("href");
 
 
+
+// nav slide
+
+
+
+
+	
+	var windowWidth = $(window).width();
+
+
+
+	function checkWidthcase() {
+    
+    if (windowWidth < 1066) {
+	    
+	    
+	    	$('nav ul.menu > li.menu-item-has-children > a').on('click', function(e) {
+		    	
+		    		$(this).next('ul.sub-menu').slideToggle(200);
+	    	  
+	    	});
+        
+	   		
+    		
+    } 
+    
+
+	};
+	
+
+checkWidthcase();
+
+
+
+
   
 }); // document ready
