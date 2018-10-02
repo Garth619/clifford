@@ -315,7 +315,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005941', end
 	
 	
 	#section_one {
-		height:auto;
+		height:924px;
+		
 		img.laptop {
 			display: none;
 		}
@@ -344,7 +345,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005941', end
 		}
 	}
 	a.request {
-		margin: 51px 0 0;
+		margin: 47px 0 0;
 		&:hover {
 			&:before {
 			
@@ -361,6 +362,65 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005941', end
 		}
 	}
 }
+
+
+.selling_points_wrapper {
+	margin-top: 57px;
+}
+    
+
+.sp_slider {
+	display: block;
+	.sp_single_slide {
+		text-align: center;
+		
+		span.sp_title, span.sp_desctiption {
+			margin-left:auto;
+			margin-right:auto;
+			max-width:580px;
+		}
+		span.sp_desctiption {
+			border:none;
+			margin-top: 14px;
+			&:after {
+				display: none;
+			}
+		}
+	}
+	.slick-dots {
+		bottom: -20px;
+		li.slick-active {
+			button {
+				&:before {
+					color:#fff;
+				}
+			}
+		}
+		li:hover {
+			button {
+				&:before {
+					color:#fff;
+				}
+			}
+		}
+		li {
+			margin:0;
+			width:27px;
+			button {
+				width:27px;
+				&:before {
+					width:27px;
+					opacity: 1;
+					color: $greenone;
+					font-size:32px;
+				}
+			}
+		}
+	}
+}
+
+
+
 	
 	
 } /* Media Query */

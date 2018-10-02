@@ -190,7 +190,7 @@ jQuery(document).ready(function($){
 
 
 
-$('.sp_single_slide').slick({
+$('.sp_slider').slick({
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,

@@ -58,6 +58,8 @@
 				
 				<img class="logo" src="<?php bloginfo('template_directory');?>/images/logo.svg"/>
 				
+				<img class="logo_mobile" src="<?php bloginfo('template_directory');?>/images/logo-mobile.svg"/>
+				
 			</a>
 			
 		</div><!-- header_left -->
@@ -81,6 +83,12 @@
 				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?>
 			
 			</nav>
+			
+			<div class="phone_icon">
+				
+				<img src="<?php bloginfo('template_directory');?>/images/"/>
+				
+			</div><!-- phone_icon -->
 			
 			<div class="mobile_menu">
 				

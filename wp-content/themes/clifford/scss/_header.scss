@@ -18,6 +18,9 @@ header {
 		img.logo {
 			width:526px;
 		}
+		img.logo_mobile {
+			display: none;
+		}
 	}
 }
 
@@ -170,7 +173,7 @@ nav {
 }
 
 
-.mobile_menu {
+.phone_icon, .mobile_menu {
 	display: none;	
 }
 
@@ -241,6 +244,7 @@ header {
 
 .header_left {
 	padding-top:33px;
+	flex-grow:0;
 	a {
 		img {
 			
@@ -252,6 +256,8 @@ header {
 	height:80px;
 	display: flex;
 	justify-content: flex-end;
+	flex-shrink: 0;
+	flex-basis: auto;
 	span.consult_title {
 		display: block;
 	}
@@ -282,10 +288,14 @@ header {
 		
 	}
 	
+	
+
+	
 	.mobile_menu {
 		display: block;	
-		width:80px;
 		margin-left:20px;
+		width:80px;
+		flex-shrink: 0;
 		height:80px;
 		background:$greentwo;
 		text-align: center;
@@ -309,6 +319,82 @@ header {
 			letter-spacing: 0.15em;
 			display: block;
 			padding-top:2px;
+		}
+	}
+	
+	
+	
+	
+} /* Media Query */
+
+
+
+@media screen and (max-width: 767px) {
+	
+	
+	header {
+		height:80px;
+		align-items: center;
+	}
+	
+	.header_left {
+		padding: 0 0 0 17px;
+		margin-right:0;
+		a {
+			img.logo  {
+				display: none;
+			}
+			img.logo_mobile {
+				display: block;
+				width:220px;
+				height: 22px;
+			}
+		}
+	}
+	
+	
+	
+	.header_right {
+		flex-basis: 160px;
+	}
+	
+	
+	.consult_phone_wrapper {
+		display: none;
+	}
+	
+	.phone_icon {
+		display: block;
+		width:80px;
+		height:80px;
+		background: $browntwo;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+	}
+	
+	.mobile_menu {
+		margin-left:0;
+		
+	}
+	
+	
+	
+} /* Media Query */
+
+
+@media screen and (max-width: 400px) {
+	
+	
+	.header_left {
+		padding-right:10px;
+		padding-left:10px;
+		a {
+			img {
+				max-width:100%;
+				height:auto;
+			}
 		}
 	}
 	
