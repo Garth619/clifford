@@ -41,6 +41,59 @@ span.brown {
 }
 
 
+.content {
+	font-size:18px;
+	line-height: 35px;
+	font-family: $aktiv;
+	font-weight:400;
+	color:#000;
+	h2 {
+		font-family: $questa;
+		font-weight: 500;
+		color:$browntwo;
+		font-size:35px;
+		line-height: 35px;
+		margin-bottom:27px;
+		display: block;
+	}
+	h3 {
+		text-transform: uppercase;
+		font-family: $aktiv;
+		font-weight: 800;
+		font-size:20px;
+		letter-spacing: 0.1em;
+		color:$greentwo;
+		line-height: 35px;
+		display: block;
+		margin-bottom:20px;
+	}
+	p, ul {
+		margin-bottom:50px;
+	}
+	ul {
+		list-style: none;
+		li {
+			position: relative;
+			padding-left:32px;
+			font-weight: 700;
+			font-size:16px;
+			line-height: 25px;
+			margin-bottom:30px;
+			&:before {
+				content:"";
+				display: block;
+				width:6px;
+				height:6px;
+				background: $browntwo;
+				border-radius: 50%;
+				position: absolute;
+				top:10px;
+				left:0;
+			}
+		}
+	}
+}
+
 
 @media screen and (max-width: 767px) {
 	
