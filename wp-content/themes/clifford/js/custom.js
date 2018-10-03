@@ -205,6 +205,46 @@ $('.sp_slider').slick({
 		]
  });
  
+ 
+ 
+ $('.cr_slider').slick({
+  infinite: true,
+  slidesToShow: 6,
+  slidesToScroll: 6,
+	arrows:false,
+	dots:false,
+	responsive: [
+    {
+      breakpoint: 1640,
+      settings:{
+	      slidesToShow: 4,
+        slidesToScroll: 4,
+      }
+     },
+     {
+      breakpoint: 1150,
+      settings:{
+	      slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+     },
+     {
+      breakpoint: 1066,
+      settings:{
+	      slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+     },
+     {
+      breakpoint: 767,
+      settings:{
+	      slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+     }
+		]
+ });
+ 
 
  
 
