@@ -1,6 +1,74 @@
+#section_four {
+	height:3000px;
+}
+
 .sec_four_top {
 	background: url(#{$themePath}images/test-background.jpg) top center no-repeat;
 	background-size:cover;
 	width:100%;
-	padding:200px 0;
+	padding:192px 0 200px;text-align: center;
+}
+
+
+span.sec_four_title {
+	color:#fff;
+	font-size:100px;
+	font-family: $questa;
+	font-weight: 500;
+	display: block;
+}
+
+
+
+.sec_four_bottom {
+	display: flex;
+	min-height:719px;
+}
+
+
+.sec_four_left {
+	flex-basis: 630px;
+	background: $browntwo;
+	flex-shrink: 0;
+	padding:0px 52px 0;
+	display: flex;
+	align-items: center;
+	.sec_four_inner {
+		
+	}
+	svg {
+		width:182px;
+		height:182px;
+		fill:#e09b78;
+	}
+	span.test_intro {
+		display: block;
+		color:#fff;
+		font-size:85px;
+		line-height: 75px;
+		font-family: $questa;
+		font-weight: 400;
+		max-width: 515px;
+		padding-left:60px;
+		margin-top:-100px;
+	}
+	img {
+		float:right;
+		margin: 55px 38px 0 0;
+	}
+}
+
+
+
+.sec_four_right {
+	background: $greentwo;
+	flex-grow: 1;
+	.test_slider {
+		margin:75px 0 0;
+		.test_single_slide {
+			img {
+				width:210px;
+			}
+		}
+	}
 }
