@@ -1,6 +1,34 @@
 <section id="section_three">
 	
+	<div class="sec_three_image mobile">
+				
+						<img class="mobile" src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
+				
+						<div class="video_wrapper">
+					
+							<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
+					
+							<div class="video_inner">
+						
+								<span class="line"></span><!-- line -->
+						
+								<div class="video_box">
+							
+									<img src="<?php bloginfo('template_directory');?>/images/logo-mark.svg"/>
+							
+									<span>Watch our video to learn more about us in 90 seconds</span>
+							
+								</div><!-- video_box -->
+						
+							</div><!-- video_inner -->
+					
+						</div><!-- video_wrapper -->
+						</div><!-- sec_three_image -->
+	
+	
 	<div class="sec_three_inner">
+		
+		
 		
 		<div class="sec_three_left">
 			

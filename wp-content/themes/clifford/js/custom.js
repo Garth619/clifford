@@ -7,10 +7,6 @@ jQuery(document).ready(function($){
 	
 		
 
-		
-				
-		
-		
 	
 	 /* Modernizr - check if browser supports webp. 
      --------------------------------------------------------------------------------------- */

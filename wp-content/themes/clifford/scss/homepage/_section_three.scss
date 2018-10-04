@@ -97,7 +97,7 @@
 		}
 	}
 
-.sec_three_image.laptop {
+.sec_three_image.laptop, .sec_three_image.mobile {
 	display: none;
 }
 
@@ -301,10 +301,10 @@ svg#arrow {
 			padding: 99px 0 0;
 			span.teeup {
 				margin-bottom: 48px;
-				max-width: 384px;
+				//max-width: 384px;
 			}
 			span.question {
-				max-width: 280px;
+				//max-width: 280px;
 			}
 		}
 	}
@@ -342,8 +342,7 @@ svg#arrow {
 	
 	.sec_three_image.laptop {
 		display: block;
-		
-		margin-top:80px;
+		margin-top: 89px;
 	}
 	
 	.accolades_desktop_image {
@@ -370,6 +369,21 @@ svg#arrow {
 	}
 	
 	
+	.sec_three_image {
+		.video_wrapper {
+			svg#play_button {
+				width:146px;
+				height:146px;
+			}
+		}
+		.video_inner {
+			.video_box {
+				margin-top: -36px;
+			}
+		}
+	} 
+	
+	    
 	
 	
 } /* Media Query */
@@ -384,6 +398,278 @@ svg#arrow {
 	.sec_three_inner {
 		max-width:1099px;
 	}
+	
+	
+	
+	.sec_three_left {
+		
+		.accolades {
+			
+			span.teeup {
+				max-width: 384px;
+			}
+			span.question {
+				max-width: 280px;
+			}
+		}
+	}
+	.sec_three_right {
+		display: none;
+	}
+
+	
+	
+	
+	
+} /* Media Query */
+
+
+@media screen and (max-width: 1200px) {
+	
+	
+	
+	.sec_three_image.laptop {
+		margin-left:auto;
+		margin-right:auto;
+		float:none;
+		max-width: 729px;
+	}
+	
+	
+	.laptop_layout {
+		flex-direction: column;
+	}
+	
+	
+	.laptop_layout_inner {
+		order:2;
+		max-width: 730px;
+		margin-left:auto;
+		margin-right: auto;
+		padding-right:0;
+	}
+	
+	
+	.laptop_right {
+		order:1;
+	}
+	
+	
+	
+	.sec_three_image {
+		.video_inner {
+			.video_box {
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
+	} 
+	
+	
+	.sec_three_left {
+		.accolades {
+			padding: 130px 0 0;
+			span.teeup {
+    		max-width: 100%;
+			}
+			span.question {
+				max-width: 100%;
+			}
+		}
+	}
+	
+	
+	
+	
+} /* Media Query */
+
+
+
+@media screen and (max-width: 945px) {
+	
+	
+	
+	.sec_three_inner {
+		margin: 85px auto 0;
+		h1 {
+			font-size: 65px;
+			line-height: 67px;
+			padding-bottom: 36px;
+		}
+	}
+	
+	
+	.sec_three_image.laptop {
+		max-width:513px;
+		margin-top: 64px;
+	}
+	
+	.sec_three_left {
+		.sec_three_content {
+			margin-top: 36px;
+		}
+		.accolades {
+			 padding: 61px 0 0;
+			 span.question {
+					max-width: 282px;
+			}
+			span.answer {
+    			max-width: 282px;
+				}
+		}
+	}
+	
+	
+	.accolades_laptop_layout {
+		justify-content: center;
+		img.laptop {
+			width:134px;
+			height:130px;
+		}
+	}
+	
+	
+	span.as_seen {
+		margin: 44px 0 0;
+	}
+	
+	   
+	
+	
+} /* Media Query */
+
+
+
+@media screen and (max-width: 767px) {
+	
+	
+	#section_three {
+		padding-left:0;
+		padding-right:0;
+	}
+	
+	
+.sec_three_inner {
+	margin: 140px auto 0;
+	padding-left:25px;
+	padding-right:25px;
+	h1 {
+		font-size: 50px;
+		text-align: center;
+		max-width: 300px;
+		margin-left:auto;
+		margin-right:auto;
+		line-height: 50px;
+		max-width: 362px;
+		padding-bottom: 40px;
+		&:after {
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			bottom:-42px;
+		}
+	}
+}
+
+
+.laptop_right {
+	display: none;	
+}
+	
+	
+	.sec_three_image.laptop {
+		display: none;
+	}
+	
+	.sec_three_image.mobile {
+		max-width:100%;
+		display: block;
+		float:none;
+	}
+	
+	
+	.sec_three_image {
+		
+		.video_inner {
+			 .video_box {
+				 margin-top:0;
+				 width:100%;
+				 justify-content: center;
+				 img {
+					 width: 65px;
+					 height: 65px;
+					 margin-right:10px;
+				 }
+			}
+		}
+	}
+	
+	
+	.sec_three_left  {
+		.accolades {
+			flex-direction: column;
+			padding: 29px 0 0;
+			img.dekstop {
+				margin-left:auto;
+				margin-right:auto;
+				display: block;
+				width:134px;
+				height:130px;
+			}
+			span {
+				text-align: center;
+			}
+			span.teeup {
+				max-width:350px;
+				margin:0 auto 26px;
+			}
+		}
+		.sec_three_content {
+			margin-top: 45px;
+			font-size:18px;
+			line-height: 34px;
+		}
+	}
+	
+	.accolades_desktop_image {
+		display: block;
+	}
+	
+	
+	.accolades_laptop_layout {
+		img.laptop {
+			display: none;
+		}
+	} 
+
+
+	.accolades_content {
+		margin-top:25px;
+	}
+	
+	.accolades_laptop_inner_layout {
+		margin-left:0;
+	}
+	
+	
+		
+	
+} /* Media Query */
+
+
+@media screen and (max-width: 480px) {
+	
+	
+	.sec_three_image {
+		img.mobile {
+			object-fit:cover;
+			object-position: 50% 0%;
+			width:100%;
+			height:350px;
+		}
+	}
+	
+	
 	
 	
 	
