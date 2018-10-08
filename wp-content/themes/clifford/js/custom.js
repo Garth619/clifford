@@ -246,7 +246,7 @@ $('.sp_slider').slick({
  
  
  
-  $('.press_slider').slick({
+ $('.press_slider').slick({
   infinite: true,
   slidesToShow: 5,
   slidesToScroll: 5,
@@ -283,6 +283,36 @@ $('.sp_slider').slick({
         slidesToScroll: 1,
       }
      }
+		]
+ });
+ 
+ 
+ 
+ $('.test_slider').slick({
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+	arrows:false,
+	dots:false,
+	slides:'.test_single_slide',
+	responsive: [
+    {
+      breakpoint: 1670,
+      settings:{
+	      slidesToShow: 1,
+        slidesToScroll: 1,
+        dots:true,
+      }
+     },
+     {
+      breakpoint: 767,
+      settings:{
+	      adaptiveHeight: true,
+	      slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+     }
+    
 		]
  });
 
