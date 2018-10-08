@@ -2,15 +2,15 @@
 	
 	/* Template Name: Home */
 	
-	get_header(); ?>
+	get_header();
+
+	get_template_part( 'page-templates/homepage_template_parts/section', '1' );
+	get_template_part( 'page-templates/homepage_template_parts/section', '2' );
+	get_template_part( 'page-templates/homepage_template_parts/section', '3' );
+	get_template_part( 'page-templates/homepage_template_parts/section', '4' );
+	get_template_part( 'page-templates/homepage_template_parts/section', '5' );
 
 
-
-<?php get_template_part( 'page-templates/homepage_template_parts/section', '1' );?>
-<?php get_template_part( 'page-templates/homepage_template_parts/section', '2' );?>
-<?php get_template_part( 'page-templates/homepage_template_parts/section', '3' );?>
-<?php get_template_part( 'page-templates/homepage_template_parts/section', '4' );?>
-
-
-
-<?php get_footer(); ?>
+	get_footer(); 
+	
+	?>
