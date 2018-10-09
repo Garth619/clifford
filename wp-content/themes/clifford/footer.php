@@ -88,9 +88,41 @@
 		
 		</div><!-- footer_right_inner -->
 		
+		<div class="copyright_wrapper mobile">
+	
+			<ul>
+				<li>&copy; 2018 by Clifford Law Offices PC. All rights reserved.</li>
+				<li><a class="disclaimer" href=""> Disclaimer</a></li>
+				<li><a href="">Site Map</a></li>
+			</ul>
+	
+	<a class="ilawyer" href="//ilawyermarketing.com" target="_blank">
+		
+		<img src="<?php bloginfo('template_directory');?>/images/ilawyer-logo-white.svg"/>
+		
+	</a>
+	
+</div><!-- copyright -->
+		
 	</div><!-- footer_right -->
 		
 </footer>
+
+<div class="copyright_wrapper desktop">
+	
+	<ul>
+		<li>&copy; 2018 by Clifford Law Offices PC. All rights reserved.</li>
+		<li><a class="disclaimer" href=""> Disclaimer</a></li>
+		<li><a href="">Site Map</a></li>
+	</ul>
+	
+	<a class="ilawyer" href="//ilawyermarketing.com" target="_blank">
+		
+		<img src="<?php bloginfo('template_directory');?>/images/ilawyer-logo.svg"/>
+		
+	</a>
+	
+</div><!-- copyright -->
 
 
 <?php wp_footer();?>
