@@ -1,0 +1,213 @@
+footer {
+	display: flex;
+	height:1000px;
+}
+
+
+.footer_left {
+	background:$greentwo;
+	flex-grow:1;
+	text-align: center;
+	padding:157px 45px 0;
+	span.large_header {
+		font-family: $questa;
+		font-weight: 500;
+		color:#fff;
+		font-size:100px;
+		display: block;
+	}
+	span.small_header {
+		color:#fff;
+		text-transform: uppercase;
+		font-size:18px;
+		letter-spacing: 0.2em;
+		font-family: $aktiv;
+		font-weight: 800;
+		display: block;
+		margin:38px 0 0;
+		&:before, &:after {
+			content:"";
+			width:88px;
+			height:3px;
+			background:$browntwo;
+			display: block;
+			margin:0 auto;
+		}
+		&:before {
+			margin-bottom:30px;
+		}
+		&:after {
+			margin-top:30px;
+		}
+	}
+}
+
+
+footer {
+	.form {
+		max-width:1040px;
+		margin:0 auto;
+		span.required {
+			display: block;
+			color:$brownone;
+			text-transform: uppercase;
+			font-family: $aktiv;
+			font-weight: 800;
+			font-size:15px;
+			letter-spacing: 0.15em;
+			text-align: left;
+			margin-top:-75px;
+		}
+		.gform_wrapper {
+			margin-top:57px;
+		}
+		
+		ul {
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			li#field_1_8 {
+				flex-basis: 66.4%;
+			}
+			li#field_1_6 {
+				flex-basis: 100%;
+			}
+			li {
+				flex-basis: 32.7%;
+				margin-bottom: 10px;
+				position: relative;
+				text-align: left;
+				&:after {
+					content:"*";
+					font-weight: 500;
+					font-size:18px;
+					color:#ce5c2d;
+					position: absolute;
+					top:30px;
+					font-family: $aktiv;
+					right:15px;
+				}
+				::-webkit-input-placeholder {
+        	color: #00281d;
+        }
+				::-moz-placeholder {
+        	color: #00281d;
+        }
+				:-moz-placeholder {
+        	color: #00281d;
+        }
+				:-ms-input-placeholder {
+        	color: #00281d;
+        }
+				::-moz-placeholder {
+        	opacity: 1;
+        }
+				label {
+					display: none;
+				}
+				input, textarea {
+					width:100%;
+					border:none;
+					display: block;
+					font-family: $aktiv;
+					font-weight:400;
+					font-size: 18px;
+					letter-spacing: 0.025em;
+					color:#00281d;
+					padding:24px 20px;
+				}
+				textarea {
+					height:134px;
+				}
+			}
+		}
+	}
+	.gfield_description, .validation_message {
+		color:$brownone;
+		font-family: $aktiv;
+		font-weight: 500;
+		text-transform: uppercase;
+		font-size:13px;
+		padding:4px 20px 0;
+		letter-spacing: 0.1em;
+	}
+}
+
+
+.gform_footer {
+	position: relative;
+	width:184px;
+	margin:18px auto 0;
+	cursor: pointer;
+	&:hover {
+		&:after {
+			opacity: 1;
+			visibility: visible;
+		}
+		input[type="submit"] {
+			color:$browntwo;
+		}
+	}
+	&:before {
+		content:"";
+		border-radius: 50px;
+		display: block;
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c57a55+0,e29e7b+31,e29e7b+73,c57a55+100 */
+		background: #c57a55; /* Old browsers */
+		background: -moz-linear-gradient(top, #c57a55 0%, #e29e7b 31%, #e29e7b 73%, #c57a55 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, #c57a55 0%,#e29e7b 31%,#e29e7b 73%,#c57a55 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, #c57a55 0%,#e29e7b 31%,#e29e7b 73%,#c57a55 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c57a55', endColorstr='#c57a55',GradientType=0 ); /* IE6-9 */
+		transition: all 200ms ease-in-out;
+	}
+	&:after {
+		content:"";
+		display: block;
+		background: #fff;
+		position: absolute;
+		border-radius: 50px;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		opacity: 0;
+		visibility: hidden;
+		z-index:2;
+		transition: all 200ms ease-in-out;
+	}
+	input[type="submit"] {
+		cursor: pointer;
+		border:none;
+		font-family: $aktiv;
+		font-weight: 800;
+		text-transform: uppercase;
+		padding:21px 45px;
+		font-size:19px;
+		letter-spacing: 0.18em;
+		color:#fff;
+		background: transparent;
+		position: relative;
+		z-index:3;
+		transition: all 200ms ease-in-out;
+	}
+	
+}
+
+
+
+
+
+.footer_right {
+	background: url(#{$themePath}images/footer-background-desktop.jpg);
+	background-size:cover;
+	flex-basis:575px;
+	flex-shrink: 0;
+}
+
+

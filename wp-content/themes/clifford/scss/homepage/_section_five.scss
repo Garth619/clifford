@@ -170,7 +170,7 @@ span.sec_five_slider_title {
 	
 	
 	#section_five {
-		padding: 109px 0px 125px;
+		padding: 158px 0px 125px;
 	}
 	
 	
@@ -192,13 +192,43 @@ span.sec_five_slider_title {
 	
 	
 	
+	
+	.section_five_inner_content {
+		 max-width: 1248px;
+	}
+	
+	
+	
+} /* Media Query */
+
+
+
+@media screen and (max-width: 1200px) {
+	
+	
+	.sec_five_slide_wrapper {
+    max-width: 830px;
+    .sec_five_slider {
+	    padding-left:10px;
+	    padding-right:10px;
+    }
+	}
+	
+	
 } /* Media Query */
 
 
 
 @media screen and (max-width: 1066px) {
 	
+	#section_five {
+		padding: 106px 0px 165px;
+	}
 	
+	.sec_five_inner_wrapper {
+		padding-left:75px;
+		padding-right:75px;
+	}
 	
 	.sec_five_intro {
 		span.sec_five_title {
@@ -218,8 +248,119 @@ span.sec_five_slider_title {
   
    .section_five_inner_content {
 	   column-count:1;
+	   padding-left:0;
+	   padding-right:0;
    }
+   
+   .sec_five_slide_wrapper {
+		 	margin: 72px auto 0;
+	 }
+	 
+	 .sec_five_bottom {
+    	margin: 20px 0 0;
+		}
+		
+		
+		.sec_five_slider {
+			.slick-dots {
+				bottom: -65px;
+				li.slick-active {
+					button {
+						&:before {
+							color:$browntwo;
+						}
+					}
+				}
+				li:hover {
+					button {
+						&:before {
+							color:$browntwo;
+						}
+					}
+				}
+				li {
+					margin:0;
+					width:23px;
+					button {
+						width:23px;
+						&:before {
+							width:23px;
+							opacity: 1;
+							color: $greenone;
+							font-size:30px;
+						}
+					}
+				}
+			}
+		}
 	
+	   
+	
+	
+	
+} /* Media Query */
+
+
+@media screen and (max-width: 767px) {
+	
+	#section_five {
+		padding: 68px 0px 143px;
+	}
+	
+	.sec_five_intro {
+		span.sec_five_title {
+			font-size: 50px;
+			max-width: 460px;
+			line-height: 51px;
+		}
+	}
+	
+	.sec_five_inner_wrapper {
+		padding-left:26px;
+		padding-right:26px;
+	}
+	
+	.section_five_inner_content {
+		padding-top: 40px;
+	}
+	
+	
+	.sec_five_intro_content {
+    padding-top: 40px;
+    margin: 41px auto 0;
+    &:before {
+	    top:-42px;
+    }
+   }
+   
+   .sec_five_intro_content.content {
+	   line-height: 33px;
+   }
+   
+   .sec_five_bottom {
+	   margin-top:45px;
+   }
+   
+   span.sec_five_slider_title {
+	   max-width: 300px;
+	   line-height: 21px;
+	   margin-left:auto;
+	   margin-right:auto;
+   }
+   
+   .sec_five_slide_wrapper {
+	   margin: 43px auto 0;
+	   .sec_five_slider {
+		   width:100%;
+	   }
+   }
+   
+   
+   .sec_five_button {
+	   display: none;
+	  }
+   
+       
 	
 	
 	

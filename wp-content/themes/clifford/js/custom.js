@@ -342,6 +342,23 @@ $('.sp_slider').slick({
 	      slidesToShow: 3,
         slidesToScroll: 3,
       }
+     },
+     {
+      breakpoint: 1200,
+      settings:{
+	      slidesToShow: 2,
+        slidesToScroll: 2,
+        dots:true,
+      }
+     },
+     {
+      breakpoint: 767,
+      settings:{
+	      slidesToShow: 1,
+        slidesToScroll: 1,
+        dots:true,
+        arrows:false
+      }
      }
     
 		]
@@ -397,6 +414,8 @@ $('.mobile_menu').on('click', function(e) {
   
 
 	$('nav').slideToggle();
+	
+	$('nav').addClass('open');
 	
 	$('.mobile_inner').toggleClass('fade');
 	
