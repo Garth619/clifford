@@ -6,7 +6,7 @@
 			
 				<span class="sec_one_title">A Tradition of Success</span><!-- sec_one_title -->
 			
-				<a class="request">Request Free Consultation</a><!-- request -->
+				<a class="request" href="#consultation">Request Free Consultation</a><!-- request -->
 				
 				<div class="selling_points_wrapper">
 					

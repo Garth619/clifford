@@ -59,7 +59,7 @@
 		"oAP": "/images/aw-01.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/aw-01.png": {
@@ -68,8 +68,8 @@
 		"oA": 0,
 		"oAP": "/images/aw-01.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -81,7 +81,7 @@
 		"oAP": "/images/aw-02.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/aw-03.jpg": {
@@ -92,7 +92,7 @@
 		"oAP": "/images/aw-03.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/aw-04.jpg": {
@@ -103,7 +103,7 @@
 		"oAP": "/images/aw-04.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/aw-05.jpg": {
@@ -114,7 +114,7 @@
 		"oAP": "/images/aw-05.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/aw-06.jpg": {
@@ -125,7 +125,7 @@
 		"oAP": "/images/aw-06.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/aw-07.jpg": {
@@ -136,7 +136,7 @@
 		"oAP": "/images/aw-07.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/aw-08.jpg": {
@@ -147,7 +147,7 @@
 		"oAP": "/images/aw-08.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/aw-09.jpg": {
@@ -158,7 +158,7 @@
 		"oAP": "/images/aw-09.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/aw-10.jpg": {
@@ -169,7 +169,7 @@
 		"oAP": "/images/aw-10.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/aw-11.jpg": {
@@ -180,7 +180,7 @@
 		"oAP": "/images/aw-11.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/aw-12.jpg": {
@@ -191,7 +191,7 @@
 		"oAP": "/images/aw-12.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/footer-background-desktop.jpg": {
@@ -202,7 +202,7 @@
 		"oAP": "/images/footer-background-desktop.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/footer-background-tablet.jpg": {
@@ -226,6 +226,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/images/footer-mobile.jpg": {
+		"ft": 16384,
+		"iS": 107362,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/footer-mobile.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/images/hero-desktop.jpg": {
 		"ft": 16384,
 		"iS": 219782,
@@ -245,7 +256,7 @@
 		"oAP": "/images/hero-laptop.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/hero-mobile.jpg": {
@@ -376,8 +387,8 @@
 		"oA": 0,
 		"oAP": "/images/media-01.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -387,8 +398,8 @@
 		"oA": 0,
 		"oAP": "/images/media-02.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -398,8 +409,8 @@
 		"oA": 0,
 		"oAP": "/images/media-03.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -409,8 +420,8 @@
 		"oA": 0,
 		"oAP": "/images/media-04.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -420,8 +431,8 @@
 		"oA": 0,
 		"oAP": "/images/media-05.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -431,8 +442,8 @@
 		"oA": 0,
 		"oAP": "/images/media-06.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -442,8 +453,8 @@
 		"oA": 0,
 		"oAP": "/images/media-07.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -453,8 +464,8 @@
 		"oA": 0,
 		"oAP": "/images/media-08.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -464,8 +475,8 @@
 		"oA": 0,
 		"oAP": "/images/media-09.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -475,8 +486,8 @@
 		"oA": 0,
 		"oAP": "/images/media-10.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -486,8 +497,8 @@
 		"oA": 0,
 		"oAP": "/images/media-11.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -497,8 +508,8 @@
 		"oA": 0,
 		"oAP": "/images/media-12.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -508,8 +519,8 @@
 		"oA": 0,
 		"oAP": "/images/media-13.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -519,8 +530,8 @@
 		"oA": 0,
 		"oAP": "/images/media-14.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -530,8 +541,8 @@
 		"oA": 0,
 		"oAP": "/images/media-15.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -541,8 +552,8 @@
 		"oA": 0,
 		"oAP": "/images/media-16.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -552,8 +563,8 @@
 		"oA": 0,
 		"oAP": "/images/media-17.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -563,8 +574,8 @@
 		"oA": 0,
 		"oAP": "/images/media-18.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -574,8 +585,8 @@
 		"oA": 0,
 		"oAP": "/images/media-19.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -686,8 +697,8 @@
 		"oA": 0,
 		"oAP": "/images/test-law-journal-logo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -699,7 +710,7 @@
 		"oAP": "/images/video-thumbnail.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/index.php": {
@@ -729,11 +740,21 @@
 		"sC": 0,
 		"tS": 0
 		},
-	"/js/jquery.3.3.1.js": {
+	"/js/jquery.1.12.4.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
+		"oAP": "/js/jquery.1.12.4-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/jquery.3.3.1.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
 		"oAP": "/js/jquery.3.3.1-min.js",
 		"oF": 0,
 		"sC": 0,
@@ -1281,7 +1302,7 @@
 "projectAttributes": {
 	"creationDate": 559775003.989079,
 	"displayValue": "clifford",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-yesBaby",
 	"iconImageWasSetByUser": 0
 	},

@@ -16,7 +16,7 @@
 			
 				<span class="test_intro">One of<br/> the 50 Elite Firms in the Country.</span><!-- test_intro -->
 			
-				<img src="<?php bloginfo('template_directory');?>/images/test-law-journal-logo.png"/>
+				<img data-src="<?php bloginfo('template_directory');?>/images/test-law-journal-logo.png"/>
 			
 			</div><!-- sec_four_inner -->
 			
@@ -31,7 +31,7 @@
 					
 					<div class="test_single_slide_inner">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/icon-stars-02.svg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/icon-stars-02.svg"/>
 					
 					<span class="test_line"></span><!-- test_line -->
 					
@@ -47,7 +47,7 @@
 					
 					<div class="test_single_slide_inner">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/icon-stars-02.svg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/icon-stars-02.svg"/>
 					
 					<span class="test_line"></span><!-- test_line -->
 					
@@ -63,7 +63,7 @@
 					
 					<div class="test_single_slide_inner">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/icon-stars-02.svg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/icon-stars-02.svg"/>
 					
 					<span class="test_line"></span><!-- test_line -->
 					
@@ -79,7 +79,7 @@
 					
 					<div class="test_single_slide_inner">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/icon-stars-02.svg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/icon-stars-02.svg"/>
 					
 					<span class="test_line"></span><!-- test_line -->
 					

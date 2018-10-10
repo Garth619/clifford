@@ -1,6 +1,6 @@
 <footer id="footer_trigger">
 	
-	<div class="footer_left">
+	<div id="consultation" class="footer_left">
 		
 		<div class="form">
 		
@@ -18,9 +18,15 @@
 	
 	<div class="footer_right">
 		
+		<img class="footer_bg_image dekstop" data-src="<?php bloginfo('template_directory');?>/images/footer-background-desktop.jpg"/>
+		
+		<img class="footer_bg_image tablet" data-src="<?php bloginfo('template_directory');?>/images/footer-background-tablet.jpg"/>
+		
+		<img class="footer_bg_image mobile" data-src="<?php bloginfo('template_directory');?>/images/footer-mobile.jpg"/>
+		
 		<div class="footer_right_inner">
 		
-			<img class="footer_logo" src="<?php bloginfo('template_directory');?>/images/footer-logo.svg"/><!-- footer_logo -->
+			<img class="footer_logo" data-src="<?php bloginfo('template_directory');?>/images/footer-logo.svg"/><!-- footer_logo -->
 			
 			<div class="location_wrapper">
 				
@@ -99,7 +105,7 @@
 	
 	<a class="ilawyer" href="//ilawyermarketing.com" target="_blank">
 		
-		<img src="<?php bloginfo('template_directory');?>/images/ilawyer-logo-white.svg"/>
+		<img data-src="<?php bloginfo('template_directory');?>/images/ilawyer-logo-white.svg"/>
 		
 	</a>
 	
@@ -119,7 +125,7 @@
 	
 	<a class="ilawyer" href="//ilawyermarketing.com" target="_blank">
 		
-		<img src="<?php bloginfo('template_directory');?>/images/ilawyer-logo.svg"/>
+		<img data-src="<?php bloginfo('template_directory');?>/images/ilawyer-logo.svg"/>
 		
 	</a>
 	

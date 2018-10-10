@@ -2,7 +2,7 @@
 	
 	<div class="sec_three_image mobile">
 				
-						<img class="mobile" src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
+						<img class="mobile" data-src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
 				
 						<div class="video_wrapper">
 					
@@ -14,7 +14,7 @@
 						
 								<div class="video_box">
 							
-									<img src="<?php bloginfo('template_directory');?>/images/logo-mark.svg"/>
+									<img data-src="<?php bloginfo('template_directory');?>/images/logo-mark.svg"/>
 							
 									<span>Watch our video to learn more about us in 90 seconds</span>
 							
@@ -42,7 +42,7 @@
 						
 						<div class="accolades_desktop_image">
 				
-							<img class="dekstop" src="<?php bloginfo('template_directory');?>/images/aw-01.png"/>
+							<img class="dekstop" data-src="<?php bloginfo('template_directory');?>/images/aw-01.png"/>
 					
 						</div><!-- accolades_desktop_image -->
 				
@@ -52,7 +52,7 @@
 					
 						<div class="accolades_laptop_layout">
 							
-							<img class="laptop" src="<?php bloginfo('template_directory');?>/images/aw-01.png"/>
+							<img class="laptop" data-src="<?php bloginfo('template_directory');?>/images/aw-01.png"/>
 						
 							<div class="accolades_laptop_inner_layout">
 							
@@ -80,7 +80,7 @@
 		
 					<div class="sec_three_image laptop">
 				
-						<img src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
+						<img data-src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
 				
 						<div class="video_wrapper">
 					
@@ -92,7 +92,7 @@
 						
 								<div class="video_box">
 							
-									<img src="<?php bloginfo('template_directory');?>/images/logo-mark.svg"/>
+									<img data-src="<?php bloginfo('template_directory');?>/images/logo-mark.svg"/>
 							
 									<span>Watch our video to learn more about us in 90 seconds</span>
 							
@@ -114,7 +114,7 @@
 			
 			<div class="sec_three_image desktop">
 				
-				<img src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
+				<img data-src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
 				
 				<div class="video_wrapper">
 					
@@ -126,7 +126,7 @@
 						
 						<div class="video_box">
 							
-							<img src="<?php bloginfo('template_directory');?>/images/logo-mark.svg"/>
+							<img data-src="<?php bloginfo('template_directory');?>/images/logo-mark.svg"/>
 							
 							<span>Watch our video to learn more about us in 90 seconds</span>
 							
@@ -156,49 +156,49 @@
 			
 			<div class="press_single_slide">
 				
-				<img src="<?php bloginfo('template_directory');?>/images/media-01.png"/>
+				<img data-src="<?php bloginfo('template_directory');?>/images/media-01.png"/>
 				
 			</div><!-- press_single_slide -->
 			
 			<div class="press_single_slide">
 				
-				<img src="<?php bloginfo('template_directory');?>/images/media-04.png"/>
+				<img data-src="<?php bloginfo('template_directory');?>/images/media-04.png"/>
 				
 			</div><!-- press_single_slide -->
 			
 			<div class="press_single_slide">
 				
-				<img src="<?php bloginfo('template_directory');?>/images/media-03.png"/>
+				<img data-src="<?php bloginfo('template_directory');?>/images/media-03.png"/>
 				
 			</div><!-- press_single_slide -->
 			
 			<div class="press_single_slide">
 				
-				<img src="<?php bloginfo('template_directory');?>/images/media-02.png"/>
+				<img data-src="<?php bloginfo('template_directory');?>/images/media-02.png"/>
 				
 			</div><!-- press_single_slide -->
 			
 			<div class="press_single_slide">
 				
-				<img src="<?php bloginfo('template_directory');?>/images/media-05.png"/>
+				<img data-src="<?php bloginfo('template_directory');?>/images/media-05.png"/>
 				
 			</div><!-- press_single_slide -->
 			
 			<div class="press_single_slide">
 				
-				<img src="<?php bloginfo('template_directory');?>/images/media-01.png"/>
+				<img data-src="<?php bloginfo('template_directory');?>/images/media-01.png"/>
 				
 			</div><!-- press_single_slide -->
 			
 			<div class="press_single_slide">
 				
-				<img src="<?php bloginfo('template_directory');?>/images/media-01.png"/>
+				<img data-src="<?php bloginfo('template_directory');?>/images/media-01.png"/>
 				
 			</div><!-- press_single_slide -->
 			
 			<div class="press_single_slide">
 				
-				<img src="<?php bloginfo('template_directory');?>/images/media-01.png"/>
+				<img data-src="<?php bloginfo('template_directory');?>/images/media-01.png"/>
 				
 			</div><!-- press_single_slide -->
 			

@@ -1,4 +1,4 @@
-// @codekit-prepend 'jquery.3.3.1.js'
+// @codekit-prepend 'jquery.1.12.4.js'
 // @codekit-prepend 'waypoints.js'
 // @codekit-prepend 'slick.js'
 // @codekit-prepend 'lity.js'
@@ -173,10 +173,10 @@ jQuery(document).ready(function($){
       
       });
 
-      console.log('images loaded');
+      console.log('data-src images loaded');
     }
 
-    // createWaypoint('section_two', null, null, '100%', loadImages, false);
+    createWaypoint('section_two', null, null, '100%', loadImages, false);
     
     
 

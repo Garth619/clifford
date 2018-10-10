@@ -56,73 +56,73 @@
 				
 				<div class="sec_five_single_slide">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/aw-01.jpg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/aw-01.jpg"/>
 					
 				</div><!-- sec_five_single_slide -->
 				
 				<div class="sec_five_single_slide">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/aw-02.jpg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/aw-02.jpg"/>
 					
 				</div><!-- sec_five_single_slide -->
 				
 				<div class="sec_five_single_slide">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/aw-03.jpg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/aw-03.jpg"/>
 					
 				</div><!-- sec_five_single_slide -->
 				
 				<div class="sec_five_single_slide">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/aw-04.jpg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/aw-04.jpg"/>
 					
 				</div><!-- sec_five_single_slide -->
 				
 				<div class="sec_five_single_slide">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/aw-05.jpg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/aw-05.jpg"/>
 					
 				</div><!-- sec_five_single_slide -->
 				
 				<div class="sec_five_single_slide">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/aw-06.jpg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/aw-06.jpg"/>
 					
 				</div><!-- sec_five_single_slide -->
 				
 				<div class="sec_five_single_slide">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/aw-07.jpg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/aw-07.jpg"/>
 					
 				</div><!-- sec_five_single_slide -->
 				
 				<div class="sec_five_single_slide">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/aw-08.jpg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/aw-08.jpg"/>
 					
 				</div><!-- sec_five_single_slide -->
 				
 				<div class="sec_five_single_slide">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/aw-09.jpg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/aw-09.jpg"/>
 					
 				</div><!-- sec_five_single_slide -->
 				
 				<div class="sec_five_single_slide">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/aw-10.jpg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/aw-10.jpg"/>
 					
 				</div><!-- sec_five_single_slide -->
 				
 				<div class="sec_five_single_slide">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/aw-11.jpg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/aw-11.jpg"/>
 					
 				</div><!-- sec_five_single_slide -->
 				
 				<div class="sec_five_single_slide">
 					
-					<img src="<?php bloginfo('template_directory');?>/images/aw-12.jpg"/>
+					<img data-src="<?php bloginfo('template_directory');?>/images/aw-12.jpg"/>
 					
 				</div><!-- sec_five_single_slide -->
 				
