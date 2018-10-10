@@ -42,6 +42,7 @@
 .sec_five_intro_content.content {
 	font-size:20px;
 	line-height: 35px;
+	
 }
 
 .section_five_inner_content {
@@ -58,6 +59,9 @@
 	h1, h2, h3, p, ul, li {
 		display: inline-block;
 		width:100%;
+	}
+	h3 {
+		margin-bottom:0;
 	}
 }
 

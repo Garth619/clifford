@@ -47,13 +47,35 @@ span.brown {
 	font-family: $aktiv;
 	font-weight:400;
 	color:#000;
+	h1 {
+		color:$greentwo;
+		font-size:75px;
+		line-height: 80px;
+		font-family: $questa;
+		font-weight:500;
+		border-bottom:1px solid $browntwo;
+		padding-bottom:49px;
+		position: relative;
+		margin-bottom:42px;
+		&:after {
+			content:"";
+			width:87px;
+			height:3px;
+			display: block;
+			background: $browntwo;
+			position: absolute;
+			bottom:-2px;
+			left:0;
+		}
+	}
 	h2 {
 		font-family: $questa;
 		font-weight: 500;
 		color:$browntwo;
 		font-size:35px;
 		line-height: 35px;
-		margin-bottom:27px;
+		// margin-bottom:27px;
+		margin-bottom:5px;
 		display: block;
 	}
 	h3 {
@@ -67,21 +89,58 @@ span.brown {
 		display: block;
 		margin-bottom:20px;
 	}
-	p, ul {
-		margin-bottom:50px;
+	h4 {
+		color:$browntwo;
+		font-weight: 700;
+		font-size:18px;
 	}
-	ul {
+	a {
+		color:$browntwo;
+		transition: all 200ms ease-in-out;
+		display: inline-block;
+		text-decoration: none;
+		&:after {
+			content:"";
+			display: block;
+			width:100%;
+			height:1px;
+			background: $browntwo;
+			position: relative;
+			top:-3px;
+			opacity: 1;
+			transition: all 100ms ease-in-out;
+		}
+		&:hover {
+			color:$greenone;
+			&:after {
+				opacity: 0;
+			}
+		}
+	}
+	p, ul, ol {
+		// margin-bottom:50px;
+		margin-bottom:32px;
+	}
+	ul, ol {
 		list-style: none;
 		li {
-			position: relative;
-			padding-left:32px;
 			font-weight: 700;
 			font-size:16px;
 			line-height: 25px;
-			margin-bottom:30px;
+			// margin-bottom:30px;
+			margin-bottom:22px;
 			&:last-of-type {
 				margin-bottom:0;
 			}
+			&:before {
+				
+			}
+		}
+	}
+	ul {
+		li {
+			position: relative;
+			padding-left:32px;
 			&:before {
 				content:"";
 				display: block;
@@ -95,7 +154,34 @@ span.brown {
 			}
 		}
 	}
+	ol {
+		counter-reset: item;
+		> li {
+			counter-increment: item;
+			position: relative;
+			padding-left:30px;
+			&:before {
+				margin-right: 10px;
+ 				content: counter(item)".";
+ 				color: $browntwo;
+ 				width: 1em;
+ 				display: inline-block;
+ 				position: absolute;
+ 				top:0;
+ 				left:0;
+			}
+		}
+	}
+	blockquote {
+		font-size:30px;
+		line-height: 41px;
+		color:$browntwo;
+		font-family: $questa;
+		font-weight: 500;
+		font-style: italic;
+	}
 }
+
 
 
 @media screen and (max-width: 767px) {

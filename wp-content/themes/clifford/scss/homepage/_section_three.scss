@@ -291,7 +291,17 @@ svg#arrow {
 		width:100%;
 		display: inline-block;
 	}
-
+	h2 {
+		margin-bottom:27px;
+	}
+	p, ul, ol {
+		margin-bottom:50px;
+	}
+	ul {
+		li {
+			margin-bottom:30px;
+		}
+	}
 }
 
 
