@@ -91,7 +91,8 @@
 		<div class="copyright_wrapper mobile">
 	
 			<ul>
-				<li>&copy; 2018 by Clifford Law Offices PC. All rights reserved.</li>
+				<li>&copy; 2018 by Clifford Law Offices PC.</li>
+				<li>All rights reserved.</li>
 				<li><a class="disclaimer" href=""> Disclaimer</a></li>
 				<li><a href="">Site Map</a></li>
 			</ul>
