@@ -366,7 +366,14 @@ $('.sp_slider').slick({
 
  
 
+ // sidebar 
  
+ 
+ $('.pa_sidebar ul.menu > li > a').on('click', function(e) {
+   
+   $(this).next('ul.sub-menu').slideToggle();
+   
+ });
 
 	
 

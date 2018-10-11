@@ -92,12 +92,131 @@ span.banner_title {
 .sidebar_wrapper {
 	flex-basis:560px;
 	flex-shrink:0;
+	padding-bottom:150px;
 	background:#fff;
+	.sidebar {
+		padding:123px 73px 0 80px;
+		.sidebar_title_wrapper {
+			display: flex;
+			span.sidebar_title {
+				display: block;
+				text-transform: uppercase;
+				font-family: $aktiv;
+				font-weight:800;
+				font-size:20px;
+				flex-basis:216px;
+				flex-shrink:0;
+				line-height: 20px;
+				letter-spacing: 0.14em;
+				color:$greentwo;
+				display: inline-block;
+			}
+			span.pa_line {
+				content:"";
+				display: inline-block;
+				flex-grow:1;
+				height:3px;
+				background:$browntwo;
+				vertical-align: top;
+				margin-top:8px;
+				margin-left:12px;
+			}
+		}
+		.pa_sidebar {
+			margin-top:56px;
+			ul {
+				list-style: none;
+				li {
+					font-family: $aktiv;
+					font-weight: 700;
+					
+					a {
+						text-decoration: none;
+						border-bottom:1px solid #eaeae5;
+						display: block;
+						padding:21px 0;
+						cursor: pointer;
+					}
+				}
+			}
+			ul.menu {
+					> li.menu-item-has-children {
+						position: relative;
+						&:hover {
+							&:after {
+								background: #fff;
+							}
+						}
+						&:after {
+							content:"";
+							display: block;
+							width:7px;
+							height:7px;
+							background: $greenone;
+							position: absolute;
+							top:26px;
+							right:12px;
+							transform: rotate(-45deg);
+						}
+				}
+				> li.current-menu-ancestor {
+						background: $browntwo;
+						ul.sub-menu {
+							display: block;
+						}
+						&:after {
+							background: #fff;
+						}
+						> a {
+								color:#fff;
+						}
+				}
+				> li {
+					background: transparent;
+					transition: all 200ms ease-in-out;
+					&:hover {
+						background: $browntwo;
+					}
+					 > a {
+						 	color:#000;
+						 	transition: all 200ms ease-in-out;
+						 	padding-left:11px;
+					 }
+					 &:hover {
+						 > a {
+							 color:#fff;
+						 }
+					 }
+				}
+			}
+			ul.sub-menu {
+				background: $greyone;
+				display: none;
+				li.current-menu-item {
+					a {
+						color:$browntwo;
+					}
+				}
+				li {
+					&:hover {
+						a {
+							color:$browntwo;
+						}
+					}
+					a {
+						padding-left:40px;
+						padding-right:40px;
+						color:$greentwo;
+						transition: all 200ms ease-in-out;
+					}
+				}
+			}
+		}
+	}
 }
 
 .container {
 	flex-grow:1;
 	background:$greyone;
-	padding:97px 10% 0 8%;
-	
+	padding:97px 10% 215px 8%;
 }
