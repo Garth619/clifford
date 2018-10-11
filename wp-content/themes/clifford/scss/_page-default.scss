@@ -84,6 +84,12 @@ span.banner_title {
 }
 
 
+
+#internal_main {
+	min-height: 700px;
+}
+
+
 .two_col {
 	display: flex;
 }
@@ -267,6 +273,7 @@ span.banner_title {
 	
 	#internal_main {
 		flex-direction: column;
+		margin-top: 85px;
 	}
 	
 	
@@ -292,7 +299,9 @@ span.banner_title {
 
 @media screen and (max-width: 767px) {
 	
-	
+	#internal_main {
+		margin-top: 80px;
+	}
 	
 	.container {
 		padding: 60px 25px 45px;

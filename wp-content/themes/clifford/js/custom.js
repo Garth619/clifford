@@ -86,7 +86,7 @@ jQuery(document).ready(function($){
     }
 
 
-    //createWaypoint('section_two', '#contact_trigger', 'visible', 500, null, true);
+    createWaypoint('section_one', 'header', 'visible', -80, null, true);
    
     
     
@@ -432,6 +432,23 @@ $('.mobile_menu').on('click', function(e) {
 
 
 });
+
+
+// banner/header check - checks to see if the template is using a banner. if not, the header will be styled differently
+
+
+	if ($(".internal_banner, #section_one")[0]){
+   	
+   	$('header').addClass('transparent_header');
+   
+  }
+  
+  
+  else {
+	  
+	  $('header').addClass('grey_header');
+	  
+  }
 
 
 

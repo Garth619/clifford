@@ -5,8 +5,11 @@
 get_header(); ?>
 
 
+<div id="internal_main">
+	
 		
-		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'pa_menu' ) ); ?>
+</div><!-- internal_main -->
+
 
 
 <?php get_footer(); ?>

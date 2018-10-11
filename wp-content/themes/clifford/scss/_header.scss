@@ -27,6 +27,7 @@ header {
 .header_right {
 	flex-basis: 1015px;
 	text-align: right;
+	margin-top:-6px;
 	span.consult_title {
 		font-family: $aktiv;
 		font-weight: 700;
@@ -51,7 +52,19 @@ header {
 }
 
 
-
+header.grey_header {
+	background:#242424;
+	height:182px;
+	nav {
+		margin-top: 0px;
+	}
+	.header_right {
+		margin-top:-9px;
+		a.phone {
+			color:#fff;
+		}
+	}
+}
 
 nav {
 	ul {
@@ -249,13 +262,26 @@ nav {
 	
 
 header {
-	height:auto;
 	align-items: flex-start;
+	position: fixed;
+	background: transparent;
+	transition: all 350ms ease-in-out;
+	height: 85px;
+}
+
+
+header.grey_header {
+	height:85px;
+}
+
+
+header.visible {
+	background:#242424;
 }
 
 
 .header_left {
-	padding-top:33px;
+	padding-top: 12px;
 	flex-grow:0;
 	a {
 		img {
@@ -270,6 +296,7 @@ header {
 	justify-content: flex-end;
 	flex-shrink: 0;
 	flex-basis: auto;
+	margin-top:0;
 	span.consult_title {
 		display: block;
 	}
@@ -289,31 +316,38 @@ header {
 }
 	
 	
+	
 	.consult_phone_wrapper {
-		padding-top:23px;
+		padding-top: 17px;
 	}
 	
 	
 	
 	
+
 body:not(.page-template-template-home) {
 	header {
 		background:#242424;
-		position: static;
+	}
+	header.grey_header {
+		.header_right {
+			margin-top:0;
+		}
 	}
 	.header_left {
-		padding-top: 12px;
+		
 	}
 	.header_right {
-		height: 85px;
+
 	}
 	.consult_phone_wrapper {
-    padding-top: 17px;
+    
 	}
 	.mobile_menu {
-		height: 85px;
+		
 	}
 }
+
 	
 	
 	
@@ -431,7 +465,7 @@ body:not(.page-template-template-home) {
 		margin-left:20px;
 		width:80px;
 		flex-shrink: 0;
-		height:80px;
+		height:85px;
 		background:$greentwo;
 		text-align: center;
 		position: relative;
@@ -459,7 +493,7 @@ body:not(.page-template-template-home) {
 				}
 				&:before {
 					transform: rotate(-45deg);
-					transform-origin: 35px 8px 0;
+					transform-origin: 36px 7px 0;
 				}
 				&:after {
 					transform: rotate(45deg);
@@ -513,7 +547,7 @@ body:not(.page-template-template-home) {
 	
 	
 	header {
-		height:80px;
+		height:85px;
 		align-items: center;
 	}
 	
@@ -536,28 +570,13 @@ body:not(.page-template-template-home) {
 	
 	.header_right {
 		flex-basis: 160px;
+		height: 85px;
 	}
 	
 	
-body:not(.page-template-template-home) {
-	header {
-		
-	}
-	.header_left {
-		padding-top:0;
-	}
-	.header_right {
-		
-	}
-	.consult_phone_wrapper {
-    
-	}
-	.mobile_menu {
-		height: 82px;
-	}
-	.phone_icon {
-		height: 82px;
-	}
+
+header.grey_header {
+	height:85px;
 }
 
 	
@@ -569,7 +588,7 @@ body:not(.page-template-template-home) {
 	.phone_icon {
 		display: block;
 		width:80px;
-		height:80px;
+		height:85px;
 		background: $browntwo;
 		display: flex;
 		justify-content: center;
@@ -586,6 +605,7 @@ body:not(.page-template-template-home) {
 	
 	.mobile_menu {
 		margin-left:0;
+		height: 85px;
 	}
 	
 	
