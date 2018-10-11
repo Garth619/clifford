@@ -178,6 +178,8 @@ jQuery(document).ready(function($){
 
     createWaypoint('section_two', null, null, '100%', loadImages, false);
     
+    createWaypoint('internal_main', null, null, '100%', loadImages, false);
+    
     
 
 
@@ -371,7 +373,9 @@ $('.sp_slider').slick({
  
  $('.pa_sidebar ul.menu > li > a').on('click', function(e) {
    
-   $(this).next('ul.sub-menu').slideToggle();
+   $(this).next('ul.sub-menu').slideToggle(400);
+   
+   $(this).parent().toggleClass('open');
    
  });
 
@@ -388,8 +392,6 @@ $("ul > li.menu-item-has-children > a[href='#']").removeAttr("href");
 // nav slide
 
 
-
-
 	
 	var windowWidth = $(window).width();
 
@@ -397,7 +399,7 @@ $("ul > li.menu-item-has-children > a[href='#']").removeAttr("href");
 
 	function checkWidthcase() {
     
-    if (windowWidth < 1066) {
+    if (windowWidth < 1230) {
 	    
 	    	$('nav ul.menu > li.menu-item-has-children > a').on('click', function(e) {
 	    	  

@@ -51,6 +51,8 @@ header {
 }
 
 
+
+
 nav {
 	ul {
 		list-style: none;
@@ -293,6 +295,28 @@ header {
 	
 	
 	
+	
+body:not(.page-template-template-home) {
+	header {
+		background:#242424;
+		position: static;
+	}
+	.header_left {
+		padding-top: 12px;
+	}
+	.header_right {
+		height: 85px;
+	}
+	.consult_phone_wrapper {
+    padding-top: 17px;
+	}
+	.mobile_menu {
+		height: 85px;
+	}
+}
+	
+	
+	
 	nav {
 		position: fixed;
 		top:0;
@@ -513,6 +537,29 @@ header {
 	.header_right {
 		flex-basis: 160px;
 	}
+	
+	
+body:not(.page-template-template-home) {
+	header {
+		
+	}
+	.header_left {
+		padding-top:0;
+	}
+	.header_right {
+		
+	}
+	.consult_phone_wrapper {
+    
+	}
+	.mobile_menu {
+		height: 82px;
+	}
+	.phone_icon {
+		height: 82px;
+	}
+}
+
 	
 	
 	.consult_phone_wrapper {

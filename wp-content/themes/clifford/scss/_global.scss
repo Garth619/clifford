@@ -186,6 +186,20 @@ span.brown {
 }
 
 
+@media screen and (max-width: 1450px) {
+	
+	
+	
+	.content {
+		h1 {
+			padding-bottom: 36px;
+		}
+	}
+	
+	
+	
+} /* Media Query */
+
 
 @media screen and (max-width: 767px) {
 	
@@ -200,6 +214,18 @@ img.aligncenter {
 	float:none;
 	max-width:100%;
 	height:auto;
+}
+
+
+
+.content {
+	blockquote {
+		padding: 18px 0;
+		margin-bottom: 0;
+		p {
+			margin:0;
+		}
+	}
 }
 	
 	
