@@ -109,7 +109,8 @@ span.banner_title {
 span.title_line {
 	display: block;
 	position: relative;
-	width:740px;
+	max-width:740px;
+	width:100%;
 	margin:0px auto;
 	&:before, &:after {
 		content:"";
@@ -339,10 +340,39 @@ span.title_line {
 
 
 
+@media screen and (max-width: 1066px) {
+	
+	
+	.one_col {
+		h1.one_col_title {
+			font-size:75px;
+			line-height: 75px;
+			padding: 81px 45px 32px;
+		}
+	}
+	
+/*
+	span.title_line {
+		margin-left:auto;
+		margin-right:auto;
+		width:calc(100% - 126px);
+	}
+*/
+
+span.title_line {
+	
+}
+	
+	
+} /* Media Query */
+
+
+
 @media screen and (max-width: 767px) {
+
 	
 	#internal_main {
-		margin-top: 80px;
+		margin-top: 85px;
 	}
 	
 	.container {
@@ -358,6 +388,16 @@ span.title_line {
 			}
 		}
 	}
+	
+	.one_col {
+		h1.one_col_title {
+			font-size:50px;
+			line-height: 50px;
+			padding: 56px 30px 20px;
+		}
+	}
+	
+	
 	
 	
 	
