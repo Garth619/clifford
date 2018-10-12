@@ -88,11 +88,6 @@ jQuery(document).ready(function($){
 
     createWaypoint('section_one', 'header', 'visible', -80, null, true);
    
-    
-    
-    
-    
-    
 
 
 
@@ -378,8 +373,14 @@ $('.sp_slider').slick({
    $(this).parent().toggleClass('open');
    
  });
+ 
+ 
+ // pa directory
+ 
+  $('.pa_directory ul.menu > li > a').wrapInner('<span class="flex_wrap"></span>');
+ 
+	$('.pa_directory span.flex_wrap').after('<span class="pa_line"></span>');
 
-	
 
 /* Remove "#" from menu anchor items to avoid jump to the top of the page
 --------------------------------------------------------------------------------------- */
