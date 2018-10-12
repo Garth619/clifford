@@ -55,6 +55,7 @@ header {
 header.grey_header {
 	background:#242424;
 	height:182px;
+	position: static;
 	nav {
 		margin-top: 0px;
 	}
@@ -272,6 +273,7 @@ header {
 
 header.grey_header {
 	height:85px;
+	position: fixed;
 }
 
 

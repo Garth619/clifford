@@ -361,6 +361,20 @@ $('.sp_slider').slick({
 		]
  });
 
+
+
+
+$('.att_bio_awards').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+	arrows:false,
+	dots:true,
+	fade:true,
+ });
+
+
+
  
 
  // sidebar 
