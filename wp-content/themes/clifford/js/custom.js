@@ -431,9 +431,24 @@ $('.att_bio_awards').slick({
         slidesToScroll: 3,
         
       }
+     },
+     {
+      breakpoint: 670,
+      settings:{
+	      slidesToShow: 2,
+        slidesToScroll: 2,
+        
+      }
+     },
+     {
+      breakpoint: 520,
+      settings:{
+	      slidesToShow: 1,
+        slidesToScroll: 1,
+        
+      }
      }
-    
-		]
+    ]
  });
  
  
@@ -464,9 +479,9 @@ $('.att_bio_awards').slick({
 	// attorney slidetoggle
 	
 	
-	$('.att_slidetoggle ul.slidetoggle_list > li.title > a').on('click', function(e) {
+	$('.att_slidetoggle ul.slidetoggle_list > li.title').on('click', function(e) {
 		
-		$(this).next('ul.sub_list').slideToggle(300);
+		$(this).find('ul.sub_list').slideToggle(300);
 		
 		$(".att_slidetoggle ul.slidetoggle_list > li.title > a[href='#']").removeAttr("href");
 	  

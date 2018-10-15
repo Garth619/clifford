@@ -90,7 +90,7 @@ span.awards_title {
 	font-weight: 800;
 	color:$greentwo;
 	letter-spacing: 0.2em;
-	font-family: 16px;
+	font-size: 16px;
 	&:after {
 		content:"";
 		display: block;
@@ -261,7 +261,8 @@ span.att_video_title {
 				line-height: 35px;
 				letter-spacing: 0.1em;
 				border-bottom:1px solid $grethree;
-				padding:15px 0;
+				padding:15px 20px 15px 0;
+				cursor: pointer;
 				&:last-of-type {
 					border-bottom: none;
 				}
@@ -524,6 +525,13 @@ span.att_video_title {
 @media screen and (max-width: 1230px) {
 	
 	
+	
+	.sidebar_wrapper.att_sidebar {
+		width:100%;
+		padding-bottom: 169px;
+	}
+	
+	
 	body.page-template-template-bio {
 		.container {
     	width: 100%;
@@ -571,6 +579,129 @@ span.att_video_title {
 	
 	.att_slidetoggle {
 		margin-top:-10px;
+	}
+	
+	 .att_sidebar_info {
+	   max-width:520px;
+	   margin-left:auto;
+	   margin-right:auto;
+   }
+	
+	span.awards_title {
+		border-top:0;
+		padding-top: 57px;
+	}
+	
+	.att_bio_awards {
+    margin-top: 37px;
+   }
+   
+  
+	
+	
+	
+} /* Media Query */
+
+
+
+@media screen and (max-width: 767px) {
+	
+	.sidebar_wrapper.att_sidebar {
+		 padding-bottom: 149px;
+	}
+	
+	   
+	
+	body.page-template-template-bio {
+		.container.content {
+			padding: 70px 32px 134px;
+			h1 {
+				text-align: center;
+				&:after {
+					position: relative;
+					margin-left:auto;
+					margin-right:auto;
+					bottom:-38px;
+				}
+			}
+		}
+	}
+	
+	
+	.att_image_wrapper.tablet {
+		padding:0;
+		&:after {
+			display: none;
+		}
+		img {
+			padding:0;
+			width:100%;
+		}
+	} 
+	
+	
+	span.sidebar_att_title.tablet {
+		text-align: center;
+	}
+	
+	a.att_results_button.tablet {
+		padding-left:0;
+		padding-right:0;
+		max-width:292px;
+		text-align: center;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom: 59px;
+		display: block;
+		
+	}
+	
+	
+	.att_slidetoggle {
+		 ul.slidetoggle_list {
+			 > li {
+				 	font-size:18px;
+				 	line-height: 35px;
+			 }
+		 }
+	}
+	
+	
+	.additional_posts {
+    padding-top: 47px;
+	}
+	
+	
+	span.awards_title {
+    padding-top: 30px;
+	}
+	
+	
+	.att_bio_awards {
+		.slick-dots {
+    	bottom: -37px;
+		}
+	}
+	
+	span.att_video_title {
+    margin-top: 102px;
+	}
+	
+	
+	.att_sidebar_info {
+		padding:0 20px;
+	}
+	
+	
+	.att_yt {
+		a {
+			.att_video_overlay {
+				svg {
+					width:122px;
+					height:122px;
+				}
+			}
+		}
 	}
 	
 	
