@@ -10,7 +10,9 @@ get_header(); ?>
 		
 		<div class="att_image_wrapper tablet">
 		
-			<img src="<?php bloginfo('template_directory');?>/images/att/att-robert-clifford.jpg"/>
+			<?php $attorney_image = get_field( 'attorney_image' ); ?>
+
+			<img src="<?php echo $attorney_image['url']; ?>" alt="<?php echo $attorney_image['alt']; ?>" />
 		
 		</div><!-- att_image_wrapper -->
 		
@@ -18,179 +20,51 @@ get_header(); ?>
 			
 			<h1><?php the_title();?></h1>
 			
-			<span class="sidebar_att_title tablet">Founder and Senior Partner</span><!-- sidebar_att_title -->
+			<span class="sidebar_att_title tablet"><?php the_field( 'position' ); ?></span><!-- sidebar_att_title -->
 			
-			<a class="att_results_button tablet" href="">View Robert's Results</a>
+			<a class="att_results_button tablet" href="">View <?php the_field( 'first_name' ); ?>'s Results</a>
 		
-			<?php get_template_part( 'loop', 'page' ); ?>
+			<?php the_field( 'att_bio_content' ); ?>
 			
-			<div class="att_slidetoggle">
+				<?php if(get_field('slidetoggle_text')): ?>
+			
+					<div class="att_slidetoggle">
+					
+						<ul class="slidetoggle_list">
+			 
+						<?php while(has_sub_field('slidetoggle_text')): ?>
+			 
+							<li class="title">
+					
+								<a class="" href="#"><?php the_sub_field( 'title' ); ?></a>
+					
+									<?php if(get_sub_field('bullet_list')): ?>
+					
+										<ul class="sub_list">
+							
+											<?php while(has_sub_field('bullet_list')): ?>
+					 
+												<li><?php the_sub_field( 'single_bullet' ); ?></li>
+					    
+												<?php endwhile; ?>
+						
+										</ul>
+					 
+									<?php endif; ?>
+					
+							<?php endwhile; ?>
 				
-				<ul class="slidetoggle_list">
-					
-					<li class="title">
-					
-					<a class="" href="#">Education</a>
-					
-					<ul class="sub_list">
-						<li>Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content</li>
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-					</ul>
-					
-					</li><!-- title -->
-					
-					<li class="title">
-					
-					<a class="" href="#">CLIFFORD SYMPOSIUM ON CIVIL JUSTICE, TORT LAW AND SOCIAL POLICY</a>
-					
-					<ul class="sub_list">
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-					</ul>
-					
-					</li><!-- title -->
-					
-					<li class="title">
-					
-					<a class="" href="#">Education</a>
-					
-					<ul class="sub_list">
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-					</ul>
-					
-					</li><!-- title -->
-					
-					<li class="title">
-					
-					<a class="" href="#">Education</a>
-					
-					<ul class="sub_list">
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-					</ul>
-					
-					</li><!-- title -->
-					
-					<li class="title">
-					
-					<a class="" href="#">Education</a>
-					
-					<ul class="sub_list">
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-					</ul>
-					
-					</li><!-- title -->
-					
-					<li class="title">
-					
-					<a class="" href="#">Education</a>
-					
-					<ul class="sub_list">
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-					</ul>
-					
-					</li><!-- title -->
-					
-					<li class="title">
-					
-					<a class="" href="#">Education</a>
-					
-					<ul class="sub_list">
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-					</ul>
-					
-					</li><!-- title -->
-					
-					<li class="title">
-					
-					<a class="" href="#">Education</a>
-					
-					<ul class="sub_list">
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-					</ul>
-					
-					</li><!-- title -->
-					
-					<li class="title">
-					
-					<a class="" href="#">Education</a>
-					
-					<ul class="sub_list">
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-					</ul>
-					
-					</li><!-- title -->
-					
-					<li class="title">
-					
-					<a class="" href="#">Education</a>
-					
-					<ul class="sub_list">
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-					</ul>
-					
-					</li><!-- title -->
-					
-					<li class="title">
-					
-					<a class="" href="#">Education</a>
-					
-					<ul class="sub_list">
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-					</ul>
-					
-					</li><!-- title -->
-					
-					<li class="title">
-					
-					<a class="" href="#">Education</a>
-					
-					<ul class="sub_list">
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-						<li>content</li>
-					</ul>
-					
-					</li><!-- title -->
-					
-				</ul>
+						</ul>
 				
-			</div><!-- att_slidetoggle -->
+				</div><!-- att_slidetoggle -->
+			 
+			<?php endif; ?>
+			
+			<?php if(get_field('more_about')): ?>
 			
 			<div class="additional_posts">
 				
-				<span class="add_title">More about Robert</span><!-- add_title -->
+				<span class="add_title">More about <?php the_field( 'first_name' ); ?></span><!-- add_title -->
 				
 				<div class="posts_slider_wrapper">
 					
@@ -203,38 +77,23 @@ get_header(); ?>
 					
 					<div class="posts_slider">
 						
-						<div class="post_single_slide">
+						<?php if(get_field('more_about')): ?>
+						 
+							<?php while(has_sub_field('more_about')): ?>
+						 
+								<div class="post_single_slide">
 							
-							<a class="" href="https://www.chicagomag.com/Chicago-Magazine/March-2014/power-robert-clifford/" target="_blank">
+									<a href="<?php the_sub_field( 'url' ); ?>" target="_blank">
 								
-								<div class="post_single_slide_inner">
+									<div class="post_single_slide_inner">
+										
+										<?php $image = get_sub_field( 'image' ); ?>
+		
+										<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 							
-									<img src="<?php bloginfo('template_directory');?>/images/about.jpg"/>
-							
-									<div class="posts_overlay">
+										<div class="posts_overlay">
 								
-										<span>Clifford Ranks 76th Most Powerful Chicagoan</span>
-								
-									</div><!-- posts_overlay -->
-								
-								</div><!-- post_single_slide_inner -->
-							
-							</a>
-							 
-						</div><!-- post_single_slide -->
-						
-						
-						<div class="post_single_slide">
-							
-							<a class="" href="https://www.chicagomag.com/Chicago-Magazine/March-2014/power-robert-clifford/" target="_blank">
-								
-								<div class="post_single_slide_inner">
-							
-									<img src="<?php bloginfo('template_directory');?>/images/about.jpg"/>
-							
-									<div class="posts_overlay">
-								
-										<span>Clifford Ranks 76th Most Powerful Chicagoan</span>
+											<span><?php the_sub_field( 'title' ); ?></span>
 								
 									</div><!-- posts_overlay -->
 								
@@ -243,92 +102,12 @@ get_header(); ?>
 							</a>
 							 
 						</div><!-- post_single_slide -->
+						    
+							<?php endwhile; ?>
+						 
+						<?php endif; ?>
 						
-						
-						<div class="post_single_slide">
-							
-							<a class="" href="https://www.chicagomag.com/Chicago-Magazine/March-2014/power-robert-clifford/" target="_blank">
-								
-								<div class="post_single_slide_inner">
-							
-									<img src="<?php bloginfo('template_directory');?>/images/about.jpg"/>
-							
-									<div class="posts_overlay">
-								
-										<span>Clifford Ranks 76th Most Powerful Chicagoan</span>
-								
-									</div><!-- posts_overlay -->
-								
-								</div><!-- post_single_slide_inner -->
-							
-							</a>
-							 
-						</div><!-- post_single_slide -->
-						
-						
-						<div class="post_single_slide">
-							
-							<a class="" href="https://www.chicagomag.com/Chicago-Magazine/March-2014/power-robert-clifford/" target="_blank">
-								
-								<div class="post_single_slide_inner">
-							
-									<img src="<?php bloginfo('template_directory');?>/images/about.jpg"/>
-							
-									<div class="posts_overlay">
-								
-										<span>Clifford Ranks 76th Most Powerful Chicagoan</span>
-								
-									</div><!-- posts_overlay -->
-								
-								</div><!-- post_single_slide_inner -->
-							
-							</a>
-							 
-						</div><!-- post_single_slide -->
-						
-						
-						<div class="post_single_slide">
-							
-							<a class="" href="https://www.chicagomag.com/Chicago-Magazine/March-2014/power-robert-clifford/" target="_blank">
-								
-								<div class="post_single_slide_inner">
-							
-									<img src="<?php bloginfo('template_directory');?>/images/about.jpg"/>
-							
-									<div class="posts_overlay">
-								
-										<span>Clifford Ranks 76th Most Powerful Chicagoan</span>
-								
-									</div><!-- posts_overlay -->
-								
-								</div><!-- post_single_slide_inner -->
-							
-							</a>
-							 
-						</div><!-- post_single_slide -->
-						
-						
-						<div class="post_single_slide">
-							
-							<a class="" href="https://www.chicagomag.com/Chicago-Magazine/March-2014/power-robert-clifford/" target="_blank">
-								
-								<div class="post_single_slide_inner">
-							
-									<img src="<?php bloginfo('template_directory');?>/images/about.jpg"/>
-							
-									<div class="posts_overlay">
-								
-										<span>Clifford Ranks 76th Most Powerful Chicagoan</span>
-								
-									</div><!-- posts_overlay -->
-								
-								</div><!-- post_single_slide_inner -->
-							
-							</a>
-							 
-						</div><!-- post_single_slide -->
-						
-						
+				
 					</div><!-- posts_slider -->
 					
 					
@@ -342,6 +121,8 @@ get_header(); ?>
 				</div><!-- posts_slider_wrapper -->
 				
 			</div><!-- additional_posts -->
+			
+			<?php endif; ?>
 		
 		</div><!-- container -->
 		

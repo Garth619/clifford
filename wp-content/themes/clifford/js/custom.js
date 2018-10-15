@@ -479,9 +479,9 @@ $('.att_bio_awards').slick({
 	// attorney slidetoggle
 	
 	
-	$('.att_slidetoggle ul.slidetoggle_list > li.title').on('click', function(e) {
+	$('.att_slidetoggle ul.slidetoggle_list > li.title > a').on('click', function(e) {
 		
-		$(this).find('ul.sub_list').slideToggle(300);
+		$(this).next('ul.sub_list').slideToggle(300);
 		
 		$(".att_slidetoggle ul.slidetoggle_list > li.title > a[href='#']").removeAttr("href");
 	  
