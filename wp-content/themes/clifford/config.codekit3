@@ -51,6 +51,17 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
+	"/images/about.jpg": {
+		"ft": 16384,
+		"iS": 8968,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/about.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/images/att/att-bradley-cosgrove.jpg": {
 		"ft": 16384,
 		"iS": 105135,
