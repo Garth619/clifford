@@ -83,7 +83,53 @@
 						
 						<a href="//www.youtube-nocookie.com/embed/6Rx0W05JJUQ?rel=0&amp;showinfo=0;autoplay=1" data-lity >
 							
-							<img alt="" src="https://img.youtube.com/vi/6Rx0W05JJUQ/maxresdefault.jpg"/>
+							<img alt="" src="https://img.youtube.com/vi/6Rx0W05JJUQ/mqdefault.jpg"/>
+							
+							<div class="att_video_overlay">
+								
+								<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
+								
+							</div><!-- att_video_overlay -->
+							
+						</a>
+						
+					</div><!-- att_yt -->
+					
+					</div><!-- att_video_single_slide -->
+					
+					<div class="att_video_single_slide">
+					
+					<div class="att_yt">
+						
+						<a href="//www.youtube-nocookie.com/embed/t4lW0qAPayI?rel=0&amp;showinfo=0;autoplay=1" data-lity >
+							
+							<img alt="" src="https://img.youtube.com/vi/t4lW0qAPayI/mqdefault.jpg"/>
+							
+							<div class="att_video_overlay">
+								
+								<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
+								
+							</div><!-- att_video_overlay -->
+							
+						</a>
+						
+					</div><!-- att_yt -->
+					
+					</div><!-- att_video_single_slide -->
+					
+					<div class="att_video_single_slide">
+					
+					<div class="att_yt">
+						
+						<a href="//www.youtube-nocookie.com/embed/zJIuCvnGGiU?rel=0&amp;showinfo=0;autoplay=1" data-lity >
+							
+							<img alt="" src="https://img.youtube.com/vi/zJIuCvnGGiU/mqdefault.jpg"/>
+							
+							<div class="att_video_overlay">
+								
+								<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
+								
+							</div><!-- att_video_overlay -->
 							
 						</a>
 						

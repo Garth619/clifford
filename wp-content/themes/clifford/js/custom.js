@@ -372,7 +372,19 @@ $('.att_bio_awards').slick({
 	dots:true,
 	fade:true,
  });
-
+ 
+ 
+ $('.att_video_slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+	arrows:false,
+	dots:true,
+	fade:true,
+ });
+ 
+ 
+ 
 
 
  
@@ -394,6 +406,18 @@ $('.att_bio_awards').slick({
   $('.pa_directory ul.menu > li > a').wrapInner('<span class="flex_wrap"></span>');
  
 	$('.pa_directory span.flex_wrap').after('<span class="pa_line"></span>');
+	
+	
+	// attorney slidetoggle
+	
+	
+	$('.att_slidetoggle ul.slidetoggle_list > li.title > a').on('click', function(e) {
+		
+		$(this).next('ul.sub_list').slideToggle(300);
+		
+		$(".att_slidetoggle ul.slidetoggle_list > li.title > a[href='#']").removeAttr("href");
+	  
+	});
 
 
 /* Remove "#" from menu anchor items to avoid jump to the top of the page

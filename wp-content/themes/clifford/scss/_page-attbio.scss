@@ -149,14 +149,147 @@ span.att_video_title {
 
 .att_video_slider {
 	margin-top:55px;
+	.slick-dots {
+		bottom: -70px;
+		li.slick-active {
+			button {
+				&:before {
+					color:$browntwo;
+				}
+			}
+		}
+		li:hover {
+			button {
+				&:before {
+					color:$browntwo;
+				}
+			}
+		}
+		li {
+			margin:0;
+			width:16px;
+			button {
+				width:16px;
+				&:before {
+					width:16px;
+					opacity: 1;
+					color: $greentwo;
+					font-size:22px;
+				}
+			}
+		}
+	}
 }
 
 
 .att_yt {
 	position: relative;
-	img {
+	&:hover {
+		svg#play_button {
+			.play_button-st0{
+				opacity:0.35;
+				fill:#FFFFFF;
+			}
+			.play_button-st1{
+				fill:$brownone;
+			}
+			.play_button-st2{
+				fill:#fff;
+			}
+		}
+	}
+	a {
 		display: block;
-		max-width:100%;
-		height:auto;
+		img {
+			display: block;
+			width:100%;
+			height:auto;
+		}
+		.att_video_overlay {
+			position: absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background: rgba(0,0,0,0.5);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			svg {
+				width:142px;
+				height:142px;
+			}
+		}
 	}
 }
+
+
+
+.att_slidetoggle {
+	ul {
+		list-style: none;
+		li {
+			font-family: $aktiv;
+			margin-bottom:0;
+			a {
+				
+			}
+		}
+	}
+	ul.slidetoggle_list {
+		> li {
+				text-transform: uppercase;
+				font-weight: 800;
+				font-size:20px;
+				line-height: 35px;
+				letter-spacing: 0.1em;
+				border-bottom:1px solid $grethree;
+				padding:15px 0;
+				&:last-of-type {
+					border-bottom: none;
+				}
+				&:before {
+					display: none;
+				}
+				> a {
+						color:$greentwo;
+						position: relative;
+						cursor: pointer;
+						&:hover {
+							&:after {
+								opacity: 1;
+							}
+						}
+						&:after {
+							width:7px;
+							height:7px;
+							background: $greenone;
+							position: absolute;
+							top:14px;
+							right:-15px;
+							transform: rotate(-45deg);
+						}
+				}
+		}
+	}
+	ul.sub_list {
+		padding-top:20px;
+		padding-bottom:20px;
+		margin-bottom:0;
+		display: none;
+		li {
+			text-transform: none;
+			margin-bottom:27px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

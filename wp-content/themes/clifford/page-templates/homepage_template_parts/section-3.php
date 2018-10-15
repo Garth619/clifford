@@ -23,12 +23,11 @@
 							</div><!-- video_inner -->
 					
 						</div><!-- video_wrapper -->
-						</div><!-- sec_three_image -->
+					
+					</div><!-- sec_three_image -->
 	
 	
 	<div class="sec_three_inner">
-		
-		
 		
 		<div class="sec_three_left">
 			
