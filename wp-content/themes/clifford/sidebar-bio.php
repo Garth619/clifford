@@ -1,7 +1,7 @@
 	<div class="sidebar_wrapper att_sidebar">
 		
 		
-		<div class="att_image_wrapper">
+		<div class="att_image_wrapper desktop">
 		
 			<img src="<?php bloginfo('template_directory');?>/images/att/att-robert-clifford.jpg"/>
 		
@@ -9,9 +9,9 @@
 		
 		<div class="att_sidebar_info">
 			
-			<span class="sidebar_att_title">Founder and Senior Partner</span><!-- sidebar_att_title -->
+			<span class="sidebar_att_title desktop">Founder and Senior Partner</span><!-- sidebar_att_title -->
 			
-			<a class="att_results_button" href="">View Robert's Results</a>
+			<a class="att_results_button desktop" href="">View Robert's Results</a>
 			
 			<span class="awards_title">Awards & Recognition</span><!-- awards_title -->
 			

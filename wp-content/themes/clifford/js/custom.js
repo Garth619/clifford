@@ -399,31 +399,37 @@ $('.att_bio_awards').slick({
       settings:{
 	      slidesToShow: 4,
         slidesToScroll: 4,
-        dots:true,
       }
      },
      {
-      breakpoint: 1450,
+      breakpoint: 1390,
       settings:{
 	      slidesToShow: 3,
         slidesToScroll: 3,
       }
      },
      {
-      breakpoint: 1200,
+      breakpoint: 1230,
       settings:{
-	      slidesToShow: 2,
-        slidesToScroll: 2,
-        dots:true,
+	      slidesToShow: 5,
+        slidesToScroll: 5,
+       
       }
      },
      {
-      breakpoint: 767,
+      breakpoint: 972,
       settings:{
-	      slidesToShow: 1,
-        slidesToScroll: 1,
-        dots:true,
-        arrows:false
+	      slidesToShow: 4,
+        slidesToScroll: 4,
+        
+      }
+     },
+     {
+      breakpoint: 841,
+      settings:{
+	      slidesToShow: 3,
+        slidesToScroll: 3,
+        
       }
      }
     

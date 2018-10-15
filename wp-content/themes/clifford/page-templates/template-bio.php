@@ -8,9 +8,19 @@ get_header(); ?>
 	
 		<?php get_sidebar('bio'); ?>
 		
-		<div class="container content">
+		<div class="att_image_wrapper tablet">
 		
+			<img src="<?php bloginfo('template_directory');?>/images/att/att-robert-clifford.jpg"/>
+		
+		</div><!-- att_image_wrapper -->
+		
+		<div class="container content">
+			
 			<h1><?php the_title();?></h1>
+			
+			<span class="sidebar_att_title tablet">Founder and Senior Partner</span><!-- sidebar_att_title -->
+			
+			<a class="att_results_button tablet" href="">View Robert's Results</a>
 		
 			<?php get_template_part( 'loop', 'page' ); ?>
 			
