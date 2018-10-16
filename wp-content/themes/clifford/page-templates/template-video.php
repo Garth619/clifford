@@ -12,182 +12,37 @@ get_header(); ?>
 	
 	<div class="video_center_wrapper">
 		
-		<div class="single_video">
-			
-			<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >
-				
-				<div class="thumbnail">
-				
-					<img alt="youtube-nfFKJxtlXoM" src="https://img.youtube.com/vi/nfFKJxtlXoM/mqdefault.jpg"/>
-				
-					<div class="vc_overlay">
-					
-						<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
-					
-					</div><!-- vc_overlay -->
-				
-				</div><!-- thumbnail -->
-				
-				<span class="vc_title">Curabitur m quis Curabitur matt odio quis urabitur mattis</span><!-- vc_title -->
-				
-			</a>
-			
-		</div><!-- single_video -->
 		
-		<div class="single_video">
+		<?php if(get_field('videos')): ?>
+		 
+			<?php while(has_sub_field('videos')): ?>
+		 
+				<div class="single_video">
 			
-			<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >
+					<a href="//www.youtube-nocookie.com/embed/<?php the_sub_field( 'youtube_video_id' ); ?>?rel=0&amp;showinfo=0;autoplay=1" data-lity >
 				
-				<div class="thumbnail">
+					<div class="thumbnail">
 				
-					<img alt="youtube-nfFKJxtlXoM" src="https://img.youtube.com/vi/nfFKJxtlXoM/mqdefault.jpg"/>
+						<img alt="youtube-nfFKJxtlXoM" src="https://img.youtube.com/vi/<?php the_sub_field( 'youtube_video_id' ); ?>/mqdefault.jpg"/>
 				
-					<div class="vc_overlay">
+						<div class="vc_overlay">
+						
+							<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
 					
-						<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
-					
-					</div><!-- vc_overlay -->
+						</div><!-- vc_overlay -->
 				
-				</div><!-- thumbnail -->
+					</div><!-- thumbnail -->
 				
-				<span class="vc_title">Curabitur m quis Curabitur matt odio quis urabitur mattis</span><!-- vc_title -->
+					<span class="vc_title"><?php the_sub_field( 'video_title' ); ?></span><!-- vc_title -->
 				
-			</a>
+				</a>
 			
-		</div><!-- single_video -->
-		
-		<div class="single_video">
-			
-			<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >
+			</div><!-- single_video -->
+		    
+			<?php endwhile; ?>
+		 
+		<?php endif; ?>
 				
-				<div class="thumbnail">
-				
-					<img alt="youtube-nfFKJxtlXoM" src="https://img.youtube.com/vi/nfFKJxtlXoM/mqdefault.jpg"/>
-				
-					<div class="vc_overlay">
-					
-						<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
-					
-					</div><!-- vc_overlay -->
-				
-				</div><!-- thumbnail -->
-				
-				<span class="vc_title">Curabitur m quis Curabitur matt odio quis urabitur mattis</span><!-- vc_title -->
-				
-			</a>
-			
-		</div><!-- single_video -->
-		
-		<div class="single_video">
-			
-			<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >
-				
-				<div class="thumbnail">
-				
-					<img alt="youtube-nfFKJxtlXoM" src="https://img.youtube.com/vi/nfFKJxtlXoM/mqdefault.jpg"/>
-				
-					<div class="vc_overlay">
-					
-						<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
-					
-					</div><!-- vc_overlay -->
-				
-				</div><!-- thumbnail -->
-				
-				<span class="vc_title">Curabitur m quis Curabitur matt odio quis urabitur mattis</span><!-- vc_title -->
-				
-			</a>
-			
-		</div><!-- single_video -->
-		
-		<div class="single_video">
-			
-			<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >
-				
-				<div class="thumbnail">
-				
-					<img alt="youtube-nfFKJxtlXoM" src="https://img.youtube.com/vi/nfFKJxtlXoM/mqdefault.jpg"/>
-				
-					<div class="vc_overlay">
-					
-						<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
-					
-					</div><!-- vc_overlay -->
-				
-				</div><!-- thumbnail -->
-				
-				<span class="vc_title">Curabitur m quis Curabitur matt odio quis urabitur mattis</span><!-- vc_title -->
-				
-			</a>
-			
-		</div><!-- single_video -->
-		
-		<div class="single_video">
-			
-			<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >
-				
-				<div class="thumbnail">
-				
-					<img alt="youtube-nfFKJxtlXoM" src="https://img.youtube.com/vi/nfFKJxtlXoM/mqdefault.jpg"/>
-				
-					<div class="vc_overlay">
-					
-						<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
-					
-					</div><!-- vc_overlay -->
-				
-				</div><!-- thumbnail -->
-				
-				<span class="vc_title">Curabitur m quis Curabitur matt odio quis urabitur mattis</span><!-- vc_title -->
-				
-			</a>
-			
-		</div><!-- single_video -->
-		
-		<div class="single_video">
-			
-			<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >
-				
-				<div class="thumbnail">
-				
-					<img alt="youtube-nfFKJxtlXoM" src="https://img.youtube.com/vi/nfFKJxtlXoM/mqdefault.jpg"/>
-				
-					<div class="vc_overlay">
-					
-						<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
-					
-					</div><!-- vc_overlay -->
-				
-				</div><!-- thumbnail -->
-				
-				<span class="vc_title">Curabitur m quis Curabitur matt odio quis urabitur mattis</span><!-- vc_title -->
-				
-			</a>
-			
-		</div><!-- single_video -->
-		
-		<div class="single_video">
-			
-			<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >
-				
-				<div class="thumbnail">
-				
-					<img alt="youtube-nfFKJxtlXoM" src="https://img.youtube.com/vi/nfFKJxtlXoM/mqdefault.jpg"/>
-				
-					<div class="vc_overlay">
-					
-						<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
-					
-					</div><!-- vc_overlay -->
-				
-				</div><!-- thumbnail -->
-				
-				<span class="vc_title">Curabitur m quis Curabitur matt odio quis urabitur mattis</span><!-- vc_title -->
-				
-			</a>
-			
-		</div><!-- single_video -->
-		
 	</div><!-- video_center_wrapper -->
 		
 </div><!-- internal_main -->
