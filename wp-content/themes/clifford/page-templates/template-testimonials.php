@@ -12,125 +12,47 @@ get_header(); ?>
 	
 	<div class="testimonial_wrapper">
 		
-		<div class="single_test_wrapper">
-			
-			<div class="test_col">
-				
-				<div class="test_inner">
-						
-						<img src="<?php bloginfo('template_directory');?>/images/quote.jpg"/>
-					
-						<span class="test_quote">Nunc eu ante eget ligula molestie elementum ac leo tellus sagittis eget, mauris convallis eleifend.</span><!-- test_quote -->
-					
-				</div><!-- test_inner -->
-				
-			</div><!-- test_left -->
-			
-			<div class="test_col">
-				
-				<div class="test_inner">
-					
-					<?php echo file_get_contents("wp-content/themes/clifford/images/icon-stars.svg"); ?>
-					
-					<span class="test_description">“Mauris condimentum rutrum velit, vitae laoreet tellus sagittis eget. Duis vitae enim odio. Aliquam pellentesque finibus purus at ullamcorper. Nunc pellentesque dapibus ultricies. Integer in vulputate mi, quis ultricies risus. Sed tincidunt ex nunc, a imperdiet quam congue vitae. Praesent luctus, felis quis vehicula commodo, diam orci hendrerit nunc, sit amet pretium ex magna vitae ante.”</span><!-- test_description -->
-					
-					<span class="test_name">J.D.&nbsp;&nbsp;|&nbsp;&nbsp;molestie vestibulum</span><!-- test_name -->
-					
-				</div><!-- test_inner -->
-				
-			</div><!-- test_right -->
-			
-		</div><!-- single_test_wrapper -->
 		
-		<div class="single_test_wrapper">
-			
-			<div class="test_col">
+		<?php if(get_field('testimonials_page')): ?>
+		 
+			<?php while(has_sub_field('testimonials_page')): ?>
+		 
 				
-				<div class="test_inner">
+		    <div class="single_test_wrapper">
+			
+					<div class="test_col">
+				
+						<div class="test_inner">
 						
-						<img src="<?php bloginfo('template_directory');?>/images/quote.jpg"/>
+							<img src="<?php bloginfo('template_directory');?>/images/quote.jpg"/>
 					
-						<span class="test_quote">Nunc eu ante eget ligula molestie elementum ac leo tellus sagittis eget, mauris convallis.</span><!-- test_quote -->
+							<span class="test_quote"><?php the_sub_field( 'testimonial_quote' ); ?></span><!-- test_quote -->
 					
-				</div><!-- test_inner -->
+					</div><!-- test_inner -->
 				
-			</div><!-- test_left -->
+				</div><!-- test_left -->
 			
-			<div class="test_col">
+				<div class="test_col">
 				
-				<div class="test_inner">
+					<div class="test_inner">
 					
-					<?php echo file_get_contents("wp-content/themes/clifford/images/icon-stars.svg"); ?>
+						<?php echo file_get_contents("wp-content/themes/clifford/images/icon-stars.svg"); ?>
 					
-					<span class="test_description">“Mauris condimentum rutrum velit, vitae laoreet tellus sagittis eget. Duis vitae enim odio. Aliquam pellentesque finibus purus at ullamcorper. Nunc pellentesque dapibus ultricies. Integer in vulputate mi, quis ultricies risus. Sed tincidunt ex nunc, a imperdiet quam congue vitae. Praesent luctus, felis quis vehicula commodo, diam orci hendrerit nunc, sit amet pretium ex magna vitae ante.”</span><!-- test_description -->
+						<span class="test_description"><?php the_sub_field( 'testimonial_description' ); ?></span><!-- test_description -->
 					
-					<span class="test_name">J.D.&nbsp;&nbsp;|&nbsp;&nbsp;molestie vestibulum</span><!-- test_name -->
+						<span class="test_name"><?php the_sub_field( 'name' ); ?>&nbsp;&nbsp;|&nbsp;&nbsp;<?php the_sub_field( 'location' ); ?></span><!-- test_name -->
 					
-				</div><!-- test_inner -->
+					</div><!-- test_inner -->
 				
-			</div><!-- test_right -->
+				</div><!-- test_right -->
 			
-		</div><!-- single_test_wrapper -->
+			</div><!-- single_test_wrapper -->
+			
+			
+			<?php endwhile; ?>
+		 
+		<?php endif; ?>
 		
-		<div class="single_test_wrapper">
-			
-			<div class="test_col">
-				
-				<div class="test_inner">
-						
-						<img src="<?php bloginfo('template_directory');?>/images/quote.jpg"/>
-					
-						<span class="test_quote">Nunc eu ante eget ligula molestie elementum ac leo tellus sagittis eget, mauris convallis.</span><!-- test_quote -->
-					
-				</div><!-- test_inner -->
-				
-			</div><!-- test_left -->
-			
-			<div class="test_col">
-				
-				<div class="test_inner">
-					
-					<?php echo file_get_contents("wp-content/themes/clifford/images/icon-stars.svg"); ?>
-					
-					<span class="test_description">“Mauris condimentum rutrum velit, vitae laoreet tellus sagittis eget. Duis vitae enim odio. Aliquam pellentesque finibus purus at ullamcorper. Nunc pellentesque dapibus ultricies. Integer in vulputate mi, quis ultricies risus. Sed tincidunt ex nunc, a imperdiet quam congue vitae. Praesent luctus, felis quis vehicula commodo, diam orci hendrerit nunc, sit amet pretium ex magna vitae ante.”</span><!-- test_description -->
-					
-					<span class="test_name">J.D.&nbsp;&nbsp;|&nbsp;&nbsp;molestie vestibulum</span><!-- test_name -->
-					
-				</div><!-- test_inner -->
-				
-			</div><!-- test_right -->
-			
-		</div><!-- single_test_wrapper -->
-		
-		<div class="single_test_wrapper">
-			
-			<div class="test_col">
-				
-				<div class="test_inner">
-						
-						<img src="<?php bloginfo('template_directory');?>/images/quote.jpg"/>
-					
-						<span class="test_quote">Nunc eu ante eget ligula molestie elementum ac leo tellus sagittis eget, mauris convallis.</span><!-- test_quote -->
-					
-				</div><!-- test_inner -->
-				
-			</div><!-- test_left -->
-			
-			<div class="test_col">
-				
-				<div class="test_inner">
-					
-					<?php echo file_get_contents("wp-content/themes/clifford/images/icon-stars.svg"); ?>
-					
-					<span class="test_description">“Mauris condimentum rutrum velit, vitae laoreet tellus sagittis eget. Duis vitae enim odio. Aliquam pellentesque finibus purus at ullamcorper. Nunc pellentesque dapibus ultricies. Integer in vulputate mi, quis ultricies risus. Sed tincidunt ex nunc, a imperdiet quam congue vitae. Praesent luctus, felis quis vehicula commodo, diam orci hendrerit nunc, sit amet pretium ex magna vitae ante.”</span><!-- test_description -->
-					
-					<span class="test_name">J.D.&nbsp;&nbsp;|&nbsp;&nbsp;molestie vestibulum</span><!-- test_name -->
-					
-				</div><!-- test_inner -->
-				
-			</div><!-- test_right -->
-			
-		</div><!-- single_test_wrapper -->
 		
 	</div><!-- testimonial_wrapper -->
 		

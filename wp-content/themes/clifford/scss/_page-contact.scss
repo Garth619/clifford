@@ -1,0 +1,22 @@
+body.page-template-template-contact {
+	.footer_right {
+		display: none;
+	}
+}
+
+
+.contact_wrapper {
+	max-width:1345px;
+	margin:0 auto;
+	display: flex;
+	height:200px;
+	justify-content: space-between;
+}
+
+
+.contact_col {
+	flex-basis:30%;
+}
+
+
+

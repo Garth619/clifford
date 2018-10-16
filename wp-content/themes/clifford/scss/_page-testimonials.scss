@@ -98,6 +98,177 @@
 				font-weight: 800;
 				letter-spacing: 0.2em;
 				margin-top:42px;
+				line-height: 18px;
+				font-size:16px;
 			}
 		}
 	}
+	
+	
+	@media screen and (max-width: 1285px) {
+		
+		
+.testimonial_wrapper {
+	margin-top:0
+}
+
+
+
+
+.single_test_wrapper {
+	flex-direction: column;
+	padding:60px 0 75px;
+	&:nth-of-type(2n + 1) {
+		.test_col {
+			&:last-of-type {
+				padding-left:0;
+			}
+		}
+	}
+	&:nth-of-type(2n + 2) {
+		.test_col {
+			&:first-of-type {
+				order:1;
+			}
+			&:last-of-type {
+				padding-left:0;
+				order:2;
+			}
+			svg {
+				.stars-st0{
+					
+				}
+			}
+			span.test_quote {
+				
+			}
+			span.test_name {
+				
+			}
+		}
+	}
+	&:last-of-type {
+	
+	}
+	.test_inner {
+		
+	}
+	.test_col {
+		flex-basis: auto;
+		&:first-of-type {
+			
+		}
+		&:last-of-type{
+			margin-top:35px;
+		}
+			img {
+				margin-left:-40px;
+				width:100px;
+				height:100px;
+			}
+			span.test_quote {
+				padding-left:0;
+				font-size:45px;
+				line-height:50px;
+				padding-top:40px;
+			}
+			svg {
+				
+				.stars-st0{
+					
+				}
+			}
+			span.test_description {
+				
+			}
+			span.test_name {
+				
+			}
+		}
+	}
+		
+		
+	} /* Media Query */
+	
+	
+	
+	@media screen and (max-width: 767px) {
+		
+		
+		
+		.testimonial_wrapper {
+			margin-bottom: 65px;
+		}
+
+
+
+.single_test_wrapper {
+	padding: 40px 0 54px;
+	&:nth-of-type(2n + 1) {
+		.test_col {
+			&:last-of-type {
+				
+			}
+		}
+	}
+	&:nth-of-type(2n + 2) {
+		.test_col {
+			&:first-of-type {
+			
+			}
+			&:last-of-type {
+				
+			}
+			svg {
+				.stars-st0{
+					
+				}
+			}
+			span.test_quote {
+				
+			}
+			span.test_name {
+				
+			}
+		}
+	}
+	&:last-of-type {
+	
+	}
+	.test_inner {
+		
+	}
+	.test_col {
+		
+		&:first-of-type {
+			
+		}
+		&:last-of-type{
+			margin-top: 15px;
+		}
+			img {
+				margin-left:-15px;
+			}
+			span.test_quote {
+				font-size:35px;
+				line-height: 40px;
+			}
+			svg {
+				
+				.stars-st0{
+					
+				}
+			}
+			span.test_description {
+				
+			}
+			span.test_name {
+				
+			}
+		}
+	}
+		
+		
+		
+		
+	} /* Media Query */
