@@ -153,6 +153,7 @@ body.page-template-template-meetteam {
 			font-family: $aktiv;
 			font-weight: 800;
 			font-size: 20px;
+			flex-shrink: 0;
 			letter-spacing: 0.14em;
 		}
 		span.team_title_line {
@@ -267,3 +268,38 @@ body.page-template-template-meetteam {
 		letter-spacing: 0.2em;
 	}
 }
+
+
+@media screen and (max-width: 1290px) {
+	
+	
+	
+	.att_intro_right {
+		padding-left: 6%;
+	}
+	
+	
+	
+} /* Media Query */
+
+
+
+
+@media screen and (max-width: 1175px) {
+	
+	
+	.att_intro_inner {
+		flex-direction: column;
+	}
+	
+	.att_intro_left {
+		order:2;
+	}
+	
+	.att_intro_right {
+		order:1;
+		padding-left:0;
+	}
+	
+	
+} /* Media Query */

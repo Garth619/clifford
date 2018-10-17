@@ -182,7 +182,7 @@ get_header(); ?>
 			
 			<div class="team_title_wrapper">
 				
-				<span class="team_title">Partners</span><!-- team_title_wrapper -->
+				<span class="team_title">Associates</span><!-- team_title_wrapper -->
 				
 				<span class="team_title_line"></span><!-- team_title_line -->
 				
@@ -321,7 +321,7 @@ get_header(); ?>
 			
 			<div class="team_title_wrapper">
 				
-				<span class="team_title">Partners</span><!-- team_title_wrapper -->
+				<span class="team_title">Of Counsel</span><!-- team_title_wrapper -->
 				
 				<span class="team_title_line"></span><!-- team_title_line -->
 				
