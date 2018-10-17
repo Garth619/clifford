@@ -755,6 +755,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/images/marker.png": {
+		"ft": 32768,
+		"iS": 2328,
+		"oA": 0,
+		"oAP": "/images/marker.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/images/media-01.png": {
 		"ft": 32768,
 		"iS": 5173,
