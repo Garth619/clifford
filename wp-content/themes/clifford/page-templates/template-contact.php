@@ -18,14 +18,14 @@ get_header(); ?>
 			<a class="contact_page_phone" href="">
 				
 				<span>Toll Free</span>
-				<span>(800) 899-0410</span>
+				<span><?php the_field( 'firm_toll_free','option'); ?></span>
 				
 			</a><!-- contact_page_phone -->
 			
 			<a class="contact_page_phone" href="">
 				
 				<span>Phone</span>
-				<span>(312) 899-9090</span>
+				<span><?php the_field( 'firm_phone','option'); ?></span>
 				
 			</a><!-- contact_page_phone -->
 			
@@ -35,9 +35,9 @@ get_header(); ?>
 			
 			<img class="firm_img" alt="" src="<?php bloginfo('template_directory');?>/images/logo-mobile.svg"/>
 			
-			<span class="contact_page_address">120 North LaSalle Street<br/> 31st Floor<br/> Chicago, IL 60602</span><!-- contact_page_address -->
+			<span class="contact_page_address"><?php the_field( 'firm_street_address','option'); ?></span><!-- contact_page_address -->
 			
-			<a class="cp_get_directions" href="">Get Directions</a><!-- cp_get_directions -->
+			<a class="cp_get_directions" href="<?php the_field( 'firm_directions_link','option'); ?>" target="_blank">Get Directions</a><!-- cp_get_directions -->
 			
 		</div><!-- contact_col -->
 		
@@ -45,37 +45,37 @@ get_header(); ?>
 			
 			<div class="cp_social_media">
 						
-						<a class="fb" href="" target="_blank">
+						<a class="fb" href="<?php the_field( 'facebook_link','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-fb.svg"); ?>
 							
 						</a><!-- fb -->
 						
-						<a class="twitter" href="" target="_blank">
+						<a class="twitter" href="<?php the_field( 'twitter_link','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-t.svg"); ?>
 							
 						</a><!-- twitter -->
 						
-						<a class="youtube" href="" target="_blank">
+						<a class="youtube" href="<?php the_field( 'youtube_link','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-yt.svg"); ?>
 							
 						</a><!-- youtube -->
 						
-						<a class="google" href="" target="_blank">
+						<a class="google" href="<?php the_field( 'google_plus_link','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-g.svg"); ?>
 							
 						</a><!-- google -->
 						
-						<a class="insta" href="" target="_blank">
+						<a class="insta" href="<?php the_field( 'instagram','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-insta.svg"); ?>
 							
 						</a><!-- insta -->
 						
-						<a class="linkedin" href="" target="_blank">
+						<a class="linkedin" href="<?php the_field( 'linked_in_link','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-in.svg"); ?>
 							
@@ -91,7 +91,7 @@ get_header(); ?>
 
 <div class="iframe_map">
 		
-		<iframe src="https://snazzymaps.com/embed/106519" width="100%" height="100%" style="border:none;"></iframe>
+		<?php the_field( 'firm_map_embed','option'); ?>
 
 	</div><!-- iframe_map -->
 

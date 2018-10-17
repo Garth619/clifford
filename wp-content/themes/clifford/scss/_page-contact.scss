@@ -98,23 +98,23 @@ a.contact_page_phone {
 		}
 	}
 	a.youtube {
-					svg {
-						width:30px;
-						height:30px;
-					}
-				}
-				a.google {
-					svg {
-						width:27px;
-						height:27px;
-					}
-				}
-				a.linkedin {
-					svg {
-						width:20px;
-						height:20px;
-					}
-				}
+		svg {
+			width:30px;
+			height:30px;
+		}
+	}
+	a.google {
+		svg {
+			width:27px;
+			height:27px;
+		}
+	}
+	a.linkedin {
+		svg {
+			width:20px;
+			height:20px;
+		}
+	}
 }
 
 
@@ -122,3 +122,191 @@ a.contact_page_phone {
 	width:100%;
 	height:550px;
 }
+
+
+
+@media screen and (max-width: 1290px) {
+	
+	
+	.contact_wrapper {
+		flex-direction: column;
+		padding-bottom:70px;
+	}
+	
+	
+.contact_col {
+	flex-basis: auto;
+	margin:0 auto;
+	&:first-of-type {
+		order:2;
+		width:380px;
+	}
+	&:nth-of-type(2) {
+		order:1;
+		width:450px;
+	}
+	&:last-of-type {
+		order:3;
+		width:380px;
+	}
+	span.contact_page_address {
+		
+	}
+	a.cp_get_directions {
+		&:hover {
+			
+		}
+	}
+	img.firm_img {
+	
+	}
+}
+
+
+.cp_social_media {
+	margin-left:auto;
+	margin-right: auto;
+	a {
+		
+		&:hover {
+			svg {
+				.sm-st0 {
+					
+				}
+			}
+		}
+		svg {
+			
+			.sm-st0 {
+				
+			}
+		}
+	}
+	a.youtube {
+		svg {
+			
+		}
+	}
+	a.google {
+		svg {
+			
+		}
+	}
+	a.linkedin {
+		svg {
+			
+		}
+	}
+}
+	
+	
+	
+	
+} /* Media Query */
+
+
+@media screen and (max-width: 1066px) {
+	
+.iframe_map {
+	height:350px;
+}
+	
+} /* Media Query */
+
+
+@media screen and (max-width: 767px) {
+	
+	.contact_wrapper {
+		margin: 67px auto 20px;
+	}
+	
+.contact_col {
+	line-height: 27px;
+	font-size: 23px;
+	
+	&:first-of-type {
+		width:360px;
+		padding: 55px 25px 0;
+	}
+	&:nth-of-type(2) {
+		width:360px;
+	}
+	&:last-of-type {
+		width:360px;
+	}
+	span.contact_page_address {
+		
+	}
+	a.cp_get_directions {
+		&:hover {
+			
+		}
+	}
+	img.firm_img {
+	
+	}
+}
+
+
+a.contact_page_phone {
+	margin-bottom:4px;
+}
+
+
+.iframe_map {
+	height:275px;
+}
+	
+	
+	
+	
+} /* Media Query */
+
+
+@media screen and (max-width: 767px) {
+	
+	
+	
+	
+	
+	
+	
+	
+} /* Media Query */
+
+
+@media screen and (max-width: 400px) {
+	
+	
+	
+	.contact_col {
+		width: 100%;
+		&:first-of-type {
+			width:100%;
+		
+		}
+		&:nth-of-type(2) {
+			width:100%;
+		}
+		&:last-of-type {
+			width:100%;
+		}
+		img.firm_img {
+			max-width:100%;
+			height:auto;
+		}
+	}
+	
+	a.contact_page_phone {
+		margin-bottom:15px;
+		display: flex;
+		
+		text-align: center;
+		flex-direction: column;
+		span {
+			
+		}
+	}
+	
+	
+} /* Media Query */

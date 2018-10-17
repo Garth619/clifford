@@ -32,9 +32,9 @@
 				
 				<div class="address_wrapper">
 					
-					<span class="address">120 North LaSalle Street 31st Floor<br/> Chicago, IL 60602 </span><!-- address -->
+					<span class="address"><?php the_field( 'firm_street_address','option'); ?> </span><!-- address -->
 					
-					<a class="get_directions" href="" target="_blank">Get Directions</a><!-- get_directions -->
+					<a class="get_directions" href="<?php the_field( 'firm_directions_link','option'); ?>" target="_blank">Get Directions</a><!-- get_directions -->
 					
 				</div><!-- address_wrapper -->
 				
@@ -42,45 +42,45 @@
 					
 					<div class="footer_phone">
 						
-						<a class="" href=""><span>Toll Free</span> <span>(800) 899-0410</span></a>
+						<a class="" href=""><span>Toll Free</span> <span><?php the_field( 'firm_toll_free','option'); ?></span></a>
 						
-						<a class="" href=""><span>Phone</span> <span>(312) 899-9090</span></a>
+						<a class="" href=""><span>Phone</span> <span><?php the_field( 'firm_phone','option'); ?></span></a>
 						
 					</div><!-- footer_phone -->
 					
 					<div class="social_media_wrapper">
 						
-						<a class="fb" href="" target="_blank">
+						<a class="fb" href="<?php the_field( 'facebook_link','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-fb.svg"); ?>
 							
 						</a><!-- fb -->
 						
-						<a class="twitter" href="" target="_blank">
+						<a class="twitter" href="<?php the_field( 'twitter_link','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-t.svg"); ?>
 							
 						</a><!-- twitter -->
 						
-						<a class="youtube" href="" target="_blank">
+						<a class="youtube" href="<?php the_field( 'youtube_link','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-yt.svg"); ?>
 							
 						</a><!-- youtube -->
 						
-						<a class="google" href="" target="_blank">
+						<a class="google" href="<?php the_field( 'google_plus_link','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-g.svg"); ?>
 							
 						</a><!-- google -->
 						
-						<a class="insta" href="" target="_blank">
+						<a class="insta" href="<?php the_field( 'instagram','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-insta.svg"); ?>
 							
 						</a><!-- insta -->
 						
-						<a class="linkedin" href="" target="_blank">
+						<a class="linkedin" href="<?php the_field( 'linked_in_link','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-in.svg"); ?>
 							
