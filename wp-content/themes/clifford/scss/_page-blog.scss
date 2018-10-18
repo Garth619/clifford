@@ -1,0 +1,194 @@
+.sidebar_blog {
+	.sidebar {
+		.pa_sidebar {
+			ul {
+/*
+				li.current-cat {
+					a {
+						background:$greyone;
+						color: $browntwo;
+					}
+				}
+*/
+				li {
+					a {
+						color:#000;
+						padding-left:20px;
+						padding-right:20px;
+						transition: all 200ms ease-in-out;
+						&:hover {
+							background:$greyone;
+							color: $browntwo;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+h3.widgettitle {
+	display: none;
+}
+
+
+
+body.blog, body.archive, body.single {
+	h2 {
+		a {
+			&:after {
+				display: none;
+			}
+		}
+	}
+	.container {
+		padding-bottom:65px;
+	}
+}
+
+
+.blog_posts {
+	padding:70px 0;
+	border-bottom:1px solid $grethree;
+	&:last-of-type {
+		border-bottom:3px solid $browntwo;
+	}
+}
+
+.meta_data {
+	text-transform: uppercase;
+	color:$greentwo;
+	font-size:16px;
+	letter-spacing: 0.2em;
+	font-family: $aktiv;
+	font-weight:800;
+	margin-top:20px;
+	margin-bottom:20px;
+	span {
+		display: inline-block;
+	}
+	ul.post-categories {
+		list-style: none;
+		display: inline-block;
+		margin-bottom:0;
+		li {
+			padding:0;
+			margin:0;
+			display: inline-block;
+			&:last-of-type {
+				&:after {
+					display: none;
+				}
+			}
+			&:before {
+				display: none;
+			}
+			&:after {
+				content:",";
+			}
+			a {
+				color:$greenone;
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+
+.blog_content {
+	
+}
+
+a.view_post {
+	color:$greentwo;
+	text-transform: uppercase;
+	font-family: $aktiv;
+	font-weight: 800;
+	font-size:13px;
+	letter-spacing: 0.2em;
+	margin-top:25px;
+	transition: all 200ms ease-in-out;
+	&:hover {
+		color:$browntwo;
+		&:after {
+			background:$browntwo;
+		}
+	}
+	&:after {
+		background:$greentwo;
+		height:2px;
+	}
+}
+
+
+
+.pagination {
+	display: flex;
+	justify-content: flex-end;
+	margin-top:5px;
+	ul {
+		li {
+			padding-left:0;
+			display: inline-block;
+			font-family: $aktiv;
+			font-weight:800;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			font-size:13px;
+			margin:0 1px;
+			&:before {
+				display: none;
+			}
+			a {
+				color:$greentwo;
+				transition: all 200ms ease-in-out;
+				&:after {
+					display: none;
+				}
+				&:hover {
+					color:$browntwo;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1066px) {
+	
+	
+	
+	.blog_feed {
+		margin-top:-25px;
+	}
+	
+	.blog_posts {
+		padding:40px 0;
+	}
+	
+	
+	
+} /* Media Query */
+
+@media screen and (max-width: 767px) {
+	
+	
+	
+	
+	.blog_posts {
+    padding: 40px 0;
+	}
+	
+	
+	body.blog, body.archive, body.single {
+		.container {
+			padding-bottom:35px;
+		}
+	}
+	
+	
+	
+} /* Media Query */

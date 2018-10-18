@@ -1,9 +1,18 @@
-<?php get_header(); ?>
+<?php 
+	
+	get_header(); ?>
 
 
+<?php get_template_part( 'internal', 'banner' ); ?>
 
+
+<div id="internal_main" class="two_col">
+	
+	<?php get_sidebar('blog'); ?>
+	
+	<div class="container content">
 		
-		<?php
+				<?php
 	/*
 	 * Queue the first post, that way we know
 	 * what date we're dealing with (if that is the case).
@@ -27,9 +36,7 @@
 <?php endif; ?>
 			</h1>
 		
-		
-				
-			<?php
+					<?php
 	/*
 	 * Since we called the_post() above, we need to
 	 * rewind the loop back to the beginning that way
@@ -42,11 +49,27 @@
 	get_template_part( 'loop', 'archive' );
 ?>
 
+			
+		
+	</div><!-- container -->
+	
+</div><!-- internal_main -->
+
+<?php get_footer(); ?>
+
+
+
+
+		
+
+		
+		
 				
+	
 			
 
 
-<?php get_footer(); ?>
+
 
 
 		

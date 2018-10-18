@@ -15,32 +15,52 @@
 
 <?php endif; ?>
 
+<div class="blog_feed">
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
+	<div class="blog_posts">
+		
+		<h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+		
+		<div class="meta_data">
+		
+		
+			<span>
+				Posted On
+				<span class="date"><?php $pfx_date = get_the_date(); echo $pfx_date ?></span><!-- date -->
+				to
+			
+				<?php echo get_the_category_list();?>
+		
+				</span>
+		
+		</div><!-- meta_data -->
+			
+		<div class="blog_content">
+			
+			<?php echo wp_trim_words( get_the_content(), 65, '...' );?>
+			
+			<?php edit_post_link( __( 'Edit'), '', '' ); ?>
 	
-		
-	<h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-		
-	<?php $pfx_date = get_the_date(); echo $pfx_date ?>
-			
-	<?php echo get_the_category_list();?>
-			
-	<?php echo wp_trim_words( get_the_content(), 54, '...' );?>
-			
-	<?php edit_post_link( __( 'Edit'), '', '' ); ?>
+		</div><!-- blog_content -->
+	
+		<a class="view_post" href="<?php the_permalink();?>">View Post</a><!-- view_post -->
 
-			
+	</div><!-- blog_posts -->		
 		
 <?php endwhile; // end of loop ?>
 
 <?php endif; ?>
+
+</div><!-- blog_feed -->
 
 <div class="pagination">
 
 	<?php wpbeginner_numeric_posts_nav(); ?>
 
 </div><!-- pagination -->
+
 
 
 <!--
@@ -56,4 +76,5 @@
 
 <?php endif; ?>
 -->
+
 

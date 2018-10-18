@@ -160,7 +160,6 @@ span.title_line {
 				font-family: $aktiv;
 				font-weight:800;
 				font-size:20px;
-				flex-basis:216px;
 				flex-shrink:0;
 				line-height: 20px;
 				letter-spacing: 0.14em;
@@ -185,7 +184,8 @@ span.title_line {
 				li {
 					font-family: $aktiv;
 					font-weight: 700;
-					
+					font-size:16px;
+					line-height: 18px;
 					a {
 						text-decoration: none;
 						border-bottom:1px solid #eaeae5;

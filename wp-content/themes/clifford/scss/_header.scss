@@ -68,6 +68,8 @@ header.grey_header {
 }
 
 nav {
+	position: relative;
+	z-index:20;
 	ul {
 		list-style: none;
 		li {

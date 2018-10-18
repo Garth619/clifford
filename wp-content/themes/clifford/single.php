@@ -1,18 +1,32 @@
 <?php get_header(); ?>
 
 
+<?php get_template_part( 'internal', 'banner' ); ?>
 
-				
-				<?php get_template_part( 'loop', 'single' );?>
-				
-			
-			
-			<?php get_sidebar('blog'); ?>
-			
+
+<div id="internal_main" class="two_col">
 	
-
+	<?php get_sidebar('blog'); ?>
+	
+	<div class="container content">
+		
+		<h1><?php the_title();?></h1>
+		
+		<?php get_template_part( 'loop', 'single' );?>
+		
+	</div><!-- container -->
+	
+</div><!-- internal_main -->
 
 <?php get_footer(); ?>
+
+
+
+
+
+				
+				
+				
 
 
 
