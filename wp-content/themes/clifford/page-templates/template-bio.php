@@ -11,8 +11,16 @@ get_header(); ?>
 		<div class="att_image_wrapper tablet">
 		
 			<?php $attorney_image = get_field( 'attorney_image' ); ?>
+			
+			<?php if ( $attorney_image ) : ?>
 
 			<img src="<?php echo $attorney_image['url']; ?>" alt="<?php echo $attorney_image['alt']; ?>" />
+			
+			<?php else:?>
+			
+			<img alt="Placeholder Image" src="<?php bloginfo('template_directory');?>/images/placeholder.png"/>
+			
+			<?php endif;?>
 		
 		</div><!-- att_image_wrapper -->
 		
