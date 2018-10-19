@@ -1,0 +1,66 @@
+body.page-template-template-caseresults {
+	#internal_main {
+		background: $greyone;
+	}
+}
+
+
+.case_results_wrapper {
+	max-width:1525px;
+	margin:0 auto;
+}
+
+
+.cr_filter_wrapper {
+	max-width:917px;
+	margin:77px auto 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.filter_inner {
+	flex-basis: 48%;
+	span.fitler_title {
+		display: block;
+		text-transform: uppercase;
+		font-family: $aktiv;
+		font-weight:800;
+		font-size:18px;
+		letter-spacing: 0.1em;
+		text-align: center;
+	}
+	
+}
+
+
+.input_wrapper {
+	margin-top:30px;
+	.input_parent {
+		background:#fff;
+		height:59px;
+		padding:22px 23px 0;
+		position: relative;
+		cursor: pointer;
+		span.input_placeholder {
+			display: block;
+			color:$browntwo;
+			text-transform: uppercase;
+			font-family: $aktiv;
+			font-weight: 700;
+			font-size:15px;
+			letter-spacing: 0.1em;
+			&:after {
+				content:"";
+				display: block;
+				position: absolute;
+				top:25px;
+				right:23px;
+				width:7px;
+				height:7px;
+				background: $greenone;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
