@@ -452,7 +452,47 @@ $('.att_bio_awards').slick({
  });
  
  
- 
+ $('.ap_slider').slick({
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 5,
+	arrows:true,
+	dots:false,
+	prevArrow:'.ap_buttton_left',
+	nextArrow:'.ap_buttton_right',
+	responsive: [
+    {
+      breakpoint: 1780,
+      settings:{
+	      slidesToShow: 4,
+        slidesToScroll: 4,
+      }
+     },
+     {
+      breakpoint: 1526,
+      settings:{
+	      slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+     },
+     {
+      breakpoint: 1230,
+      settings:{
+	      slidesToShow: 2,
+        slidesToScroll: 2,
+       
+      }
+     },
+     {
+      breakpoint: 896,
+      settings:{
+	      slidesToShow: 1,
+        slidesToScroll: 1,
+        
+      }
+     }
+    ]
+ });
 
 
  
