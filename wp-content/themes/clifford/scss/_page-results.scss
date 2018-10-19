@@ -15,7 +15,7 @@ body.page-template-template-caseresults {
 
 
 .filter_inner {
-	flex-basis: 48%;
+	flex-basis: 47.4%;
 	span.fitler_title {
 		display: block;
 		text-transform: uppercase;
@@ -35,9 +35,11 @@ body.page-template-template-caseresults {
 	.input_parent {
 		background:#fff;
 		height:59px;
-		padding:22px 23px 0;
+		padding: 0px 43px 0 23px;
 		position: relative;
 		cursor: pointer;
+		display: flex;
+		align-items: center;
 		span.input_placeholder {
 			display: block;
 			color:$browntwo;
@@ -85,8 +87,8 @@ body.page-template-template-caseresults {
 
 
 .case_results_wrapper {
-	max-width:1580px;
-	margin:110px auto 0;
+	max-width:1560px;
+	margin:140px auto 0;
 	padding-bottom:120px;
 	display: flex;
 	flex-wrap: wrap;
@@ -99,7 +101,13 @@ body.page-template-template-caseresults {
 	background:#fff;
 	position: relative;
 	width:21.5%;
-	margin: 0px 1.75% 40px;
+	margin: 0px 1.75% 45px;
+	&:hover {
+		.single_cr_hover {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 	.single_cr_inner {
 		padding:113px 0 0;
 		span.amount {
@@ -149,6 +157,9 @@ body.page-template-template-caseresults {
 		display: flex;
 		align-items: center;
 		padding:0 15px;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 200ms ease-in-out;
 		.cr_hover_inner {
 			span {
 				color:#fff;
@@ -170,3 +181,289 @@ body.page-template-template-caseresults {
 		}
 	}
 }
+
+
+
+	a.filter_submit {
+		color:#fff;
+		text-transform: uppercase;
+		font-family: $aktiv;
+		font-weight: 800;
+		font-size:17px;
+		letter-spacing: 0.18em;
+		padding:26px 10px;
+		position: relative;
+		display: block;
+		cursor: pointer;
+		text-decoration: none;
+		position: relative;
+		z-index: 5;
+		text-align: center;
+		max-width:195px;
+		margin:45px auto 0;
+		&:hover {
+			&:before {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		&:after {
+			content:"";
+			border-radius: 45px;
+			width:100%;
+			height:100%;
+			display: block;
+			position: absolute;
+			top:0;
+			left:0;
+			z-index: -2;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c57a55+0,e29e7b+31,e29e7b+73,c57a55+100 */
+			background: #c57a55; /* Old browsers */
+			background: -moz-linear-gradient(top, #c57a55 0%, #e29e7b 31%, #e29e7b 73%, #c57a55 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, #c57a55 0%,#e29e7b 31%,#e29e7b 73%,#c57a55 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, #c57a55 0%,#e29e7b 31%,#e29e7b 73%,#c57a55 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c57a55', endColorstr='#c57a55',GradientType=0 ); /* IE6-9 */
+			transition: all 200ms ease-in-out;
+		}
+		&:before {
+			content:"";
+			width:100%;
+			border-radius: 45px;
+			height:100%;
+			display: block;
+			position: absolute;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 200ms ease-in-out;;
+			top:0;
+			left:0;
+			z-index: -1;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#005941+0,008964+32,008964+70,005941+100 */
+			background: #005941; /* Old browsers */
+			background: -moz-linear-gradient(top, #005941 0%, #008964 32%, #008964 70%, #005941 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, #005941 0%,#008964 32%,#008964 70%,#005941 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, #005941 0%,#008964 32%,#008964 70%,#005941 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005941', endColorstr='#005941',GradientType=0 ); /* IE6-9 */
+		}
+		&:hover {
+		
+		}
+}
+
+
+@media screen and (max-width: 1500px) {
+	
+	
+	
+.single_case_result {
+	width:30%;
+	margin: 0px 1.6% 45px;
+	&:hover {
+		.single_cr_hover {
+			
+		}
+	}
+	.single_cr_inner {
+		
+		span.amount {
+			
+		}
+		span.cr_type {
+			t
+			&:after {
+				
+			}
+		}
+		ul.att_list {
+			
+			li {
+				
+			}
+		}
+	}
+	.single_cr_hover {
+		
+		.cr_hover_inner {
+			span {
+				
+			}
+			span.cr_date {
+				
+			}
+			span.cr_description {
+				
+			}
+		}
+	}
+}
+
+	
+	
+	
+} /* Media Query */
+
+
+
+@media screen and (max-width: 1230px) {
+	
+	
+	.case_results_wrapper {
+		max-width: 960px;
+		margin: 75px auto 0;
+		justify-content: space-between;
+	}
+	
+	
+	
+	
+	
+.single_case_result {
+	width:47%;
+	margin: 0px 0% 45px;
+	&:hover {
+		.single_cr_hover {
+			
+		}
+	}
+	.single_cr_inner {
+		
+		span.amount {
+			
+		}
+		span.cr_type {
+			t
+			&:after {
+				
+			}
+		}
+		ul.att_list {
+			
+			li {
+				
+			}
+		}
+	}
+	.single_cr_hover {
+		
+		.cr_hover_inner {
+			span {
+				
+			}
+			span.cr_date {
+				
+			}
+			span.cr_description {
+				
+			}
+		}
+	}
+}
+
+
+.cr_filter_wrapper {
+    max-width: 960px;
+  }
+	
+	
+	
+	
+} /* Media Query */
+
+
+
+@media screen and (max-width: 1066px) {
+	
+	
+	.case_results_wrapper {
+		padding-bottom:55px;
+	}
+	
+	
+} /* Media Query */
+
+
+
+
+@media screen and (max-width: 767px) {
+	
+
+
+.case_results_wrapper {
+	max-width: 430px;
+}
+
+
+.cr_filter_wrapper {
+	flex-direction: column;
+	max-width: 400px;
+	margin: 70px auto 0;
+}
+
+.input_wrapper {
+	.input_parent {
+		span.input_placeholder {
+			font-size: 14px;
+		}
+	}
+} 
+
+
+
+.filter_inner {
+	&:last-of-type {
+		margin-top:35px;
+	}
+	span.fitler_title {
+		font-size:16px;
+	}
+}
+
+
+.single_case_result {
+	width:100%;
+	height:auto;
+	min-height: 488px;
+	&:hover {
+		.single_cr_hover {
+			
+		}
+	}
+	.single_cr_inner {
+		
+		span.amount {
+			
+		}
+		span.cr_type {
+			t
+			&:after {
+				
+			}
+		}
+		ul.att_list {
+			
+			li {
+				
+			}
+		}
+	}
+	.single_cr_hover {
+		
+		.cr_hover_inner {
+			span {
+				
+			}
+			span.cr_date {
+				
+			}
+			span.cr_description {
+				
+			}
+		}
+	}
+}
+
+	
+	
+	
+	
+} /* Media Query */

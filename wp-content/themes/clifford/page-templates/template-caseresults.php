@@ -65,6 +65,8 @@ get_header(); ?>
 			</div><!-- filter_inner -->
 			
 		</div><!-- cr_filter_wrapper -->
+		
+		<a class="filter_submit">Submit</a><!-- filter_submit -->
 	
 	<div class="case_results_wrapper">
 		
