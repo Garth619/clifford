@@ -596,8 +596,15 @@ $('.mobile_menu').on('click', function(e) {
 	  $('header').addClass('grey_header');
 	  
   }
+  
+  
+ // case results filter
 
-
+ $('.input_parent').on('click', function(e) {
+   
+ 	$(this).next('ul.input_list').slideToggle(300);
+ 
+ });
 
 
   
