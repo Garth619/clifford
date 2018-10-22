@@ -32,6 +32,9 @@ body.page-template-template-contact {
 	}
 	span.contact_page_address {
 		display: block;
+		max-width: 325px;
+		margin-left:auto;
+		margin-right:auto;
 	}
 	a.cp_get_directions {
 		display: inline-block;

@@ -2,6 +2,7 @@ body.error404 {
 	#internal_main {
     padding-left:55px;
     padding-right:55px;
+    background: $greyone;
 	}
 }
 
@@ -9,6 +10,8 @@ body.error404 {
 .not_found {
 	text-align: center;
 	padding-top:73px;
+	position: relative;
+	z-index: 1;
 	h1.not_found_header {
 		color:$greentwo;
 		font-size:160px;

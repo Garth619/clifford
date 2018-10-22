@@ -3,7 +3,7 @@
 	justify-content: space-between;
 	max-width:1680px;
 	margin:0 auto;
-	padding:0 55px 120px;
+	padding: 0 55px 150px;
 	.about_page_col {
 		flex-basis: 46.5%;
 		flex-shrink:0;
@@ -222,6 +222,7 @@
 	
 	
 	.about_wrapper {
+		padding-bottom:155px;
 		.about_page_col {
 			&:last-of-type {
 				margin-top:20px;
