@@ -155,7 +155,7 @@
 	
 	<span class="as_seen">As Seen On</span><!-- as_seen -->
 	
-	<div class="sec_three_press">
+	<div id="sec_three_press_trigger" class="sec_three_press">
 		
 		<div class="press_button press_left">
 			

@@ -16,7 +16,7 @@
 		
 	</div><!-- footer_left -->
 	
-	<div class="footer_right">
+	<div id="footer_right_trigger" class="footer_right">
 		
 		<img class="footer_bg_image dekstop" data-src="<?php bloginfo('template_directory');?>/images/footer-background-desktop.jpg"/>
 		

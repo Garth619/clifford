@@ -8,7 +8,7 @@
 	
 	<div class="sec_four_bottom">
 		
-		<div class="sec_four_left">
+		<div id="sec_four_left_trigger" class="sec_four_left">
 			
 			<div class="sec_four_inner">
 			

@@ -87,6 +87,33 @@ jQuery(document).ready(function($){
 
 
     createWaypoint('section_one', 'header', 'visible', -80, null, true);
+    
+    createWaypoint('section_three', '#section_three', 'visible', 280, null, false);
+    
+    createWaypoint('sec_three_press_trigger', '.sec_three_press', 'visible', 580, null, false);
+     
+    createWaypoint('section_four', '#section_four', 'visible', 280, null, false);
+    
+    createWaypoint('sec_four_left_trigger', '#sec_four_left_trigger', 'visible', 380, null, false);
+    
+    createWaypoint('sec_five_slider_trigger', '#sec_five_slider_trigger', 'visible', 550, null, false);
+    
+    createWaypoint('footer_right_trigger', '#footer_right_trigger', 'visible', 500, null, false);
+    
+    
+    
+    
+    
+     
+    
+    
+    
+    
+    // load section one animation
+    
+    
+    
+    $('#section_one').addClass('visible');
    
 
 

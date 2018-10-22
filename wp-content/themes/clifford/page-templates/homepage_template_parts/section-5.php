@@ -44,7 +44,7 @@
 		
 		<span class="sec_five_slider_title">Nationally Recognized For Excellence</span><!-- sec_five_slider_title -->
 		
-		<div class="sec_five_slide_wrapper">
+		<div id="sec_five_slider_trigger" class="sec_five_slide_wrapper">
 			
 			<div class="sec_five_button sec_five_left">
 				

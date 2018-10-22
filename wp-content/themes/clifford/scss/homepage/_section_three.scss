@@ -110,6 +110,9 @@
 	margin-right:20px;
 	position: relative;
 	cursor: pointer;
+	a {
+		display: block;
+	}
 	&:hover {
 		.video_wrapper {
 			background: rgba(0,0,0,0.4);
