@@ -424,12 +424,17 @@ svg#arrow {
 	
 	.sec_three_inner {
 		max-width:1099px;
+		h1 {
+			max-width: 757px;
+		}
 	}
 	
 	
 	
 	.sec_three_left {
-		
+		.sec_three_content {
+			max-width: 485px;
+		}
 		.accolades {
 			
 			span.teeup {
@@ -447,7 +452,7 @@ svg#arrow {
 
 .sec_three_press {
 	max-width:1190px;
-	margin: 59px auto 0;
+	margin: 95px auto 0;
 }
 
 
@@ -458,7 +463,7 @@ svg#arrow {
 .sec_three_bottom_content {
 	max-width:1100px;
 	column-gap: 80px;
-	
+	margin: 109px auto 0;
 }
 	
 	
@@ -502,6 +507,7 @@ svg#arrow {
 	.sec_three_image {
 		.video_inner {
 			.video_box {
+				
 				margin-left:auto;
 				margin-right:auto;
 			}
@@ -547,7 +553,25 @@ span.as_seen {
 }
 
 .sec_three_press {
-	
+	margin: 54px auto 0;
+}
+
+
+	.sec_three_image {
+		.video_inner {
+			.video_box {
+				margin-top: -26px;
+			}
+		}
+	} 
+
+.sec_three_left {
+	.accolades {
+		padding: 71px 0 0;
+		span.question {
+			margin-bottom: 26px;
+		}
+	}
 }
 	
 	
@@ -577,6 +601,7 @@ span.as_seen {
 	.sec_three_left {
 		.sec_three_content {
 			margin-top: 36px;
+			max-width:100%;
 		}
 		.accolades {
 			 padding: 61px 0 0;
