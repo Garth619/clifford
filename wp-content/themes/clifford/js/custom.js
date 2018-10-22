@@ -307,6 +307,7 @@ $('.sp_slider').slick({
 	      adaptiveHeight: true,
 	      slidesToShow: 1,
         slidesToScroll: 1,
+         dots:true,
       }
      }
     
@@ -605,7 +606,10 @@ $('.mobile_menu').on('click', function(e) {
  	$(this).next('ul.input_list').slideToggle(300);
  
  });
+ 
+ 
 
+ 
 
   
 }); // document ready

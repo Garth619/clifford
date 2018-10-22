@@ -48,6 +48,15 @@ body.blog, body.archive, body.single {
 }
 
 
+body.blog {
+	ul {
+		li.view_all {
+			display: none;
+		}
+	}
+}
+
+
 .blog_posts {
 	padding:70px 0;
 	border-bottom:1px solid $grethree;
@@ -64,7 +73,8 @@ body.blog, body.archive, body.single {
 	font-family: $aktiv;
 	font-weight:800;
 	margin-top:20px;
-	margin-bottom:20px;
+	margin-bottom:30px;
+	line-height: 19px;
 	span {
 		display: inline-block;
 	}
@@ -157,6 +167,12 @@ a.view_post {
 }
 
 
+
+.blog_feed {
+	margin-top:-65px;
+}
+
+
 @media screen and (max-width: 1066px) {
 	
 	
@@ -176,7 +192,9 @@ a.view_post {
 @media screen and (max-width: 767px) {
 	
 	
-	
+	.blog_feed {
+    margin-top: -45px;
+	}
 	
 	.blog_posts {
     padding: 40px 0;

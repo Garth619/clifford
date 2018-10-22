@@ -16,7 +16,7 @@
 			<div class="pa_sidebar">
 					
 				<?php dynamic_sidebar( 'recent_posts' ); ?>
-					
+				
 			</div><!-- pa_sidebar -->
 
 			
