@@ -99,8 +99,8 @@
 			<ul>
 				<li>&copy; 2018 by Clifford Law Offices PC.</li>
 				<li>All rights reserved.</li>
-				<li><a class="disclaimer" href=""> Disclaimer</a></li>
-				<li><a href="">Site Map</a></li>
+				<li><a class="disclaimer" href="<?php the_permalink(800);?>"> Disclaimer</a></li>
+				<li><a href="<?php the_permalink(802);?>">Site Map</a></li>
 			</ul>
 	
 	<a class="ilawyer" href="//ilawyermarketing.com" target="_blank">
@@ -119,8 +119,8 @@
 	
 	<ul>
 		<li>&copy; 2018 by Clifford Law Offices PC. All rights reserved.</li>
-		<li><a class="disclaimer" href=""> Disclaimer</a></li>
-		<li><a href="">Site Map</a></li>
+		<li><a class="disclaimer" href="<?php the_permalink(800);?>"> Disclaimer</a></li>
+		<li><a href="<?php the_permalink(802);?>">Site Map</a></li>
 	</ul>
 	
 	<a class="ilawyer" href="//ilawyermarketing.com" target="_blank">

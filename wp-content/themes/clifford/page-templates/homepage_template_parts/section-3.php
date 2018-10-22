@@ -1,30 +1,34 @@
 <section id="section_three">
 	
 	<div class="sec_three_image mobile">
+
+		<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >				
+			
+			<img class="mobile" data-src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
 				
-						<img class="mobile" data-src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
-				
-						<div class="video_wrapper">
+				<div class="video_wrapper">
 					
-							<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
+					<?php echo file_get_contents("wp-content/themes/clifford/images/play-button.svg"); ?>
 					
-							<div class="video_inner">
+						<div class="video_inner">
 						
-								<span class="line"></span><!-- line -->
+							<span class="line"></span><!-- line -->
 						
-								<div class="video_box">
+							<div class="video_box">
 							
-									<img data-src="<?php bloginfo('template_directory');?>/images/logo-mark.svg"/>
+								<img data-src="<?php bloginfo('template_directory');?>/images/logo-mark.svg"/>
 							
-									<span>Watch our video to learn more about us in 90 seconds</span>
+								<span>Watch our video to learn more about us in 90 seconds</span>
 							
-								</div><!-- video_box -->
+							</div><!-- video_box -->
 						
-							</div><!-- video_inner -->
+						</div><!-- video_inner -->
 					
-						</div><!-- video_wrapper -->
+					</div><!-- video_wrapper -->
+						
+				</a>
 					
-					</div><!-- sec_three_image -->
+			</div><!-- sec_three_image -->
 	
 	
 	<div class="sec_three_inner">
@@ -78,7 +82,9 @@
 				<div class="laptop_right">
 		
 					<div class="sec_three_image laptop">
-				
+						
+						<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >	
+							
 						<img data-src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
 				
 						<div class="video_wrapper">
@@ -100,6 +106,8 @@
 							</div><!-- video_inner -->
 					
 						</div><!-- video_wrapper -->
+						
+						</a>
 				
 					</div><!-- sec_three_image -->
 			
@@ -112,6 +120,8 @@
 		<div class="sec_three_right">
 			
 			<div class="sec_three_image desktop">
+				
+				<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >
 				
 				<img data-src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
 				
@@ -134,6 +144,8 @@
 					</div><!-- video_inner -->
 					
 				</div><!-- video_wrapper -->
+				
+				</a>
 				
 			</div><!-- sec_three_image -->
 			
