@@ -627,11 +627,54 @@ $('.mobile_menu').on('click', function(e) {
   
  // case results filter
 
- $('.input_parent').on('click', function(e) {
+ $('.input_inner').on('click', function(e) {
    
- 	$(this).next('ul.input_list').slideToggle(300);
+ 	$(this).find('ul.input_list').slideToggle(300);
+ 	
+ 	$(this).addClass('open');
  
  });
+ 
+ 
+ $(document).click(function (e){
+
+		var container = $(".input_inner.open");
+
+		if (!container.is(e.target) && container.has(e.target).length === 0){
+
+			$('ul.input_list').slideUp();
+		
+		}
+
+	}); 
+	
+	
+	$('ul.input_list li').on('click', function(e) {
+	  
+		var textUpdate = $(this).text();
+		
+		$('ul.input_list li span').replaceWith('<span>' + textUpdate + '</span>');
+		
+		
+		$(this).parent().prev('.input_parent').find('span.input_placeholder').replaceWith('<span class="input_placeholder">' + textUpdate + '</span>');
+		
+		
+		$(this).parents('.input_inner').next('span.clear').fadeIn(300);
+		
+		
+/*
+		var mydata = $(this).data('tag');
+	
+		
+		$('.case_result_types, .videos_wrapper').fadeOut(300).delay(500).fadeIn(400);
+		
+		$('.single_case_results, .single_video').fadeOut(300);
+		
+		$('.' + mydata + '').delay(600).fadeIn(400);
+*/
+
+
+	});
  
  
 

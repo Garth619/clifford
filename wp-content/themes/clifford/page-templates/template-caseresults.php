@@ -18,6 +18,8 @@ get_header(); ?>
 				
 				<div class="input_wrapper">
 					
+					<div class="input_inner">
+					
 					<div class="input_parent">
 						
 						<span class="input_placeholder">Select a Practice Area</span><!-- input_placeholder -->
@@ -27,12 +29,16 @@ get_header(); ?>
 					<ul class="input_list">
 						
 						<li>Car Accidents</li>
-						<li>Car Accidents</li>
-						<li>Car Accidents</li>
-						<li>Car Accidents</li>
-						<li>Car Accidents</li>
+						<li>Pa Two</li>
+						<li>Pa Three</li>
+						<li>Pa Four</li>
+						<li>Pa Five</li>
 						
 					</ul><!-- input_list -->
+					
+					</div><!-- input_inner -->
+					
+					<span class="clear">Clear Selection</span>
 					
 				</div><!-- input_wrapper -->
 				
@@ -44,6 +50,8 @@ get_header(); ?>
 				
 				<div class="input_wrapper">
 					
+					<div class="input_inner">
+					
 					<div class="input_parent">
 						
 						<span class="input_placeholder">Select an Attorney</span><!-- input_placeholder -->
@@ -52,13 +60,17 @@ get_header(); ?>
 					
 					<ul class="input_list">
 						
-						<li>Car Accidents</li>
-						<li>Car Accidents</li>
-						<li>Car Accidents</li>
-						<li>Car Accidents</li>
-						<li>Car Accidents</li>
+						<li>Attorney One</li>
+						<li>Attorney Two</li>
+						<li>Attorney Three</li>
+						<li>Attorney Four</li>
+						<li>Attorney Five</li>
 						
 					</ul><!-- input_list -->
+					
+					</div><!-- input_inner -->
+						
+					<span class="clear">Clear Selection</span>
 					
 				</div><!-- input_wrapper -->
 				
