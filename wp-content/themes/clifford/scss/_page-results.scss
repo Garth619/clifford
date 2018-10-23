@@ -129,7 +129,10 @@ body.page-template-template-caseresults {
 			letter-spacing: 0.2em;
 			display: block;
 			margin-top:7px;
-			&:after {
+		}
+		ul.att_list {
+			list-style: none;
+			&:before {
 				content:"";
 				display: block;
 				width:65px;
@@ -137,10 +140,7 @@ body.page-template-template-caseresults {
 				background:$browntwo;
 				margin: 45px auto 22px;
 			}
-		}
-		ul.att_list {
-			list-style: none;
-			li {
+		li {
 				display: block;
 				font-family: $aktiv;
 				font-weight:400;

@@ -1711,6 +1711,13 @@
 		"oAP": "/sidebar.php",
 		"oF": 0
 		},
+	"/single-case_results.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/single-case_results.php",
+		"oF": 0
+		},
 	"/single.php": {
 		"cB": 0,
 		"ft": 8192,

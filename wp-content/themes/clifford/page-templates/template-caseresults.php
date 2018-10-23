@@ -28,11 +28,18 @@ get_header(); ?>
 					
 					<ul class="input_list">
 						
-						<li>Car Accidents</li>
-						<li>Pa Two</li>
-						<li>Pa Three</li>
-						<li>Pa Four</li>
-						<li>Pa Five</li>
+						<?php $termspa = get_terms(array(
+    'taxonomy' => 'practice_area'));
+							
+							if ( ! empty( $termspa ) && ! is_wp_error( $termspa ) ){
+							
+								foreach ( $termspa as $term ) {
+							
+									echo '<li>' . $term->name . '</li>';
+    						}
+							
+						} ?>
+		
 						
 					</ul><!-- input_list -->
 					
@@ -60,11 +67,17 @@ get_header(); ?>
 					
 					<ul class="input_list">
 						
-						<li>Attorney One</li>
-						<li>Attorney Two</li>
-						<li>Attorney Three</li>
-						<li>Attorney Four</li>
-						<li>Attorney Five</li>
+						<?php $termsatt = get_terms(array(
+							'taxonomy' => 'attorney'));
+							
+							if ( ! empty( $termsatt ) && ! is_wp_error( $termsatt ) ){
+							
+								foreach ( $termsatt as $term ) {
+							
+									echo '<li>' . $term->name . '</li>';
+    						}
+							
+						} ?>
 						
 					</ul><!-- input_list -->
 					
@@ -82,191 +95,79 @@ get_header(); ?>
 	
 	<div class="case_results_wrapper">
 		
-		<div class="single_case_result">
-			
-			<div class="single_cr_inner">
-				
-				<span class="amount">$350k</span><!-- amount -->
-				
-				<span class="cr_type">Car Accident</span><!-- cr_type -->
-				
-				<ul class="att_list">
-					
-					<li>Attorney(s)</li>
-					<li>Kevin P. Durkin</li>
-				
-				</ul><!-- att_list -->
-				
-			</div><!-- single_cr_inner -->
-			
-			<div class="single_cr_hover">
-				
-				<div class="cr_hover_inner">
-				
-					<span class="cr_date">March, 2004</span><!-- cr_date -->
-				
-					<span class="cr_description">A mother and her two children involved in a devastating truck-car collision on Interstate 90 near Rockford in 1999. After a month-long trial in the Cook County Circuit Court, Mr. Durkin received a $38.3 million verdict on behalf of the family in March, 2004 – the largest in the country that year involving a motor vehicle crash and was featured as one of the Top 100 Verdicts in the National Law Journal in 2005.</span><!-- cr_description -->
-				
-				</div><!-- cr_hover_inner -->
-				
-			</div><!-- single_cr_hover -->
-			
-		</div><!-- single_case_result -->
 		
-		<div class="single_case_result">
+			<?php $mymain_query = new WP_Query( array( 'post_type' => array ( 'case_results' )) ); while($mymain_query->have_posts()) : $mymain_query->the_post(); ?>
+         
+        
+        <div class="single_case_result">
 			
-			<div class="single_cr_inner">
+					<div class="single_cr_inner">
 				
-				<span class="amount">$350k</span><!-- amount -->
-				
-				<span class="cr_type">Car Accident</span><!-- cr_type -->
-				
-				<ul class="att_list">
-					
-					<li>Attorney(s)</li>
-					<li>Kevin P. Durkin</li>
-				
-				</ul><!-- att_list -->
-				
-			</div><!-- single_cr_inner -->
-			
-			<div class="single_cr_hover">
-				
-				<div class="cr_hover_inner">
-				
-					<span class="cr_date">March, 2004</span><!-- cr_date -->
-				
-					<span class="cr_description">A mother and her two children involved in a devastating truck-car collision on Interstate 90 near Rockford in 1999. After a month-long trial in the Cook County Circuit Court, Mr. Durkin received a $38.3 million verdict on behalf of the family in March, 2004 – the largest in the country that year involving a motor vehicle crash and was featured as one of the Top 100 Verdicts in the National Law Journal in 2005.</span><!-- cr_description -->
-				
-				</div><!-- cr_hover_inner -->
-				
-			</div><!-- single_cr_hover -->
-			
-		</div><!-- single_case_result -->
+						<span class="amount"><?php the_field( 'case_results_amount' ); ?></span><!-- amount -->
+						
+						
+						
+<!--
+						<?php 
 		
-		<div class="single_case_result">
-			
-			<div class="single_cr_inner">
-				
-				<span class="amount">$350k</span><!-- amount -->
-				
-				<span class="cr_type">Car Accident</span><!-- cr_type -->
-				
-				<ul class="att_list">
-					
-					<li>Attorney(s)</li>
-					<li>Kevin P. Durkin</li>
-				
-				</ul><!-- att_list -->
-				
-			</div><!-- single_cr_inner -->
-			
-			<div class="single_cr_hover">
-				
-				<div class="cr_hover_inner">
-				
-					<span class="cr_date">March, 2004</span><!-- cr_date -->
-				
-					<span class="cr_description">A mother and her two children involved in a devastating truck-car collision on Interstate 90 near Rockford in 1999. After a month-long trial in the Cook County Circuit Court, Mr. Durkin received a $38.3 million verdict on behalf of the family in March, 2004 – the largest in the country that year involving a motor vehicle crash and was featured as one of the Top 100 Verdicts in the National Law Journal in 2005.</span><!-- cr_description -->
-				
-				</div><!-- cr_hover_inner -->
-				
-			</div><!-- single_cr_hover -->
-			
-		</div><!-- single_case_result -->
+							$terms = get_field('cr_practice_areas');
 		
-		<div class="single_case_result">
-			
-			<div class="single_cr_inner">
-				
-				<span class="amount">$350k</span><!-- amount -->
-				
-				<span class="cr_type">Car Accident</span><!-- cr_type -->
-				
-				<ul class="att_list">
-					
-					<li>Attorney(s)</li>
-					<li>Kevin P. Durkin</li>
-				
-				</ul><!-- att_list -->
-				
-			</div><!-- single_cr_inner -->
-			
-			<div class="single_cr_hover">
-				
-				<div class="cr_hover_inner">
-				
-					<span class="cr_date">March, 2004</span><!-- cr_date -->
-				
-					<span class="cr_description">A mother and her two children involved in a devastating truck-car collision on Interstate 90 near Rockford in 1999. After a month-long trial in the Cook County Circuit Court, Mr. Durkin received a $38.3 million verdict on behalf of the family in March, 2004 – the largest in the country that year involving a motor vehicle crash and was featured as one of the Top 100 Verdicts in the National Law Journal in 2005.</span><!-- cr_description -->
-				
-				</div><!-- cr_hover_inner -->
-				
-			</div><!-- single_cr_hover -->
-			
-		</div><!-- single_case_result -->
+							if( $terms ): ?>
 		
-		<div class="single_case_result">
-			
-			<div class="single_cr_inner">
-				
-				<span class="amount">$350k</span><!-- amount -->
-				
-				<span class="cr_type">Car Accident</span><!-- cr_type -->
-				
-				<ul class="att_list">
-					
-					<li>Attorney(s)</li>
-					<li>Kevin P. Durkin</li>
-				
-				</ul><!-- att_list -->
-				
-			</div><!-- single_cr_inner -->
-			
-			<div class="single_cr_hover">
-				
-				<div class="cr_hover_inner">
-				
-					<span class="cr_date">March, 2004</span><!-- cr_date -->
-				
-					<span class="cr_description">A mother and her two children involved in a devastating truck-car collision on Interstate 90 near Rockford in 1999. After a month-long trial in the Cook County Circuit Court, Mr. Durkin received a $38.3 million verdict on behalf of the family in March, 2004 – the largest in the country that year involving a motor vehicle crash and was featured as one of the Top 100 Verdicts in the National Law Journal in 2005.</span><!-- cr_description -->
-				
-				</div><!-- cr_hover_inner -->
-				
-			</div><!-- single_cr_hover -->
-			
-		</div><!-- single_case_result -->
+								<ul>
 		
-		<div class="single_case_result">
-			
-			<div class="single_cr_inner">
+									<?php foreach( $terms as $term ): ?>
+		
+									<span class="cr_type"><?php echo $term->name; ?></span>
 				
-				<span class="amount">$350k</span><!-- amount -->
+		
+									<?php endforeach; ?>
+		
+								</ul>
+-->
+		
+						<?php endif; ?>
 				
-				<span class="cr_type">Car Accident</span><!-- cr_type -->
-				
-				<ul class="att_list">
+						<ul class="att_list">
 					
-					<li>Attorney(s)</li>
-					<li>Kevin P. Durkin</li>
+							<li>Attorney(s)</li>
+							
+							<?php 
+		
+								$termstwo = get_field('cr_attorneys');
+		
+								if( $termstwo ): 
+		
+									foreach( $termstwo as $term ): ?>
+		
+									<li><?php echo $term->name; ?></li>
 				
-				</ul><!-- att_list -->
+									<?php endforeach; ?>
+		
+								<?php endif; ?>
 				
-			</div><!-- single_cr_inner -->
+						</ul><!-- att_list -->
+				
+					</div><!-- single_cr_inner -->
 			
-			<div class="single_cr_hover">
+					<div class="single_cr_hover">
 				
-				<div class="cr_hover_inner">
+						<div class="cr_hover_inner">
 				
-					<span class="cr_date">March, 2004</span><!-- cr_date -->
+							<span class="cr_date"><?php the_field( 'cr_date' ); ?></span><!-- cr_date -->
 				
-					<span class="cr_description">A mother and her two children involved in a devastating truck-car collision on Interstate 90 near Rockford in 1999. After a month-long trial in the Cook County Circuit Court, Mr. Durkin received a $38.3 million verdict on behalf of the family in March, 2004 – the largest in the country that year involving a motor vehicle crash and was featured as one of the Top 100 Verdicts in the National Law Journal in 2005.</span><!-- cr_description -->
+							<span class="cr_description"><?php the_field( 'cr_description' ); ?></span><!-- cr_description -->
 				
-				</div><!-- cr_hover_inner -->
+						</div><!-- cr_hover_inner -->
 				
-			</div><!-- single_cr_hover -->
+					</div><!-- single_cr_hover -->
 			
-		</div><!-- single_case_result -->
+				</div><!-- single_case_result -->
+        
+        
+        <?php endwhile; ?>
+      <?php wp_reset_postdata(); // reset the query ?>
+
 		
 	</div><!-- case_results_wrapper -->
 	
