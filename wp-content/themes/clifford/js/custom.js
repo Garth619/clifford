@@ -96,24 +96,23 @@ jQuery(document).ready(function($){
     
     createWaypoint('sec_four_left_trigger', '#sec_four_left_trigger', 'visible', 380, null, false);
     
+    createWaypoint('section_five', '#section_five', 'visible', 280, null, false);
+    
     createWaypoint('sec_five_slider_trigger', '#sec_five_slider_trigger', 'visible', 550, null, false);
     
-    createWaypoint('footer_right_trigger', '#footer_right_trigger', 'visible', 500, null, false);
+    createWaypoint('about_page_rewards_trigger', '#about_page_rewards_trigger', 'visible', 200, null, false);
     
+    createWaypoint('footer_right_trigger', '#footer_right_trigger', 'visible', 200, null, false);
     
-    
-    
-    
-     
-    
-    
-    
+
     
     // load section one animation
     
     
     
-    $('#section_one').addClass('visible');
+    $('#section_one, #internal_main').addClass('visible');
+    
+    
    
 
 

@@ -104,7 +104,7 @@ get_header(); ?>
 </div><!-- internal_main -->
 
 
-<div class="about_page_awards_wrapper">
+<div id="about_page_rewards_trigger" class="about_page_awards_wrapper">
 	
 	<span class="ap_awards_title"><?php the_field( 'about_awards_title' ); ?></span><!-- ap_awards_title -->
 	

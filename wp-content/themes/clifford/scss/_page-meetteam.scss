@@ -60,9 +60,19 @@ img.clifford_img.tablet {
 		font-weight:800;
 		font-size:20px;
 		letter-spacing: 0.1em;
-		border-bottom:1px solid $browntwo;
+		//border-bottom:1px solid $browntwo;
 		padding-bottom:38px;
 		position: relative;
+		&:before {
+			content:"";
+			display: block;
+			width:100%;
+			height:1px;
+			background: $browntwo;
+			position: absolute;
+			bottom:-1px;
+			left:0;
+		}
 		&:after {
 			content:"";
 			display: block;

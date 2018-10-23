@@ -53,10 +53,20 @@ span.brown {
 		line-height: 80px;
 		font-family: $questa;
 		font-weight:500;
-		border-bottom:1px solid $browntwo;
+		// border-bottom:1px solid $browntwo;
 		padding-bottom:49px;
 		position: relative;
 		margin-bottom:42px;
+		&:before {
+			content:"";
+			display: block;
+			width:100%;
+			height:1px;
+			background:$browntwo;
+			position: absolute;
+			bottom:-1px;
+			left:0;
+		}
 		&:after {
 			content:"";
 			width:87px;

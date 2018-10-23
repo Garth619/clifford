@@ -24,9 +24,10 @@
 .sec_five_intro_content {
 	margin: 67px auto 0;
 	max-width: 755px;
-	border-top:1px solid $greentwo;
+	//border-top:1px solid $greentwo;
 	padding-top:47px;
 	color:#1b2f24;
+	position: relative;
 	&:before {
 		content:"";
 		display: block;
@@ -36,6 +37,16 @@
 		margin:0 auto;
 		position: relative;
 		top: -49px;
+	}
+	&:after {
+		content:"";
+		display: block;
+		width:100%;
+		position: absolute;
+		top:-1px;
+		left:0;
+		height:1px;
+		background: $greentwo;
 	}
 }
 

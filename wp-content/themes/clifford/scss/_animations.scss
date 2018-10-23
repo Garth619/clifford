@@ -59,6 +59,40 @@
 // section three
 
 
+
+
+
+.sec_three_inner {
+	h1 {
+		&:before {
+			transform: scaleX(0);
+			transition: all 1700ms cubic-bezier(.17,.66,.34,.98);
+			transform-origin: 0 0 0;
+		}
+		&:after {
+			opacity: 0;
+			transition: all 300ms linear;
+		}
+	}
+}
+
+
+
+#section_three.visible {
+	.sec_three_inner {
+		h1 {
+			&:before {
+				transform: scaleX(1);
+			}
+			&:after {
+				opacity: 1;
+				transition-delay: 1650ms;
+			}
+		}
+	}
+}
+
+
 .sec_three_image {
 	.video_wrapper {
 		svg#play_button {
@@ -196,6 +230,33 @@
 		// section five
 		
 		
+		
+		.sec_five_intro_content {
+			&:before {
+				opacity: 0;
+				transition: all 300ms linear;
+			}
+			&:after {
+				transform: scaleX(0);
+				transition: all 1700ms cubic-bezier(.17,.66,.34,.98);
+				//transform-origin: 0 0 0;
+			}
+		}
+		
+		
+		#section_five.visible {
+			.sec_five_intro_content {
+				&:before {
+					opacity: 1;
+					transition-delay: 1400ms;
+				}
+				&:after {
+					transform: scaleX(1);
+					
+				}
+			}
+		}
+		
 		.sec_five_slide_wrapper {
 			transform: translateY(-40px);
 			opacity: 0;
@@ -243,6 +304,282 @@
 		}
 		
 		
+// about page
+		
+		
+
+body.page-template-template-about {
+	span.title_line {
+		&:before {
+			transform-origin: 0;
+		}
+	}
+}
+
+
+
+
+
+	span.title_line {
+		&:before {
+			transform: scaleX(0);
+			transition: all 1700ms cubic-bezier(.17,.66,.34,.98);
+		}
+		&:after {
+			opacity: 0;
+			transition: all 300ms linear;
+		}
+	}
+	
+	
+	#internal_main.visible {
+		span.title_line {
+			&:before {
+				transform: scaleX(1);
+				
+			}
+			&:after {
+				opacity: 1;
+				transition-delay: 1400ms;
+				
+			}
+		}
+	}
+
+
+
+
+#internal_main.visible {
+	.sec_three_image {
+		.video_wrapper {
+			svg#play_button {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
+		.video_inner {
+			.video_box {
+				opacity: 1;
+				transform: translateY(0px);
+				transition-delay: 300ms;
+			}
+			span.line {
+				transform: scaleY(1);
+				transition-delay: 850ms;
+			}
+		}
+	}
+}
+
+
+
+.about_slider_wrapper {
+	transform: translateY(-40px);
+	opacity: 0;
+	transition:  transform 1200ms cubic-bezier(.17,.66,.34,.98), opacity 400ms linear;
+	.ap_buttton_left {
+		transform: translateX(-30px);
+		opacity: 0;
+		transition:  transform 1200ms cubic-bezier(.17,.66,.34,.98), opacity 400ms linear;
+	}
+	.ap_buttton_right {
+		transform: translateX(30px);
+		opacity: 0;
+		transition:  transform 1200ms cubic-bezier(.17,.66,.34,.98), opacity 400ms linear;
+	}
+}
+
+
+
+#about_page_rewards_trigger.visible {
+	.about_slider_wrapper {
+		opacity: 1;
+		transform: translateY(0px);
+		.ap_buttton_left, .ap_buttton_right {
+			opacity: 1;
+			transform: translateX(0px);
+			transition-delay: 700ms;
+		}
+	}
+}
+
+
+// content
+
+
+.content {
+	h1 {
+		&:before {
+			transform: scaleX(0);
+			transform-origin: 0;
+			transition: all 1700ms cubic-bezier(.17,.66,.34,.98);
+		}
+		&:after {
+			opacity: 0;
+			transition: all 300ms linear;
+		}
+	}
+}
+
+
+#internal_main.visible {
+	.content {
+		h1 {
+			&:before {
+				transform: scaleX(1);
+			}
+			&:after {
+				opacity: 1;
+				transition-delay: 1400ms;
+			}
+		}
+	}
+}
+
+
+// video center
+
+
+.single_video {
+	&:hover {
+		a {
+			.thumbnail {
+				img {
+					transform: scale(1.15);
+				}
+			}
+		}
+	}
+	a {
+		.thumbnail {
+			overflow: hidden;
+			img {
+				transform: scale(1);
+				transition: all 1300ms cubic-bezier(.17,.66,.34,.98);
+			}
+		}
+	}
+} 
+
+
+// attorney bio
+
+
+
+.att_yt {
+	&:hover {
+		a {
+			img {
+				transform: scale(1.15);
+			}
+		}
+	}
+	a {
+		overflow: hidden;
+		img {
+			transform: scale(1);
+			transition: all 1300ms cubic-bezier(.17,.66,.34,.98);
+		}
+	}
+}
+
+
+
+
+.additional_posts {
+	
+	.posts_slider_wrapper {
+		.posts_slider {
+			.post_single_slide {
+				&:hover {
+					a {
+						img {
+							transform: scale(1.15);
+						}
+					}
+				}
+				a {
+					.post_single_slide_inner {
+						overflow: hidden;
+					}
+					img {
+						transform: scale(1);
+						transition: all 900ms cubic-bezier(.17,.66,.34,.98);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+// meet the team
+
+
+.att_intro_left {
+	overflow: hidden;
+	transform: translateY(-55px);
+	opacity: 0;
+	transition: opacity 200ms linear, transform 1500ms cubic-bezier(.17,.66,.34,.98);
+	img {
+		transform: scale(1.4);
+		transition: transform 1500ms cubic-bezier(.17,.66,.34,.98);
+	}
+}
+
+
+#internal_main.visible {
+	.att_intro_left {
+		opacity: 1;
+		transform: translateY(0px);
+		transition-delay: 100ms;
+		img {
+			transform: scale(1);
+			transition-delay: 100ms;
+		}
+	}
+}
+
+
+
+.att_intro_right {
+	span.position {
+		&:before {
+			transform: scaleX(0);
+			transform-origin: 0 0 0;
+			transition: all 1700ms cubic-bezier(.17,.66,.34,.98);
+		}
+		&:after {
+			opacity: 0;
+			transition: all 300ms linear;
+		}
+	}
+}
+
+#internal_main.visible {
+	span.position {
+		&:before {
+			transform: scaleX(1);
+		}
+		&:after {
+			opacity: 1;
+			transition-delay: 1400ms;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 } /* Media Query */
 
