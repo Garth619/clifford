@@ -666,6 +666,8 @@ $('.mobile_menu').on('click', function(e) {
  
  });
  
+ // closes dropdown when clicking outside dropdown
+ 
  
  $(document).click(function (e){
 
@@ -680,21 +682,39 @@ $('.mobile_menu').on('click', function(e) {
 	}); 
 	
 	
+	// moves selected text and specific data-term into parent div
+	
+	
 	$('ul.input_list li').on('click', function(e) {
+		
+		// updates text on dropdown selection
 	  
 		var textUpdate = $(this).text();
 		
 		$('ul.input_list li span').replaceWith('<span>' + textUpdate + '</span>');
 		
+		// grabs data from list items and adds to submit button before filter begins
 		
-		$(this).parent().prev('.input_parent').find('span.input_placeholder').replaceWith('<span class="input_placeholder">' + textUpdate + '</span>');
+		var dataPracticearea = $(this).data('practiceareas');
+		var dataAttorney = $(this).data('attorneys');
+
 		
+// 		$(this).parent().prev('.input_parent').find('span.input_placeholder').text(textUpdate).attr('data-practiceareas',dataPracticearea).attr('data-attorneys',dataAttorney);
+		
+		// or should i add to the submit button
+		
+		$('a.filter_submit').attr('data-practiceareas',dataPracticearea).attr('data-attorneys',dataAttorney);
+		
+		
+		// shows the clear button after something is selected
 		
 		$(this).parents('.input_inner').next('span.clear').fadeIn(300);
 		
 		
+		
+
+
 /*
-		var mydata = $(this).data('tag');
 	
 		
 		$('.case_result_types, .videos_wrapper').fadeOut(300).delay(500).fadeIn(400);
@@ -706,6 +726,22 @@ $('.mobile_menu').on('click', function(e) {
 
 
 	});
+	
+	
+	// submit button
+	
+	
+	
+	$('.filter_submit').on('click', function(e) {
+	  
+	
+		
+	
+	
+	});
+	
+	
+	
  
  
 

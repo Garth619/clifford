@@ -28,6 +28,7 @@ get_header(); ?>
 					
 					<ul class="input_list">
 						
+						
 						<?php $termspa = get_terms(array(
 							
 							'taxonomy' => 'practice_area'));
@@ -36,7 +37,7 @@ get_header(); ?>
 							
 								foreach ( $termspa as $term ) {
 							
-									echo '<li data-term="' . $term->slug . '">' . $term->name . '</li>';
+									echo '<li data-practiceareas="' . $term->slug . '">' . $term->name . '</li>';
     						
     						}
 							
@@ -77,7 +78,7 @@ get_header(); ?>
 							
 								foreach ( $termsatt as $term ) {
 							
-									echo '<li data-term="' . $term->slug . '">' . $term->name . '</li>';
+									echo '<li data-attorneys="' . $term->slug . '">' . $term->name . '</li>';
     						
     						}
 							
@@ -100,118 +101,100 @@ get_header(); ?>
 	<div class="case_results_wrapper">
 		
 		
-			<?php $mymain_query = new WP_Query( array( 'post_type' => array ( 'case_results' )) ); while($mymain_query->have_posts()) : $mymain_query->the_post(); ?>
-			
-					
-					
-<!--
-					<?php $patheterms = get_the_terms( get_the_ID(), array( 'practice_area', 'attorney') );
-							
-							if ( $patheterms && ! is_wp_error( $patheterms ) ) {
-								
-								$cr_terms = array();
-							
-								foreach ( $patheterms as $term ) {
-        
-								 $cr_terms[] = $term->slug;
-    					
-    					}
-    					
-    					$term_data = implode(' ', $cr_terms);
-    					
-					} ?>
--->
-         
-         
-         
-         <?php $patheterms = get_the_terms( get_the_ID(), 'practice_area' );
+		
+		
+			<?php 
+				
+				// cpt loop
+				
+				$mymain_query = new WP_Query( array('post_type' => 'case_results') ); 
+				
+				while($mymain_query->have_posts()) : $mymain_query->the_post();  
+				
+				
+					// get all practice area terms
+				
+					$patheterms = get_the_terms( get_the_ID(), 'practice_area' );
 							
 							if ( $patheterms && ! is_wp_error( $patheterms ) ) {
 								
 								$pa_terms = array();
+								$pa_title = array();
 							
 								foreach ( $patheterms as $term ) {
         
+								 // get practice area slugs
+								 
 								 $pa_terms[] = $term->slug;
+								 
+								 // get practice area names
+								 
+								 $pa_title[] = $term->name;
     					
     					}
     					
-    					// $paterm_data = implode(' ', $pa_terms);
-    					
-					} ?>
+					}  
 					
+					// get all attorney terms
 					
-					<?php $atttheterms = get_the_terms( get_the_ID(), 'attorney' );
+					$atttheterms = get_the_terms( get_the_ID(), 'attorney' );
 							
 							if ( $atttheterms && ! is_wp_error( $atttheterms ) ) {
 								
 								$att_terms = array();
+								$att_title = array();
 							
 								foreach ( $atttheterms as $term ) {
         
+								 // get atorney slugs
+								 
 								 $att_terms[] = $term->slug;
+								 
+								 // gt attorny names
+								 
+								 $att_title[] = $term->name;
     					
     					}
     					
-    					//$attterm_data = implode(' ', $att_terms);
-    					
-					} ?>
+    			}
+    			
+    			// merges practice areas and attorney arrays
 					
-					<?php // echo $paterm_data; ?>
-					
-					<?php // echo $attterm_data; ?>
+					$term_merge = array_merge($pa_terms,$att_terms);
 					
 					
-					<?php $term_merge = array_merge($pa_terms,$att_terms);
+					// turns new merged array in a string with spaces in between each slug value. this is printed as classes for each case result
 						
-						
-						$term_string = implode(' ', $term_merge);
-						
-					?>
+					$term_string = implode(' ', $term_merge);
 					
-					<?php echo $term_string; ?>
-         
-         
-        
-        <div class="single_case_result" data-term=""><?php // print_r($term_data); ?>
+					
+					// takes pracrice area array from above and turns it into a string with span tags wrapped around each value. printed onto case result type title
+					
+					$pa_data = "<span class='cr_type'>" . implode('</span><span class="cr_type">', $pa_title) . "</span>";
+					
+					
+					// takes attorney array from above and turns it into a string with li tags wrapped around each value. printed onto case result attorney list
+					
+					$att_data = "<li>" . implode('</li><li>', $att_title) . "</li>";
+					
+					
+				?>
+					
+
+        <div class="single_case_result <?php echo $term_string; ?>">
 			
 					<div class="single_cr_inner">
 				
 						<span class="amount"><?php the_field( 'case_results_amount' ); ?></span><!-- amount -->
 						
-						
-<!--
-						<?php $patheterms = get_the_terms( get_the_ID(), 'practice_area' );
-							
-							if ( $patheterms && ! is_wp_error( $patheterms ) ) {
-							
-								foreach ( $patheterms as $term ) {
-        
-								echo '<span class="cr_type">' . $term->name . "</span>";
-    					
-    					}
-                         
-							
-							} ?>
--->
+						<?php printf($pa_data);?>
 
-				
 						<ul class="att_list">
 					
 							<li>Attorney(s)</li>
 							
-							<?php $atttheterms = get_the_terms( get_the_ID(), 'attorney' );
-							
-								if ( $atttheterms && ! is_wp_error( $atttheterms ) ) {
-								
-									foreach ( $atttheterms as $term ) {
-        
-										echo "<li>" . $term->name . "</li>";
-    					
-    							}
-    						
-							} ?>
-				
+							<?php printf($att_data);?>
+	
 						</ul><!-- att_list -->
 				
 					</div><!-- single_cr_inner -->
