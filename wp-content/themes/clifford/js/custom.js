@@ -695,34 +695,21 @@ $('.mobile_menu').on('click', function(e) {
 		
 		// grabs data from list items and adds to submit button before filter begins
 		
-		var dataPracticearea = $(this).data('practiceareas');
-		var dataAttorney = $(this).data('attorneys');
+		var dataPracticearea = $(this).data('pa');
+		var dataAttorney = $(this).data('att');
 
 		
-// 		$(this).parent().prev('.input_parent').find('span.input_placeholder').text(textUpdate).attr('data-practiceareas',dataPracticearea).attr('data-attorneys',dataAttorney);
+		$(this).parent().prev('.input_parent').find('span.input_placeholder').text(textUpdate);
 		
 		// or should i add to the submit button
 		
-		$('a.filter_submit').attr('data-practiceareas',dataPracticearea).attr('data-attorneys',dataAttorney);
+		$('a.filter_submit').attr('data-pa',dataPracticearea).attr('data-att',dataAttorney);
 		
 		
 		// shows the clear button after something is selected
 		
 		$(this).parents('.input_inner').next('span.clear').fadeIn(300);
 		
-		
-		
-
-
-/*
-	
-		
-		$('.case_result_types, .videos_wrapper').fadeOut(300).delay(500).fadeIn(400);
-		
-		$('.single_case_results, .single_video').fadeOut(300);
-		
-		$('.' + mydata + '').delay(600).fadeIn(400);
-*/
 
 
 	});
@@ -732,13 +719,37 @@ $('.mobile_menu').on('click', function(e) {
 	
 	
 	
+
+	  
+	
 	$('.filter_submit').on('click', function(e) {
 	  
 	
+		$('.' + dataPracticearea + ', .' + dataAttorney +'').delay(600).fadeOut(400);
+		
+		
+		
+		
+		/*
+	
+		
+		$('.case_result_types, .videos_wrapper').fadeOut(300).delay(500).fadeIn(400);
+		
+		$('.single_case_results, .single_video').fadeOut(300);
+		
+		$('.' + mydata + '').delay(600).fadeIn(400);
+*/
+		
+		
+		
 		
 	
 	
 	});
+		
+	
+	
+
 	
 	
 	

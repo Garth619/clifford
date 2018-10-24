@@ -37,7 +37,7 @@ get_header(); ?>
 							
 								foreach ( $termspa as $term ) {
 							
-									echo '<li data-practiceareas="' . $term->slug . '">' . $term->name . '</li>';
+									echo '<li data-pa="' . $term->slug . '">' . $term->name . '</li>';
     						
     						}
 							
@@ -78,7 +78,7 @@ get_header(); ?>
 							
 								foreach ( $termsatt as $term ) {
 							
-									echo '<li data-attorneys="' . $term->slug . '">' . $term->name . '</li>';
+									echo '<li data-att="' . $term->slug . '">' . $term->name . '</li>';
     						
     						}
 							
