@@ -29,7 +29,8 @@ get_header(); ?>
 					<ul class="input_list">
 						
 						<?php $termspa = get_terms(array(
-    'taxonomy' => 'practice_area'));
+							
+							'taxonomy' => 'practice_area'));
 							
 							if ( ! empty( $termspa ) && ! is_wp_error( $termspa ) ){
 							
@@ -68,6 +69,7 @@ get_header(); ?>
 					<ul class="input_list">
 						
 						<?php $termsatt = get_terms(array(
+							
 							'taxonomy' => 'attorney'));
 							
 							if ( ! empty( $termsatt ) && ! is_wp_error( $termsatt ) ){
@@ -106,45 +108,35 @@ get_header(); ?>
 						<span class="amount"><?php the_field( 'case_results_amount' ); ?></span><!-- amount -->
 						
 						
-						
-<!--
-						<?php 
-		
-							$terms = get_field('cr_practice_areas');
-		
-							if( $terms ): ?>
-		
-								<ul>
-		
-									<?php foreach( $terms as $term ): ?>
-		
-									<span class="cr_type"><?php echo $term->name; ?></span>
-				
-		
-									<?php endforeach; ?>
-		
-								</ul>
--->
-		
-						<?php endif; ?>
+						<?php $patheterms = get_the_terms( get_the_ID(), 'practice_area' );
+							
+							if ( $patheterms && ! is_wp_error( $patheterms ) ) {
+							
+								foreach ( $patheterms as $term ) {
+        
+								echo '<span class="cr_type">' . $term->name . "</span>";
+    					
+    					}
+                         
+							
+							} ?>
+
 				
 						<ul class="att_list">
 					
 							<li>Attorney(s)</li>
 							
-							<?php 
-		
-								$termstwo = get_field('cr_attorneys');
-		
-								if( $termstwo ): 
-		
-									foreach( $termstwo as $term ): ?>
-		
-									<li><?php echo $term->name; ?></li>
-				
-									<?php endforeach; ?>
-		
-								<?php endif; ?>
+							<?php $atttheterms = get_the_terms( get_the_ID(), 'attorney' );
+							
+								if ( $atttheterms && ! is_wp_error( $atttheterms ) ) {
+								
+									foreach ( $atttheterms as $term ) {
+        
+										echo '<li>' . $term->name . "</li>";
+    					
+    							}
+    						
+							} ?>
 				
 						</ul><!-- att_list -->
 				
