@@ -104,24 +104,76 @@ get_header(); ?>
 			
 					
 					
-					<?php $patheterms = get_the_terms( get_the_ID(), 'practice_area' );
+<!--
+					<?php $patheterms = get_the_terms( get_the_ID(), array( 'practice_area', 'attorney') );
 							
 							if ( $patheterms && ! is_wp_error( $patheterms ) ) {
 								
-								$palist = array();
+								$cr_terms = array();
 							
 								foreach ( $patheterms as $term ) {
         
-								 $draught_links[] = $term->slug;
+								 $cr_terms[] = $term->slug;
     					
     					}
     					
-    					$on_draught = implode(' ',$draught_links);
+    					$term_data = implode(' ', $cr_terms);
     					
 					} ?>
+-->
+         
+         
+         
+         <?php $patheterms = get_the_terms( get_the_ID(), 'practice_area' );
+							
+							if ( $patheterms && ! is_wp_error( $patheterms ) ) {
+								
+								$pa_terms = array();
+							
+								foreach ( $patheterms as $term ) {
+        
+								 $pa_terms[] = $term->slug;
+    					
+    					}
+    					
+    					// $paterm_data = implode(' ', $pa_terms);
+    					
+					} ?>
+					
+					
+					<?php $atttheterms = get_the_terms( get_the_ID(), 'attorney' );
+							
+							if ( $atttheterms && ! is_wp_error( $atttheterms ) ) {
+								
+								$att_terms = array();
+							
+								foreach ( $atttheterms as $term ) {
+        
+								 $att_terms[] = $term->slug;
+    					
+    					}
+    					
+    					//$attterm_data = implode(' ', $att_terms);
+    					
+					} ?>
+					
+					<?php // echo $paterm_data; ?>
+					
+					<?php // echo $attterm_data; ?>
+					
+					
+					<?php $term_merge = array_merge($pa_terms,$att_terms);
+						
+						
+						$term_string = implode(' ', $term_merge);
+						
+					?>
+					
+					<?php echo $term_string; ?>
+         
          
         
-        <div class="single_case_result" data-term="<?php printf( $on_draught ); ?>">
+        <div class="single_case_result" data-term=""><?php // print_r($term_data); ?>
 			
 					<div class="single_cr_inner">
 				
