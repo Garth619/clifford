@@ -63,11 +63,13 @@ get_header(); ?>
 							
 						</a><!-- youtube -->
 						
+<!--
 						<a class="google" href="<?php the_field( 'google_plus_link','option'); ?>" target="_blank">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-g.svg"); ?>
 							
-						</a><!-- google -->
+						</a>
+--><!-- google -->
 						
 						<a class="insta" href="<?php the_field( 'instagram','option'); ?>" target="_blank">
 							

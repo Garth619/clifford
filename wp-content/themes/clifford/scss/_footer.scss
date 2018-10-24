@@ -407,7 +407,15 @@ footer {
 @media screen and (max-width: 1475px) {
 	
 	
-
+	footer {
+		.form {
+			ul {
+				li {
+					flex-basis:32.5%;
+				}
+			}
+		}
+	}
 	
 	.footer_left {
 		padding: 109px 45px 217px;
@@ -452,7 +460,7 @@ footer {
 	.footer_left {
 		
 		span.large_header {
-			font-size:61px;
+			font-size:60px;
 		}
 		span.small_header {
 			
@@ -540,7 +548,7 @@ footer {
 	
 	
 	.footer_left {
-		padding: 90px 65px 154px;
+		padding: 90px 70px 154px;
 		span.large_header {
 			
 		}
@@ -688,7 +696,7 @@ footer {
 		}
 		span.small_header {
 			margin: 40px auto 0;
-			font-size: 17px;
+			font-size: 16px;
 			&:before, &:after {
 			
 			}

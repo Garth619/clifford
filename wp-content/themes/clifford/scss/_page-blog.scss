@@ -99,6 +99,10 @@ body.blog {
 			}
 			a {
 				color:$greenone;
+				transition: all 200ms ease-in-out;
+				&:hover {
+					color:$browntwo;
+				}
 				&:after {
 					display: none;
 				}
@@ -124,6 +128,7 @@ a.view_post {
 	&:hover {
 		color:$browntwo;
 		&:after {
+			
 			background:$browntwo;
 		}
 	}
@@ -182,7 +187,7 @@ a.view_post {
 	}
 	
 	.blog_posts {
-		padding:40px 0;
+		padding:50px 0;
 	}
 	
 	

@@ -91,7 +91,7 @@ body.page-template-template-caseresults {
 
 
 .case_results_wrapper {
-	max-width:1560px;
+	max-width:1580px;
 	margin:140px auto 0;
 	padding-bottom:120px;
 	display: flex;
@@ -160,7 +160,7 @@ body.page-template-template-caseresults {
 		background: $browntwo;
 		display: flex;
 		align-items: center;
-		padding:0 15px;
+		padding:0 40px;
 		opacity: 0;
 		visibility: hidden;
 		transition: all 200ms ease-in-out;
@@ -414,6 +414,19 @@ span.clear {
 	.case_results_wrapper {
 		padding-bottom:55px;
 	}
+	
+	.single_case_result {
+		&:hover {
+			.single_cr_hover {
+				opacity: 0;
+			}
+		}
+		.single_cr_hover.open {
+			opacity: 1;
+		}
+	}
+	
+	
 	
 	
 } /* Media Query */

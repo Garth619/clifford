@@ -105,6 +105,18 @@
 	}
 	
 	
+	@media screen and (max-width: 1450px) {
+		
+		
+		
+		.single_test_wrapper {
+			padding-top:70px;
+		}
+		
+		
+	} /* Media Query */
+	
+	
 	@media screen and (max-width: 1285px) {
 		
 		
@@ -117,7 +129,7 @@
 
 .single_test_wrapper {
 	flex-direction: column;
-	padding:60px 0 75px;
+	padding:60px 0 95px;
 	&:nth-of-type(2n + 1) {
 		.test_col {
 			&:last-of-type {

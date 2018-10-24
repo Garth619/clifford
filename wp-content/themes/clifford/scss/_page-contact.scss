@@ -28,7 +28,7 @@ body.page-template-template-contact {
 		
 	}
 	&:last-of-type {
-		padding:69px 11px 0 0;
+		padding:69px 50px 0 0;
 	}
 	span.contact_page_address {
 		display: block;
@@ -151,6 +151,7 @@ a.contact_page_phone {
 	&:last-of-type {
 		order:3;
 		width:380px;
+		padding-right:0;
 	}
 	span.contact_page_address {
 		
@@ -229,7 +230,7 @@ a.contact_page_phone {
 	
 	&:first-of-type {
 		width:360px;
-		padding: 55px 25px 0;
+		padding: 70px 30px 0;
 	}
 	&:nth-of-type(2) {
 		width:360px;
@@ -266,16 +267,7 @@ a.contact_page_phone {
 } /* Media Query */
 
 
-@media screen and (max-width: 767px) {
-	
-	
-	
-	
-	
-	
-	
-	
-} /* Media Query */
+
 
 
 @media screen and (max-width: 400px) {

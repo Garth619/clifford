@@ -625,6 +625,37 @@ $('.mobile_menu').on('click', function(e) {
   }
   
   
+  // case results tap on smaller devices
+  
+  
+  	
+  	var windowWidth = $(window).width();
+  
+  
+  
+  	function checkWidthcr() {
+      
+      if (windowWidth < 1066) {
+          
+        
+      	$('.single_case_result').on('click', function(e) {
+      	  
+      		
+      	$(this).find('.single_cr_hover').toggleClass('open');
+      	
+      	
+      	});
+      	   		
+      		
+      } 
+      
+      
+  };
+  	
+  
+  checkWidthcr();
+  
+  
  // case results filter
 
  $('.input_inner').on('click', function(e) {
