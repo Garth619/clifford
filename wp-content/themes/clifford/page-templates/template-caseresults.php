@@ -36,7 +36,8 @@ get_header(); ?>
 							
 								foreach ( $termspa as $term ) {
 							
-									echo '<li>' . $term->name . '</li>';
+									echo '<li data-term="' . $term->slug . '">' . $term->name . '</li>';
+    						
     						}
 							
 						} ?>
@@ -76,7 +77,8 @@ get_header(); ?>
 							
 								foreach ( $termsatt as $term ) {
 							
-									echo '<li>' . $term->name . '</li>';
+									echo '<li data-term="' . $term->slug . '">' . $term->name . '</li>';
+    						
     						}
 							
 						} ?>
@@ -99,15 +101,34 @@ get_header(); ?>
 		
 		
 			<?php $mymain_query = new WP_Query( array( 'post_type' => array ( 'case_results' )) ); while($mymain_query->have_posts()) : $mymain_query->the_post(); ?>
+			
+					
+					
+					<?php $patheterms = get_the_terms( get_the_ID(), 'practice_area' );
+							
+							if ( $patheterms && ! is_wp_error( $patheterms ) ) {
+								
+								$palist = array();
+							
+								foreach ( $patheterms as $term ) {
+        
+								 $draught_links[] = $term->slug;
+    					
+    					}
+    					
+    					$on_draught = implode(' ',$draught_links);
+    					
+					} ?>
          
         
-        <div class="single_case_result">
+        <div class="single_case_result" data-term="<?php printf( $on_draught ); ?>">
 			
 					<div class="single_cr_inner">
 				
 						<span class="amount"><?php the_field( 'case_results_amount' ); ?></span><!-- amount -->
 						
 						
+<!--
 						<?php $patheterms = get_the_terms( get_the_ID(), 'practice_area' );
 							
 							if ( $patheterms && ! is_wp_error( $patheterms ) ) {
@@ -120,6 +141,7 @@ get_header(); ?>
                          
 							
 							} ?>
+-->
 
 				
 						<ul class="att_list">
@@ -132,7 +154,7 @@ get_header(); ?>
 								
 									foreach ( $atttheterms as $term ) {
         
-										echo '<li>' . $term->name . "</li>";
+										echo "<li>" . $term->name . "</li>";
     					
     							}
     						
