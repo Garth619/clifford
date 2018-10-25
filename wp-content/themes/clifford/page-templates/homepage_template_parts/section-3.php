@@ -2,9 +2,12 @@
 	
 	<div class="sec_three_image mobile">
 
-		<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >				
+		<a href="//www.youtube-nocookie.com/embed/<?php the_field( 'section_three_youtube_id' ); ?>?rel=0&amp;showinfo=0;autoplay=1" data-lity >		
 			
-			<img class="mobile" data-src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
+			<?php $section_three_video_image = get_field( 'section_three_video_image' ); ?>
+			
+			<img class="mobile" data-src="<?php echo $section_three_video_image['url']; ?>" alt="<?php echo $section_three_video_image['alt']; ?>" />	
+			
 				
 				<div class="video_wrapper">
 					
@@ -18,7 +21,7 @@
 							
 								<img data-src="<?php bloginfo('template_directory');?>/images/logo-mark.svg"/>
 							
-								<span>Watch our video to learn more about us in 90 seconds</span>
+								<span><?php the_field( 'section_three_video_description' ); ?></span>
 							
 							</div><!-- video_box -->
 						
@@ -51,7 +54,7 @@
 				
 					<div class="accolades_content">
 					
-						<span class="teeup">If you need a lawyer, you have likely found yourself wondering: </span><!-- teeup -->
+						<span class="teeup"><?php the_field( 'section_three_tee_up' ); ?> </span><!-- teeup -->
 					
 						<div class="accolades_laptop_layout">
 							
@@ -59,9 +62,9 @@
 						
 							<div class="accolades_laptop_inner_layout">
 							
-								<span class="question">"How do I choose the right one?"</span><!-- question -->
+								<span class="question"><?php the_field( 'section_three_question' ); ?></span><!-- question -->
 					
-								<span class="answer">The answer — choose Clifford Law Offices.</span><!-- answer -->
+								<span class="answer"><?php the_field( 'section_three_answer' ); ?></span><!-- answer -->
 							
 							</div><!-- accolades_laptop_inner_layout -->
 						
@@ -73,7 +76,7 @@
 			
 					<div class="sec_three_content">
 			
-						<p>Our firm is routinely ranked as one of the top Chicago law firms, and we have been included on U.S. News & World Report's list of Best Law Firms. Our attorneys have the experience to protect your interests and help you seek fair compensation for your injuries or the loss of a loved one. </p>
+						<?php the_field( 'section_three_description' ); ?>
 			
 					</div><!-- sec_three_content -->
 		
@@ -83,9 +86,9 @@
 		
 					<div class="sec_three_image laptop">
 						
-						<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >	
+						<a href="//www.youtube-nocookie.com/embed/<?php the_field( 'section_three_youtube_id' ); ?>?rel=0&amp;showinfo=0;autoplay=1" data-lity >
 							
-						<img data-src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
+						<img data-src="<?php echo $section_three_video_image['url']; ?>" alt="<?php echo $section_three_video_image['alt']; ?>" />	
 				
 						<div class="video_wrapper">
 					
@@ -99,7 +102,7 @@
 							
 									<img data-src="<?php bloginfo('template_directory');?>/images/logo-mark.svg"/>
 							
-									<span>Watch our video to learn more about us in 90 seconds</span>
+									<span><?php the_field( 'section_three_video_description' ); ?></span>
 							
 								</div><!-- video_box -->
 						
@@ -121,9 +124,9 @@
 			
 			<div class="sec_three_image desktop">
 				
-				<a href="//www.youtube-nocookie.com/embed/nfFKJxtlXoM?rel=0&amp;showinfo=0;autoplay=1" data-lity >
-				
-				<img data-src="<?php bloginfo('template_directory');?>/images/video-thumbnail.jpg"/>
+				<a href="//www.youtube-nocookie.com/embed/<?php the_field( 'section_three_youtube_id' ); ?>?rel=0&amp;showinfo=0;autoplay=1" data-lity >
+					
+				<img data-src="<?php echo $section_three_video_image['url']; ?>" alt="<?php echo $section_three_video_image['alt']; ?>" />
 				
 				<div class="video_wrapper">
 					
@@ -137,7 +140,7 @@
 							
 							<img data-src="<?php bloginfo('template_directory');?>/images/logo-mark.svg"/>
 							
-							<span>Watch our video to learn more about us in 90 seconds</span>
+							<span><?php the_field( 'section_three_video_description' ); ?></span>
 							
 						</div><!-- video_box -->
 						
@@ -165,54 +168,23 @@
 		
 		<div class="press_slider">
 			
-			<div class="press_single_slide">
+			<?php if(get_field('section_three_press_logos')): ?>
+			 
+				<?php while(has_sub_field('section_three_press_logos')): ?>
+			 
+					<div class="press_single_slide">
+						
+						<?php $image = get_sub_field( 'image' ); ?>
 				
-				<img data-src="<?php bloginfo('template_directory');?>/images/media-01.png"/>
+						<img data-src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 				
-			</div><!-- press_single_slide -->
+					</div><!-- press_single_slide -->
 			
-			<div class="press_single_slide">
-				
-				<img data-src="<?php bloginfo('template_directory');?>/images/media-04.png"/>
-				
-			</div><!-- press_single_slide -->
+				<?php endwhile; ?>
+			 
+			<?php endif; ?>
 			
-			<div class="press_single_slide">
-				
-				<img data-src="<?php bloginfo('template_directory');?>/images/media-03.png"/>
-				
-			</div><!-- press_single_slide -->
-			
-			<div class="press_single_slide">
-				
-				<img data-src="<?php bloginfo('template_directory');?>/images/media-02.png"/>
-				
-			</div><!-- press_single_slide -->
-			
-			<div class="press_single_slide">
-				
-				<img data-src="<?php bloginfo('template_directory');?>/images/media-05.png"/>
-				
-			</div><!-- press_single_slide -->
-			
-			<div class="press_single_slide">
-				
-				<img data-src="<?php bloginfo('template_directory');?>/images/media-01.png"/>
-				
-			</div><!-- press_single_slide -->
-			
-			<div class="press_single_slide">
-				
-				<img data-src="<?php bloginfo('template_directory');?>/images/media-01.png"/>
-				
-			</div><!-- press_single_slide -->
-			
-			<div class="press_single_slide">
-				
-				<img data-src="<?php bloginfo('template_directory');?>/images/media-01.png"/>
-				
-			</div><!-- press_single_slide -->
-			
+						
 		</div><!-- press_slider -->
 		
 		<div class="press_button press_right">
@@ -225,28 +197,7 @@
 	
 	<div class="sec_three_bottom_content content">
 		
-		<h2>Complexes Cases. Exceptional Results.</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia noned quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor magna aliqua.</p>
- 
-<h3>h3 text styling here</h3>
-
-<ul>
-	<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ea commodo consequat.</li>
-
-	<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</li>
- 	
-	<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </li>
-
-	<li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</li>
-</ul>
-
-<h3> Nationally Recognized For Excellence</h3>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor magna aliqua. </p>
-
-<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-		
+		<?php the_field( 'section_three_content' ); ?>
 		
 	</div><!-- sec_three_bottom_content -->
 	

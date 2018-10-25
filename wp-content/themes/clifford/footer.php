@@ -4,9 +4,9 @@
 		
 		<div class="form">
 		
-			<span class="large_header">Tell Us About Your Case</span><!-- large_header -->
+			<span class="large_header"><?php the_field( 'footer_form_header','option'); ?></span><!-- large_header -->
 		
-			<span class="small_header">Get your FREE, confidential case consultation today!</span><!-- small_header -->
+			<span class="small_header"><?php the_field( 'footer_form_sub_header','option'); ?></span><!-- small_header -->
 		
 			<?php gravity_form(1, false, false, false, '', true, 12); ?>
 			
@@ -141,12 +141,7 @@
 jQuery(document).ready(function($){
 
 
-
- // blog sidebar view all links
- 
- 
- 
- 
+// blog sidebar view all links
  
  $('.widget_recent_entries > ul').append('<li class="view_all"><a href="<?php the_permalink(12);?>">View All Posts</a></li>');
  $('.widget_categories > ul').append('<li class="view_all"><a href="<?php the_permalink(12);?>">View All Categories</a></li>');

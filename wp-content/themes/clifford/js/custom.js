@@ -685,6 +685,9 @@ $('.mobile_menu').on('click', function(e) {
 	// moves selected text and specific data-term into parent div
 	
 	
+ 
+	
+	
 	$('ul.input_list li').on('click', function(e) {
 		
 		// updates text on dropdown selection
@@ -696,6 +699,7 @@ $('.mobile_menu').on('click', function(e) {
 		// grabs data from list items and adds to submit button before filter begins
 		
 		var dataPracticearea = $(this).data('pa');
+		
 		var dataAttorney = $(this).data('att');
 
 		
@@ -717,46 +721,35 @@ $('.mobile_menu').on('click', function(e) {
 	
 	// submit button
 	
-	
-	
 
-	  
 	
 	$('.filter_submit').on('click', function(e) {
 	  
-	
-		$('.' + dataPracticearea + ', .' + dataAttorney +'').delay(600).fadeOut(400);
 		
 		
+		var dataPracticearea = $(this).data('pa');
+		
+		var dataAttorney = $(this).data('att');
 		
 		
-		/*
-	
-		
+/*
 		$('.case_result_types, .videos_wrapper').fadeOut(300).delay(500).fadeIn(400);
 		
 		$('.single_case_results, .single_video').fadeOut(300);
-		
-		$('.' + mydata + '').delay(600).fadeIn(400);
 */
 		
 		
+		$('.single_case_result').fadeOut(400);
 		
+			$('.' + dataPracticearea + '.' + dataAttorney +'').delay(600).fadeIn(400);
 		
-	
+		// $('.' + dataPracticearea + '').delay(600).fadeIn(400);
+		
+
 	
 	});
 		
-	
-	
 
-	
-	
-	
- 
- 
-
- 
 
   
 }); // document ready

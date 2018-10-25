@@ -4,37 +4,33 @@
 			
 			<div class="sec_one_inner">
 			
-				<span class="sec_one_title">A Tradition of Success</span><!-- sec_one_title -->
+				<span class="sec_one_title"><?php the_field( 'section_one_header' ); ?></span><!-- sec_one_title -->
 			
-				<a class="request" href="#consultation">Request Free Consultation</a><!-- request -->
+				<a class="request" href="#consultation"><?php the_field( 'request_verbiage' ); ?></a><!-- request -->
 				
 				<div class="selling_points_wrapper">
 					
 					<div class="sp_slider">
 						
-						<div class="sp_single_slide">
+						<?php if(get_field('selling_points_slider')): ?>
+						 
+							<?php while(has_sub_field('selling_points_slider')): ?>
 							
-							<span class="sp_title">Over $2 billion recovered</span><!-- sp_title -->
+								
+								<div class="sp_single_slide">
 							
-							<span class="sp_desctiption">We know how to address your case as efficiently as possible and how to maximize the compensation you receive.</span><!-- sp_desctiption -->
+									<span class="sp_title"><?php the_sub_field( 'title' ); ?></span><!-- sp_title -->
 							
-						</div><!-- sp_single_slide -->
+									<span class="sp_desctiption"><?php the_sub_field( 'description' ); ?></span><!-- sp_desctiption -->
+							
+								</div><!-- sp_single_slide -->
 						
-						<div class="sp_single_slide">
 							
-							<span class="sp_title">You are treated like family</span><!-- sp_title -->
-							
-							<span class="sp_desctiption">When you retain our services, you become a member of the Clifford Law family. We will fight for you just like we would for our own. </span><!-- sp_desctiption -->
-							
-						</div><!-- sp_single_slide -->
+							<?php endwhile; ?>
+						 
+						<?php endif; ?>
 						
-						<div class="sp_single_slide">
-							
-							<span class="sp_title">35+ years of experience</span><!-- sp_title -->
-							
-							<span class="sp_desctiption">Our extensive experience in personal injury and wrongful death cases means that we are prepared for all types of situations. </span><!-- sp_desctiption -->
-							
-						</div><!-- sp_single_slide -->
+						
 						
 					</div><!-- sp_slider -->
 					
@@ -43,11 +39,22 @@
 			</div><!-- sec_one_inner -->
 			
 		</div><!-- sec_one_internal -->
-	
-		<img class="sec_one_bg" src="<?php bloginfo('template_directory');?>/images/hero-desktop.jpg"/>
-		<img class="laptop" src="<?php bloginfo('template_directory');?>/images/hero-laptop.jpg"/>
-		<img class="tablet" src="<?php bloginfo('template_directory');?>/images/hero-tablet.jpg"/>
-		<img class="mobile" src="<?php bloginfo('template_directory');?>/images/hero-mobile.jpg"/>
+		
+		<?php $section_one_desktop_image = get_field( 'section_one_desktop_image' ); ?>
+
+		<img class="sec_one_bg" src="<?php echo $section_one_desktop_image['url']; ?>" alt="<?php echo $section_one_desktop_image['alt']; ?>" />
+
+		<?php $section_one_laptop_image = get_field( 'section_one_laptop_image' ); ?>
+
+		<img class="laptop" src="<?php echo $section_one_laptop_image['url']; ?>" alt="<?php echo $section_one_laptop_image['alt']; ?>" />
+
+		<?php $section_one_tablet_image = get_field( 'section_one_tablet_image' ); ?>
+		
+		<img class="tablet" src="<?php echo $section_one_tablet_image['url']; ?>" alt="<?php echo $section_one_tablet_image['alt']; ?>" />
+		
+		<?php $section_one_mobile_image = get_field( 'section_one_mobile_image' ); ?>
+		
+		<img class="mobile" src="<?php echo $section_one_mobile_image['url']; ?>" alt="<?php echo $section_one_mobile_image['alt']; ?>" />
 
 </section><!-- section_one -->
 

@@ -56,9 +56,13 @@
 			
 			<a href="<?php bloginfo('url');?>">
 				
-				<img class="logo" src="<?php bloginfo('template_directory');?>/images/logo.svg"/>
-				
-				<img class="logo_mobile" src="<?php bloginfo('template_directory');?>/images/logo-mobile.svg"/>
+				<?php $desktop_logo = get_field( 'desktop_logo','option'); ?>
+
+				<img class="logo" src="<?php echo $desktop_logo['url']; ?>" alt="<?php echo $desktop_logo['alt']; ?>" />
+
+				<?php $mobile_logo = get_field( 'mobile_logo','option'); ?>
+
+				<img class="logo_mobile" src="<?php echo $mobile_logo['url']; ?>" alt="<?php echo $mobile_logo['alt']; ?>" />
 				
 			</a>
 			
@@ -69,11 +73,11 @@
 			
 			<div class="consult_phone_wrapper">
 				
-				<span class="consult_title desktop">call now for a free consultation</span><!-- consult_title -->
+				<span class="consult_title desktop"><?php the_field( 'call_now_header_verbiage','option'); ?></span><!-- consult_title -->
 				
-				<span class="consult_title tablet">free consultation</span><!-- consult_title -->
+				<span class="consult_title tablet"><?php the_field( 'call_now_header_verbiage_mobile','option'); ?></span><!-- consult_title -->
 				
-				<a class="phone" href="tel:(312) 899-9090">(312) 899-9090</a><!-- phone -->
+				<a class="phone" href="tel:<?php the_field( 'firm_phone','option'); ?>"><?php the_field( 'firm_phone','option'); ?></a><!-- phone -->
 				
 			</div><!-- consult_phone_wrapper -->
 			
@@ -86,7 +90,7 @@
 			
 			<div class="phone_icon">
 				
-				<a href="tel:(312) 899-9090">
+				<a href="tel:<?php the_field( 'firm_phone','option'); ?>">
 				
 					<img src="<?php bloginfo('template_directory');?>/images/icon-phone.svg"/>
 				
