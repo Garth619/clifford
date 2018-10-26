@@ -22,7 +22,7 @@ get_header(); ?>
 					
 					<div class="input_parent">
 						
-						<span class="input_placeholder">Select a Practice Area</span><!-- input_placeholder -->
+						<span class="input_placeholder">- Select -</span><!-- input_placeholder -->
 						
 					</div><!-- input_parent -->
 					
@@ -48,7 +48,7 @@ get_header(); ?>
 					
 					</div><!-- input_inner -->
 					
-					<span class="clear">Clear Selection</span>
+					
 					
 				</div><!-- input_wrapper -->
 				
@@ -64,7 +64,7 @@ get_header(); ?>
 					
 					<div class="input_parent">
 						
-						<span class="input_placeholder">Select an Attorney</span><!-- input_placeholder -->
+						<span class="input_placeholder">- Select -</span><!-- input_placeholder -->
 						
 					</div><!-- input_parent -->
 					
@@ -88,7 +88,7 @@ get_header(); ?>
 					
 					</div><!-- input_inner -->
 						
-					<span class="clear">Clear Selection</span>
+					
 					
 				</div><!-- input_wrapper -->
 				
@@ -97,6 +97,8 @@ get_header(); ?>
 		</div><!-- cr_filter_wrapper -->
 		
 		<a class="filter_submit">Submit</a><!-- filter_submit -->
+		
+		<span class="clear">Clear Selection</span>
 	
 	<div class="case_results_wrapper">
 		

@@ -682,41 +682,64 @@ $('.mobile_menu').on('click', function(e) {
 	}); 
 	
 	
-	// moves selected text and specific data-term into parent div
-	
-	
- 
-	
+	// moves selected text into parent div
 	
 	$('ul.input_list li').on('click', function(e) {
 		
-		// updates text on dropdown selection
+		// assigns vairable to text data from list item
 	  
 		var textUpdate = $(this).text();
 		
+		
+		
 		$('ul.input_list li span').replaceWith('<span>' + textUpdate + '</span>');
 		
-		// grabs data from list items and adds to submit button before filter begins
+		// grabs data and assigns variables to them 
 		
-		var dataPracticearea = $(this).data('pa');
+		var dataPracticearea = $(this).attr('data-pa'); // can attr just have one arg? bc it seems to be working
 		
-		var dataAttorney = $(this).data('att');
+		var dataAttorney = $(this).attr('data-att');
 
+		// updates text
 		
 		$(this).parent().prev('.input_parent').find('span.input_placeholder').text(textUpdate);
 		
-		// or should i add to the submit button
+		// adds data attributes to the submit button
 		
 		$('a.filter_submit').attr('data-pa',dataPracticearea).attr('data-att',dataAttorney);
 		
+		// shows the clear button after list item is selected
 		
-		// shows the clear button after something is selected
+		$('span.clear').addClass('open');
 		
-		$(this).parents('.input_inner').next('span.clear').fadeIn(300);
 		
-
-
+		
 	});
+	
+	
+	// clear slection button
+	
+	
+
+	$('span.clear').on('click', function(e) {
+	  
+	  // when clicked the parent text gets replaced
+		
+		$('span.input_placeholder').text('- Select -');
+		
+		// removes data from the submit button 
+		
+		$('.filter_submit').removeAttr('data-pa').removeAttr('data-att');
+		
+		// brings all case results back
+		
+		$('.single_case_result').fadeIn(400);
+		
+		// hide clear button after clicked 
+		
+		$(this).removeClass('open');
+    
+  });
 	
 	
 	// submit button
@@ -726,10 +749,9 @@ $('.mobile_menu').on('click', function(e) {
 	$('.filter_submit').on('click', function(e) {
 	  
 		
+		var dataPracticearea = $(this).attr('data-pa');
 		
-		var dataPracticearea = $(this).data('pa');
-		
-		var dataAttorney = $(this).data('att');
+		var dataAttorney = $(this).attr('data-att');
 		
 		
 /*
@@ -738,21 +760,12 @@ $('.mobile_menu').on('click', function(e) {
 		$('.single_case_results, .single_video').fadeOut(300);
 */
 		
-		
-		
-/*
-				if ($('.filter_submit').data('pa')) {
- 
-			
-			$('.filter_submit').addClass('thisishere');	
-		
-		
-		}
-*/
-		
-		
-		
+
 		$('.single_case_result').fadeOut(400);
+		
+		
+		
+		
 		
 		if (this.hasAttribute('data-pa') && !this.hasAttribute('data-att')) {
       console.log('has just pa specs');
@@ -779,32 +792,16 @@ $('.mobile_menu').on('click', function(e) {
       var runFilter = $('.' + dataPracticearea + '.' + dataAttorney +'');
       
       
-    }  
+    } 
     
     
-    // run a results not found 
+    // run case results filter
+    
+    $(runFilter).delay(600).fadeIn(400); 
     
     
-     $(runFilter).delay(600).fadeIn(400);
-    
-    
-    
-    
-/*
-    
-    else {
-      console.log('no specs');
-    }
-*/
+    // run a results not found maybe?
 
-
-		
-		
-		
-			// $('.' + dataPracticearea + '.' + dataAttorney +'').delay(600).fadeIn(400);
-		
-		// $('.' + dataPracticearea + '').delay(600).fadeIn(400);
-		
 
 	
 	});
