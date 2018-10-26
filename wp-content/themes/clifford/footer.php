@@ -18,11 +18,19 @@
 	
 	<div id="footer_right_trigger" class="footer_right">
 		
-		<img class="footer_bg_image dekstop" data-src="<?php bloginfo('template_directory');?>/images/footer-background-desktop.jpg"/>
 		
-		<img class="footer_bg_image tablet" data-src="<?php bloginfo('template_directory');?>/images/footer-background-tablet.jpg"/>
+		<?php $footer_desktop_image = get_field( 'footer_desktop_image','option'); ?>
+
+		<img class="footer_bg_image dekstop" data-src="<?php echo $footer_desktop_image['url']; ?>" alt="<?php echo $footer_desktop_image['alt']; ?>" />
 		
-		<img class="footer_bg_image mobile" data-src="<?php bloginfo('template_directory');?>/images/footer-mobile.jpg"/>
+		<?php $footer_tablet_image = get_field( 'footer_tablet_image','option'); ?>
+		
+		<img class="footer_bg_image tablet" data-src="<?php echo $footer_tablet_image['url']; ?>" alt="<?php echo $footer_tablet_image['alt']; ?>" />
+		
+		<?php $footer_mobile_image = get_field( 'footer_mobile_image','option'); ?>
+		
+		<img class="footer_bg_image mobile" data-src="<?php echo $footer_mobile_image['url']; ?>" alt="<?php echo $footer_mobile_image['alt']; ?>" />
+		
 		
 		<div class="footer_right_inner">
 		
@@ -99,10 +107,19 @@
 		<div class="copyright_wrapper mobile">
 	
 			<ul>
-				<li>&copy; 2018 by Clifford Law Offices PC.</li>
-				<li>All rights reserved.</li>
-				<li><a class="disclaimer" href="<?php the_permalink(800);?>"> Disclaimer</a></li>
-				<li><a href="<?php the_permalink(802);?>">Site Map</a></li>
+				<li><?php the_field( 'copyright','option'); ?></li>
+				<li><?php the_field( 'all_rights_reserved','option'); ?></li>
+				<?php if(get_field('disclaimer','option')) :?>
+		
+				<li><a class="disclaimer" href="<?php the_field( 'disclaimer','option'); ?>"> Disclaimer</a></li>
+		
+				<?php endif;?>
+				
+				<?php if(get_field('site_map_link','option')) :?>
+				
+				<li><a href="<?php the_field( 'site_map_link','option'); ?>">Site Map</a></li>
+				
+				<?php endif;?>
 			</ul>
 	
 	<a class="ilawyer" href="//ilawyermarketing.com" target="_blank">
@@ -120,14 +137,26 @@
 <div class="copyright_wrapper desktop">
 	
 	<ul>
-		<li>&copy; 2018 by Clifford Law Offices PC. All rights reserved.</li>
-		<li><a class="disclaimer" href="<?php the_permalink(800);?>"> Disclaimer</a></li>
-		<li><a href="<?php the_permalink(802);?>">Site Map</a></li>
+		
+		<li><?php the_field( 'copyright','option'); ?> <?php the_field( 'all_rights_reserved','option'); ?></li>
+		
+		<?php if(get_field('disclaimer','option')) :?>
+		
+		<li><a class="disclaimer" href="<?php the_field( 'disclaimer','option'); ?>">Disclaimer</a></li>
+		
+		<?php endif;?>
+		
+		<?php if(get_field('site_map_link','option')) :?>
+				
+		<li><a href="<?php the_field( 'site_map_link','option'); ?>">Site Map</a></li>
+				
+		<?php endif;?>
+	
 	</ul>
 	
 	<a class="ilawyer" href="//ilawyermarketing.com" target="_blank">
 		
-		<img data-src="<?php bloginfo('template_directory');?>/images/ilawyer-logo.svg"/>
+		<img alt="iLawyer Marketing Logo" data-src="<?php bloginfo('template_directory');?>/images/ilawyer-logo.svg"/>
 		
 	</a>
 	

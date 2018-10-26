@@ -10,7 +10,7 @@
  function load_my_styles_scripts() {
   
     
-    wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 3, 'all' ); 
+    wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 4, 'all' ); 
     
 
     // wp_deregister_script( 'jquery' );
