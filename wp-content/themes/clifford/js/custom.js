@@ -757,7 +757,7 @@ $('.mobile_menu').on('click', function(e) {
 		if (this.hasAttribute('data-pa') && !this.hasAttribute('data-att')) {
       console.log('has just pa specs');
       
-			$('.' + dataPracticearea + '').delay(600).fadeIn(400);
+      var runFilter = $('.' + dataPracticearea + '');
     
     } 
     
@@ -765,7 +765,9 @@ $('.mobile_menu').on('click', function(e) {
     if (!this.hasAttribute('data-pa') && this.hasAttribute('data-att')) {
       console.log('has just att specs');
       
-      $('.' + dataAttorney + '').delay(600).fadeIn(400);
+      
+      var runFilter = $('.' + dataAttorney + '');
+      
     
     }
     
@@ -773,9 +775,17 @@ $('.mobile_menu').on('click', function(e) {
     if (this.hasAttribute('data-pa') && this.hasAttribute('data-att'))  {
       console.log('has both pa and att specs');
       
-      $('.' + dataPracticearea + '.' + dataAttorney +'').delay(600).fadeIn(400);
-    
+      
+      var runFilter = $('.' + dataPracticearea + '.' + dataAttorney +'');
+      
+      
     }  
+    
+    
+    // run a results not found 
+    
+    
+     $(runFilter).delay(600).fadeIn(400);
     
     
     
