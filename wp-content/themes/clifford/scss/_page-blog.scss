@@ -34,7 +34,7 @@ h3.widgettitle {
 
 
 
-body.blog, body.archive, body.single {
+body.blog, body.archive, body.single, body.page-template-template-press {
 	h2 {
 		a {
 			&:after {
@@ -172,6 +172,30 @@ a.view_post {
 }
 
 
+nav.press_pagination {
+	display: flex;
+	justify-content: flex-end;
+	margin-top:5px;
+	
+	a {
+		margin-left:30px;
+		font-family: $aktiv;
+		font-weight:800;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-size:13px;
+		color:$greentwo;
+		transition: all 200ms ease-in-out;
+		&:hover {
+			color:$browntwo;
+		}
+		&:after {
+			display: none;
+		}
+	}
+}
+
+
 
 .blog_feed {
 	margin-top:-65px;
@@ -206,7 +230,7 @@ a.view_post {
 	}
 	
 	
-	body.blog, body.archive, body.single {
+	body.blog, body.archive, body.single, body.page-template-template-press {
 		.container {
 			padding-bottom:35px;
 		}

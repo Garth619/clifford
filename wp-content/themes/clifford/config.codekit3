@@ -1326,6 +1326,13 @@
 		"oAP": "/page-templates/template-padirectory.php",
 		"oF": 0
 		},
+	"/page-templates/template-press.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/page-templates/template-press.php",
+		"oF": 0
+		},
 	"/page-templates/template-testimonials.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1716,6 +1723,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/single-case_results.php",
+		"oF": 0
+		},
+	"/single-press_releases.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/single-press_releases.php",
 		"oF": 0
 		},
 	"/single.php": {
