@@ -97,6 +97,8 @@ body.page-template-template-caseresults {
 	padding-bottom:120px;
 	display: flex;
 	flex-wrap: wrap;
+	
+	min-height:653px;
 }
 
 
@@ -291,6 +293,9 @@ span.clear.open {
 @media screen and (max-width: 1500px) {
 	
 	
+.case_results_wrapper {
+	min-height: 1186px;
+}
 	
 .single_case_result {
 	width:30%;
@@ -440,6 +445,7 @@ span.clear.open {
 
 .case_results_wrapper {
 	max-width: 430px;
+	min-height:588px;
 }
 
 

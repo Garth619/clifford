@@ -733,7 +733,7 @@ $('.mobile_menu').on('click', function(e) {
 		
 		// brings all case results back
 		
-		$('.single_case_result').fadeIn(400);
+		$('.single_case_result').fadeOut(400).delay(1000).fadeIn(400);
 		
 		// hide clear button after clicked 
 		

@@ -34,7 +34,7 @@
 		
 		<div class="footer_right_inner">
 		
-			<img class="footer_logo" data-src="<?php bloginfo('template_directory');?>/images/footer-logo.svg"/><!-- footer_logo -->
+			<img alt="<?php echo get_bloginfo( 'name' ); ?>" class="footer_logo" data-src="<?php bloginfo('template_directory');?>/images/footer-logo.svg"/><!-- footer_logo -->
 			
 			<div class="location_wrapper">
 				
