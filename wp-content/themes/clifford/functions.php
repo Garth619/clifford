@@ -10,7 +10,7 @@
  function load_my_styles_scripts() {
   
     
-    wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 4, 'all' ); 
+    wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' ); 
     
 
     // wp_deregister_script( 'jquery' );
@@ -292,6 +292,58 @@ function wpbeginner_numeric_posts_nav() {
     echo '</ul></div></div>' . "\n";
  
 }
+
+
+
+// rewrite api - this will set up a custom url structure to display an attorney's specific filtered case results (linked automatically from their bio page)
+
+
+function prefix_rewrite_rule() {
+		
+	add_rewrite_rule( 'results/([^/]+)', 'index.php?attorney_name=$matches[1]', 'top' );
+	
+}
+ 
+add_action( 'init', 'prefix_rewrite_rule' );
+
+
+
+// this sets up the global variables used in the url query string above. these values will later be pulled from url and applied to a wp_query loop in templates
+
+
+
+function prefix_register_query_var( $vars ) {
+    
+    $vars[] = 'attorney_name';
+    
+		return $vars;
+}
+
+
+add_filter( 'query_vars', 'prefix_register_query_var' );
+
+
+
+
+// if the query variable is detected in the url structure, this will display a specific template (template-caseresults_attorneys.php). on that template, the query var will be pulled again from url to a run a loop of case results based on attorney's name (query var and att bio page title variable will be same, so it will happen dynamically)
+
+
+function prefix_url_rewrite_templates() {
+	
+		if ( get_query_var( 'attorney_name') ) { 
+       
+	  	add_filter( 'template_include', function() {
+            return get_template_directory() . '/page-templates/template-caseresults_attorneys.php';
+       });
+    }
+    
+ }
+ 
+add_action( 'template_redirect', 'prefix_url_rewrite_templates' );
+
+
+
+
 
 
 

@@ -5,6 +5,17 @@ body.page-template-template-caseresults {
 }
 
 
+span.search_other {
+	display: block;
+  text-transform: uppercase;
+  font-family: $aktiv;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-top:65px;
+}
+
 
 .cr_filter_wrapper {
 	max-width:917px;

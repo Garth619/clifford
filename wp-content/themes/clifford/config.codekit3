@@ -1298,6 +1298,13 @@
 		"oAP": "/page-templates/template-caseresults.php",
 		"oF": 0
 		},
+	"/page-templates/template-caseresults_attorneys.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/page-templates/template-caseresults_attorneys.php",
+		"oF": 0
+		},
 	"/page-templates/template-contact.php": {
 		"cB": 0,
 		"ft": 8192,

@@ -22,7 +22,16 @@
 			
 			<span class="sidebar_att_title desktop"><?php the_field( 'position' ); ?></span><!-- sidebar_att_title -->
 			
-			<a class="att_results_button desktop" href="">View <?php the_field( 'first_name' ); ?>'s Results</a>
+			<?php 
+				
+				global $post;
+				$post_slug=$post->post_name;
+				
+			?>
+			
+			
+			
+			<a class="att_results_button desktop" href="<?php bloginfo('url');?>/results/<?php echo $post_slug;?>">View <?php the_field( 'first_name' ); ?>'s Results</a>
 			
 			<?php if(get_field('award_logos')):?>
 			

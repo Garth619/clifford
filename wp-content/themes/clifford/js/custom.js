@@ -753,19 +753,10 @@ $('.mobile_menu').on('click', function(e) {
 		
 		var dataAttorney = $(this).attr('data-att');
 		
-		
-/*
-		$('.case_result_types, .videos_wrapper').fadeOut(300).delay(500).fadeIn(400);
-		
-		$('.single_case_results, .single_video').fadeOut(300);
-*/
-		
 
 		$('.single_case_result').fadeOut(400);
 		
-		
-		
-		
+		// if submit button just has data-pa practice areas
 		
 		if (this.hasAttribute('data-pa') && !this.hasAttribute('data-att')) {
       console.log('has just pa specs');
@@ -774,6 +765,7 @@ $('.mobile_menu').on('click', function(e) {
     
     } 
     
+    // if submit button just has data-att attorneys
     
     if (!this.hasAttribute('data-pa') && this.hasAttribute('data-att')) {
       console.log('has just att specs');
@@ -785,19 +777,36 @@ $('.mobile_menu').on('click', function(e) {
     }
     
     
+     // if submit button just data-pa practice areas and data-att attorneys
+    
+    
     if (this.hasAttribute('data-pa') && this.hasAttribute('data-att'))  {
       console.log('has both pa and att specs');
       
       
       var runFilter = $('.' + dataPracticearea + '.' + dataAttorney +'');
       
-      
     } 
+    
+    
+    // work on
+    
+     if(!$('.single_case_result').hasClass(dataPracticearea) && !$('.single_case_result').hasClass(dataAttorney) ) {
+	      
+	      console.log('doesnt exsist my g');
+      
+      }
+      
+      
+      //if ($('html').is('.m320, .m768')) { ... }
     
     
     // run case results filter
     
     $(runFilter).delay(600).fadeIn(400); 
+    
+    
+    
     
     
     // run a results not found maybe?
