@@ -739,17 +739,67 @@ $('.mobile_menu').on('click', function(e) {
 */
 		
 		
+		
+/*
+				if ($('.filter_submit').data('pa')) {
+ 
+			
+			$('.filter_submit').addClass('thisishere');	
+		
+		
+		}
+*/
+		
+		
+		
 		$('.single_case_result').fadeOut(400);
 		
-			$('.' + dataPracticearea + '.' + dataAttorney +'').delay(600).fadeIn(400);
+		if (this.hasAttribute('data-pa') && !this.hasAttribute('data-att')) {
+      console.log('has just pa specs');
+      
+			$('.' + dataPracticearea + '').delay(600).fadeIn(400);
+    
+    } 
+    
+    
+    if (!this.hasAttribute('data-pa') && this.hasAttribute('data-att')) {
+      console.log('has just att specs');
+      
+      $('.' + dataAttorney + '').delay(600).fadeIn(400);
+    
+    }
+    
+    
+    if (this.hasAttribute('data-pa') && this.hasAttribute('data-att'))  {
+      console.log('has both pa and att specs');
+      
+      $('.' + dataPracticearea + '.' + dataAttorney +'').delay(600).fadeIn(400);
+    
+    }  
+    
+    
+    
+    
+/*
+    
+    else {
+      console.log('no specs');
+    }
+*/
+
+
+		
+		
+		
+			// $('.' + dataPracticearea + '.' + dataAttorney +'').delay(600).fadeIn(400);
 		
 		// $('.' + dataPracticearea + '').delay(600).fadeIn(400);
 		
 
 	
 	});
-		
-
-
+	
+	
+	
   
 }); // document ready
