@@ -655,6 +655,16 @@ $('.mobile_menu').on('click', function(e) {
   checkWidthcr();
   
   
+ // pa sidebar view post links
+
+
+ 
+ $('.widget_recent_entries > ul').append('<li class="view_all"><a href="' + my_data.blog_homepage  + '">View All Posts</a></li>');
+ $('.widget_categories > ul').append('<li class="view_all"><a href="' + my_data.blog_homepage  + '">View All Categories</a></li>');
+ $('.widget_archive > ul').append('<li class="view_all"><a href="' + my_data.blog_homepage  + '">View Archive</a></li>');
+ 
+  
+  
  // case results filter
 
  $('.input_inner').on('click', function(e) {
@@ -805,7 +815,7 @@ $('.mobile_menu').on('click', function(e) {
     $(runFilter).delay(600).fadeIn(400); 
     
     
-    
+    alert( att_name.a_value);
     
     
     // run a results not found maybe?
@@ -813,6 +823,9 @@ $('.mobile_menu').on('click', function(e) {
 
 	
 	});
+	
+	
+	
 	
 	
 	

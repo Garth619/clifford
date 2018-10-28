@@ -1,55 +1,6 @@
 <?php 
 
 
-
-/* Enqueued Scripts
--------------------------------------------------------------- */
-
-
-
- function load_my_styles_scripts() {
-  
-    
-    wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' ); 
-    
-
-    // disables jquery then registers it again to go into footer
-    
-    wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
-    wp_enqueue_script( 'jquery' );
-
-		// custom js to fall uner jquery in footer
-		    
-    wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
-    
- }
- 
- add_action( 'wp_enqueue_scripts', 'load_my_styles_scripts', 20 );
- 
-
-
-/* CSS in Header for Lighthouse
--------------------------------------------------------------- */
- 
- 
-
-/*
-
-function internal_css_print() {
-   echo '<style>';
-   
-   include_once get_template_directory() . '/style.css';
-  
-   echo '</style>';
-}
-
-
-add_action( 'wp_head', 'internal_css_print' );
-*/
-
-
-
  
  
 /* Force Gravity Forms to init scripts in the footer and ensure that the DOM is loaded before scripts are executed
@@ -339,10 +290,98 @@ function prefix_url_rewrite_templates() {
 add_action( 'template_redirect', 'prefix_url_rewrite_templates' );
 
 
+/* only shows attorney's current case results on template-caseresults_attorneys.php */
+
+function internal_att_print() {
+	
+	$attorney_queryvar = get_query_var( 'attorney_name');
+	
+	if($attorney_queryvar) {
+   
+		echo '<style>.single_case_result:not(.' . $attorney_queryvar . ') {display: none;}</style>';
+ 
+ 	}
+  
+}
+
+add_action( 'wp_head', 'internal_att_print' );
 
 
 
 
+/* Enqueued Scripts
+-------------------------------------------------------------- */
 
+
+
+ function load_my_styles_scripts() {
+  
+    
+    wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' ); 
+    
+
+    // disables jquery then registers it again to go into footer
+    
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
+    wp_enqueue_script( 'jquery' );
+
+		// custom js to fall uner jquery in footer
+		
+		wp_register_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js' );
+		
+		
+		// blog link data for sidebars view all links, need php data to get passed on to jquery function in custom-min.js file
+		
+		$bloghomepage = get_permalink(12);
+		
+		
+		// Localize the script with new data for the case results/attorneys specific search results page
+		
+		$translation_array = array(
+    	'a_value' => '10',
+    	'blog_homepage' => $bloghomepage
+		);
+		
+		
+		
+		
+		wp_localize_script( 'jquery-addon', 'my_data', $translation_array );
+		    
+    wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
+    
+ }
+ 
+ add_action( 'wp_enqueue_scripts', 'load_my_styles_scripts', 20 );
+ 
+ 
+ 
+
+
+/* CSS in Header for Lighthouse
+-------------------------------------------------------------- */
+
+	
+/*
+	.single_case_result:not(.<?php echo $attorneyname;?>) {
+		display: none;
+	}
+*/
+
+ 
+
+/*
+
+function internal_css_print() {
+   echo '<style>';
+   
+   include_once get_template_directory() . '/style.css';
+  
+   echo '</style>';
+}
+
+
+add_action( 'wp_head', 'internal_css_print' );
+*/
 
 

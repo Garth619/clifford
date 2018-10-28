@@ -165,26 +165,5 @@
 
 <?php wp_footer();?>
 
-<script type="text/javascript">
-
-jQuery(document).ready(function($){
-
-
-// blog sidebar view all links
- 
- $('.widget_recent_entries > ul').append('<li class="view_all"><a href="<?php the_permalink(12);?>">View All Posts</a></li>');
- $('.widget_categories > ul').append('<li class="view_all"><a href="<?php the_permalink(12);?>">View All Categories</a></li>');
- $('.widget_archive > ul').append('<li class="view_all"><a href="<?php the_permalink(12);?>">View Archive</a></li>');
- 
- 
-// case results
-
-
-
-
-}); // Document Ready
-
-</script>
-
 </body>
 </html>

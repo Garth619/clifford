@@ -38,14 +38,6 @@
 <?php the_field( 'review_css','option'); ?>
 
 
-/* only shows attorney's current case results on template-caseresults_attorneys.php */
-
-<?php $attorneyname = get_query_var( 'attorney_name');?>
-	
-	.single_case_result:not(.<?php echo $attorneyname;?>) {
-		display: none;
-	}
-
 </style>
 
 <?php wp_head(); ?>
