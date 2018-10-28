@@ -42,7 +42,7 @@
 					
 					<span class="address"><?php the_field( 'firm_street_address','option'); ?> </span><!-- address -->
 					
-					<a class="get_directions" href="<?php the_field( 'firm_directions_link','option'); ?>" target="_blank">Get Directions</a><!-- get_directions -->
+					<a class="get_directions" href="<?php the_field( 'firm_directions_link','option'); ?>" target="_blank" rel="noopener">Get Directions</a><!-- get_directions -->
 					
 				</div><!-- address_wrapper -->
 				
@@ -58,19 +58,19 @@
 					
 					<div class="social_media_wrapper">
 						
-						<a class="fb" href="<?php the_field( 'facebook_link','option'); ?>" target="_blank">
+						<a class="fb" href="<?php the_field( 'facebook_link','option'); ?>" target="_blank" rel="noopener">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-fb.svg"); ?>
 							
 						</a><!-- fb -->
 						
-						<a class="twitter" href="<?php the_field( 'twitter_link','option'); ?>" target="_blank">
+						<a class="twitter" href="<?php the_field( 'twitter_link','option'); ?>" target="_blank" rel="noopener">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-t.svg"); ?>
 							
 						</a><!-- twitter -->
 						
-						<a class="youtube" href="<?php the_field( 'youtube_link','option'); ?>" target="_blank">
+						<a class="youtube" href="<?php the_field( 'youtube_link','option'); ?>" target="_blank" rel="noopener">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-yt.svg"); ?>
 							
@@ -84,13 +84,13 @@
 						</a>
 --><!-- google -->
 						
-						<a class="insta" href="<?php the_field( 'instagram','option'); ?>" target="_blank">
+						<a class="insta" href="<?php the_field( 'instagram','option'); ?>" target="_blank" rel="noopener">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-insta.svg"); ?>
 							
 						</a><!-- insta -->
 						
-						<a class="linkedin" href="<?php the_field( 'linked_in_link','option'); ?>" target="_blank">
+						<a class="linkedin" href="<?php the_field( 'linked_in_link','option'); ?>" target="_blank" rel="noopener">
 							
 							<?php echo file_get_contents("wp-content/themes/clifford/images/social-in.svg"); ?>
 							
@@ -122,7 +122,7 @@
 				<?php endif;?>
 			</ul>
 	
-	<a class="ilawyer" href="//ilawyermarketing.com" target="_blank">
+	<a class="ilawyer" href="//ilawyermarketing.com" target="_blank" rel="noopener">
 		
 		<img data-src="<?php bloginfo('template_directory');?>/images/ilawyer-logo-white.svg"/>
 		
@@ -154,7 +154,7 @@
 	
 	</ul>
 	
-	<a class="ilawyer" href="//ilawyermarketing.com" target="_blank">
+	<a class="ilawyer" href="//ilawyermarketing.com" target="_blank" rel="noopener">
 		
 		<img alt="iLawyer Marketing Logo" data-src="<?php bloginfo('template_directory');?>/images/ilawyer-logo.svg"/>
 		
@@ -175,6 +175,11 @@ jQuery(document).ready(function($){
  $('.widget_recent_entries > ul').append('<li class="view_all"><a href="<?php the_permalink(12);?>">View All Posts</a></li>');
  $('.widget_categories > ul').append('<li class="view_all"><a href="<?php the_permalink(12);?>">View All Categories</a></li>');
  $('.widget_archive > ul').append('<li class="view_all"><a href="<?php the_permalink(12);?>">View Archive</a></li>');
+ 
+ 
+// case results
+
+
 
 
 }); // Document Ready

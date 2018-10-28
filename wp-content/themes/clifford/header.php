@@ -34,9 +34,17 @@
 @import url("https://use.typekit.net/skh5qas.css");
 @import url('https://fonts.googleapis.com/css?family=Rozha+One');
 
+
 <?php the_field( 'review_css','option'); ?>
 
 
+/* only shows attorney's current case results on template-caseresults_attorneys.php */
+
+<?php $attorneyname = get_query_var( 'attorney_name');?>
+	
+	.single_case_result:not(.<?php echo $attorneyname;?>) {
+		display: none;
+	}
 
 </style>
 

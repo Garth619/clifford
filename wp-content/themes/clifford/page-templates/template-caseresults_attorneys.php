@@ -12,15 +12,6 @@ $attorneyname = get_query_var( 'attorney_name');
 
  // echo $ptitle; ?>
 
-<style>
-	
-	.single_case_result:not(.<?php echo $attorneyname;?>) {
-		display: none;
-	}
-	
-</style>
-
-
 <div id="internal_main" class="one_col" style="background: #f4f4f0;">
 	
 	<h1 class="one_col_title"><?php echo $attorneyname;?>'s Case Results</h1><!-- one_col_title -->
@@ -148,7 +139,7 @@ $attorneyname = get_query_var( 'attorney_name');
 								 
 								 $pa_terms[] = $term->slug;
 								 
-								 // get practice area names
+								 // get practice area titles
 								 
 								 $pa_title[] = $term->name;
     					
@@ -171,7 +162,7 @@ $attorneyname = get_query_var( 'attorney_name');
 								 
 								 $att_terms[] = $term->slug;
 								 
-								 // gt attorny names
+								 // gt attorny titles
 								 
 								 $att_title[] = $term->name;
     					
@@ -179,7 +170,7 @@ $attorneyname = get_query_var( 'attorney_name');
     					
     			}
     			
-    			// merges practice areas and attorney arrays
+    			// merges practice areas and attorney arrays, I need them separate orginally bc the values in these loops are also being echoed as separate pa and attorney titles further below
 					
 					$term_merge = array_merge($pa_terms,$att_terms);
 					

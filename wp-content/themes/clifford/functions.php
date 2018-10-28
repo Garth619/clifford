@@ -13,22 +13,17 @@
     wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' ); 
     
 
-    // wp_deregister_script( 'jquery' );
+    // disables jquery then registers it again to go into footer
     
-/*    
+    wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
     wp_enqueue_script( 'jquery' );
-*/
+
+		// custom js to fall uner jquery in footer
+		    
+    wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
     
-    
-    // wp_deregister_script( 'wp-embed' );
-		// wp_deregister_script( 'wp_customize_support_script' );
-     
-    wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', '', '', true );
-    
-     
-    
-  }
+ }
  
  add_action( 'wp_enqueue_scripts', 'load_my_styles_scripts', 20 );
  
@@ -40,6 +35,7 @@
  
 
 /*
+
 function internal_css_print() {
    echo '<style>';
    
@@ -51,6 +47,7 @@ function internal_css_print() {
 
 add_action( 'wp_head', 'internal_css_print' );
 */
+
 
 
  
@@ -293,7 +290,7 @@ function wpbeginner_numeric_posts_nav() {
  
 }
 
-
+// Case Results
 
 // rewrite api - this will set up a custom url structure to display an attorney's specific filtered case results (linked automatically from their bio page)
 
@@ -325,7 +322,7 @@ add_filter( 'query_vars', 'prefix_register_query_var' );
 
 
 
-// if the query variable is detected in the url structure, this will display a specific template (template-caseresults_attorneys.php). on that template, the query var will be pulled again from url to a run a loop of case results based on attorney's name (query var and att bio page title variable will be same, so it will happen dynamically)
+// if the query variable is detected in the url structure, this will display a specific template (template-caseresults_attorneys.php). on that template. Then that query_var is used to see if that page has that attorney name as a single case class. If it does, then it just shows those case results and hodes the rest. The filter will still be functional if the user decides to search other pa's or attorneys
 
 
 function prefix_url_rewrite_templates() {
