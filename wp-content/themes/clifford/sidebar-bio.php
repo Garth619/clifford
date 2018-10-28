@@ -24,14 +24,26 @@
 			
 			<?php 
 				
+				// gets current page's slug
+				
 				global $post;
 				$post_slug=$post->post_name;
+				
+				// gets the results page's slug from its page id
+				
+				$resultspost_id = 54; 
+				$resultspost = get_post($resultspost_id); 
+				$resultsslug = $resultspost->post_name;
+				
+				// create the url structure to echo below
+				
+				$att_caseresults = get_bloginfo('url').'/'.$resultsslug.'/'.$post_slug;
 				
 			?>
 			
 			
 			
-			<a class="att_results_button desktop" href="<?php bloginfo('url');?>/results/<?php echo $post_slug;?>">View <?php the_field( 'first_name' ); ?>'s Results</a>
+			<a class="att_results_button desktop" href="<?php echo $att_caseresults;?>">View <?php the_field( 'first_name' ); ?>'s Results</a>
 			
 			<?php if(get_field('award_logos')):?>
 			

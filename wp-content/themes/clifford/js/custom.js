@@ -659,9 +659,11 @@ $('.mobile_menu').on('click', function(e) {
 
 
  
+
  $('.widget_recent_entries > ul').append('<li class="view_all"><a href="' + my_data.blog_homepage  + '">View All Posts</a></li>');
  $('.widget_categories > ul').append('<li class="view_all"><a href="' + my_data.blog_homepage  + '">View All Categories</a></li>');
  $('.widget_archive > ul').append('<li class="view_all"><a href="' + my_data.blog_homepage  + '">View Archive</a></li>');
+
  
   
   
@@ -813,10 +815,7 @@ $('.mobile_menu').on('click', function(e) {
     // run case results filter
     
     $(runFilter).delay(600).fadeIn(400); 
-    
-    
-    alert( att_name.a_value);
-    
+
     
     // run a results not found maybe?
 
@@ -826,8 +825,68 @@ $('.mobile_menu').on('click', function(e) {
 	
 	
 	
+	// Case results Attorney Page - when you land on a specific attorney's case results, we need it to fire the filtering function based on the string thats the same as the one in the url. The variable below is set up on the functions.php as PHP localized data being passed through to js file. if the string tied to this vairable is getting returned empty then we are just on the page "/results", if the variable contains a string, we are on an attorney's case results page "/results/name-of-attorney". With that conditional, we can fire the filter on page load for that specific attorney 
+	
+		if(my_data.attorney_title !== '')  {
+	 	
+	 		console.log("URL contains att name, so run the filter");
+	 		
+	 		// adds data-att to submit button 
+	 		
+	 		$('a.filter_submit').attr('data-att',my_data.attorney_title);
+	 		
+	 		// hides all single case results
+	 		
+	 		$('.single_case_result').hide();
+	 		
+	 		// shows just the ones with class name that is the attorney name
+	 		
+	 		var runFilter = $('.' + my_data.attorney_title + '');
+	 		
+	 		
+	 		$(runFilter).show();
+	 		
+	 			 		
+	 		// look for that drop down list item that contains the data-att value of this attorney name. 
+	 		
+	 		var attorneyname = $('ul.input_list li[data-att="' + my_data.attorney_title  + '"').text();
+	 		
+	 		// Preload the Attorneys name to the parent input field as if its already selected 
+	 		
+	 		$('.att_filter span.input_placeholder').replaceWith('<span class="input_placeholder">' + attorneyname + '</span>');
+	 		
+	 		 // case resut attorney page titles (i can't use wordpress hooks here because the Rewrite API creates these pages virtually so no way to referece simple hooks like the_title(), so I will grab dropdown data-att and grab the text from inside the drop down menu to display as the. page title
+
+	 		
+	 		$('h1.one_col_title.attorney_page').replaceWith("<h1 class='one_col_title attorney_page'>" + attorneyname + "'s<br/> Case Results");
+	 		
+	 		// show clear buttton
+	 		
+	 		$('span.clear').addClass('open');
+	 		
+	 	
+	 	} 
+	
+	    
+   
 	
 	
+
+/*
+    if (window.location.href.indexOf(my_data.attorney_title) > -1) {
+       // console.log("URL contains att name");
+    
+			  alert( my_data.attorney_title);
+    
+    }
+*/
+
+	
+	
+
+ 
+
+
 	
   
 }); // document ready

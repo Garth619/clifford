@@ -4,25 +4,20 @@
 
 get_header(); 
 
-$attorneyname = get_query_var( 'attorney_name');
-
 ?>
 
-<?php // $ptitle = get_the_title( 60 ); 
-
- // echo $ptitle; ?>
 
 <div id="internal_main" class="one_col" style="background: #f4f4f0;">
 	
-	<h1 class="one_col_title"><?php echo $attorneyname;?>'s Case Results</h1><!-- one_col_title -->
+	<h1 class="one_col_title attorney_page"><?php echo $attorneyname;?>'s<br/> Case Results</h1><!-- one_col_title -->
 	
 	<span class="title_line"></span><!-- title_line -->
 	
-	<span class="search_other">Search Other Case Results</span><!-- search_other -->
+<!-- 	<span class="search_other">Search Other Case Results</span> --><!-- search_other -->
 	
 	<div class="cr_filter_wrapper">
 			
-			<div class="filter_inner">
+			<div class="filter_inner pa_filter">
 				
 				<span class="fitler_title">Filter by Category</span><!-- fitler_title -->
 				
@@ -64,7 +59,7 @@ $attorneyname = get_query_var( 'attorney_name');
 				
 			</div><!-- filter_inner -->
 			
-			<div class="filter_inner">
+			<div class="filter_inner att_filter">
 				
 				<span class="fitler_title">Filter by Attorney</span><!-- fitler_title -->
 				

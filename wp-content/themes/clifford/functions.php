@@ -247,8 +247,16 @@ function wpbeginner_numeric_posts_nav() {
 
 
 function prefix_rewrite_rule() {
+	
+	// this is here in case someone renames the "results" slug to something else, you will still need to reflush permalinks from dashboard for updated url changes
+	
+	$post_id = 54; 
+	$post = get_post($post_id); 
+	$slug = $post->post_name;
+	
+	// rewrite the url structure
 		
-	add_rewrite_rule( 'results/([^/]+)', 'index.php?attorney_name=$matches[1]', 'top' );
+	add_rewrite_rule( '' . $slug . '/([^/]+)', 'index.php?attorney_name=$matches[1]', 'top' );
 	
 }
  
@@ -290,8 +298,9 @@ function prefix_url_rewrite_templates() {
 add_action( 'template_redirect', 'prefix_url_rewrite_templates' );
 
 
-/* only shows attorney's current case results on template-caseresults_attorneys.php */
+/* only shows attorney's current case results on template-caseresults_attorneys.php by hiding the other ones with css */
 
+/*
 function internal_att_print() {
 	
 	$attorney_queryvar = get_query_var( 'attorney_name');
@@ -305,6 +314,7 @@ function internal_att_print() {
 }
 
 add_action( 'wp_head', 'internal_att_print' );
+*/
 
 
 
@@ -331,22 +341,35 @@ add_action( 'wp_head', 'internal_att_print' );
 		wp_register_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js' );
 		
 		
-		// blog link data for sidebars view all links, need php data to get passed on to jquery function in custom-min.js file
+		
+		
+		
+		
+		// Localized PHP Data that needs to be passed onto my custom-min.js file
+		
+		// blog link data for sidebars view all links
 		
 		$bloghomepage = get_permalink(12);
 		
+		// if on an attorneys case results page, then that att name value will get passed to .js file, i need this for case search results for each attorney 
 		
-		// Localize the script with new data for the case results/attorneys specific search results page
+		$attorney_title = get_query_var( 'attorney_name');
+		
+		// Localize the script with new data array for the blog sidebar and also other data for case results/attorneys specific search results page
 		
 		$translation_array = array(
-    	'a_value' => '10',
+    	'attorney_title' => $attorney_title,
     	'blog_homepage' => $bloghomepage
 		);
-		
-		
-		
-		
+
 		wp_localize_script( 'jquery-addon', 'my_data', $translation_array );
+		
+		// carry on to enqueue script like normal, but now it contains my two js variables with php data tied to it from above
+		
+		
+		
+		
+		// Enqueue Script
 		    
     wp_enqueue_script( 'jquery-addon', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true );
     
