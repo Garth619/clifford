@@ -40,21 +40,29 @@
 			
 		</div><!-- sec_one_internal -->
 		
-		<?php $section_one_desktop_image = get_field( 'section_one_desktop_image' ); ?>
+		<?php $section_one_desktop_image = get_field( 'section_one_desktop_image' );
+					$section_one_desktop_image_webp = get_field( 'section_one_desktop_image_webp' );
+		?>
 
-		<img class="sec_one_bg" src="<?php echo $section_one_desktop_image['url']; ?>" alt="<?php echo $section_one_desktop_image['alt']; ?>" />
+		<img class="sec_one_bg" data-webp="<?php echo $section_one_desktop_image_webp['url']; ?>" data-jpg="<?php echo $section_one_desktop_image['url']; ?>" alt="<?php echo $section_one_desktop_image['alt']; ?>" />
 
-		<?php $section_one_laptop_image = get_field( 'section_one_laptop_image' ); ?>
-
-		<img class="laptop" src="<?php echo $section_one_laptop_image['url']; ?>" alt="<?php echo $section_one_laptop_image['alt']; ?>" />
-
-		<?php $section_one_tablet_image = get_field( 'section_one_tablet_image' ); ?>
 		
-		<img class="tablet" src="<?php echo $section_one_tablet_image['url']; ?>" alt="<?php echo $section_one_tablet_image['alt']; ?>" />
+		<?php $section_one_laptop_image = get_field( 'section_one_laptop_image' );
+					$section_one_laptop_image_webp = get_field( 'section_one_laptop_image_webp' );
+		?>
+
+		<img class="laptop" data-webp="<?php echo $section_one_laptop_image_webp['url']; ?>" data-jpg="<?php echo $section_one_laptop_image['url']; ?>" alt="<?php echo $section_one_laptop_image['alt']; ?>" />
+
+		<?php $section_one_tablet_image = get_field( 'section_one_tablet_image' );
+					$section_one_tablet_image_webp = get_field( 'section_one_tablet_image_webp' );
+		 ?>
 		
-		<?php $section_one_mobile_image = get_field( 'section_one_mobile_image' ); ?>
+		<img class="tablet" data-webp="<?php echo $section_one_tablet_image_webp['url']; ?>" data-jpg="<?php echo $section_one_tablet_image['url']; ?>" alt="<?php echo $section_one_tablet_image['alt']; ?>" />
 		
-		<img class="mobile" src="<?php echo $section_one_mobile_image['url']; ?>" alt="<?php echo $section_one_mobile_image['alt']; ?>" />
+		<?php $section_one_mobile_image = get_field( 'section_one_mobile_image' );
+					$section_one_mobile_image_webp = get_field( 'section_one_mobile_image_webp' ); ?>
+		
+		<img class="mobile" data-webp="<?php echo $section_one_mobile_image_webp['url']; ?>" data-jpg="<?php echo $section_one_mobile_image['url']; ?>" alt="<?php echo $section_one_mobile_image['alt']; ?>" />
 
 </section><!-- section_one -->
 

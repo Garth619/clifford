@@ -4,6 +4,8 @@
 		
 		<span class="sec_four_title"><?php the_field( 'section_four_header' ); ?></span><!-- sec_four_title -->
 		
+		<img data-src="<?php the_field( 'section_four_bg' ); ?>"/>
+		
 	</div><!-- sec_four_top -->
 	
 	<div class="sec_four_bottom">

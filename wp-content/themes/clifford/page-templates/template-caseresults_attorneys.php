@@ -214,6 +214,8 @@ get_header();
 							<span class="cr_date"><?php the_field( 'cr_date' ); ?></span><!-- cr_date -->
 				
 							<span class="cr_description"><?php the_field( 'cr_description' ); ?></span><!-- cr_description -->
+							
+							<a class="cr_readmore" href="<?php the_permalink();?>">Read More</a>
 				
 						</div><!-- cr_hover_inner -->
 				

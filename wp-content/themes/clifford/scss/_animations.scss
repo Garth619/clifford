@@ -176,15 +176,7 @@
 			position: relative;
 			z-index:2;
 		}
-		&:before {
-			content:"";
-			display: block;
-			position: absolute;
-			top:0;
-			left:0;
-			width:100%;
-			height:100%;
-			background: url(#{$themePath}images/test-background.jpg);
+		img {
 			transform: scale(1.15);
 			transition: all 1500ms cubic-bezier(.17,.66,.34,.98);
 		}
@@ -192,7 +184,7 @@
 	
 	#section_four.visible {
 		.sec_four_top {
-			&:before {
+			img {
 				transform: scale(1);
 			}
 		}
