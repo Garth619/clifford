@@ -118,8 +118,36 @@ span.search_other {
 	padding-bottom:120px;
 	display: flex;
 	flex-wrap: wrap;
-	
 	min-height:653px;
+	position: relative;
+}
+
+
+.exist_message, .no_selection_message {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 200ms ease-in-out;
+	span {
+		text-align: center;
+		display: block;
+		text-transform: uppercase;
+    font-family: $aktiv;
+    font-weight: 600;
+    color:$greentwo;
+    font-size: 17px;
+    letter-spacing: 0.1em;
+	}
+}
+
+
+.exist_message.show, .no_selection_message.show {
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 800ms;
 }
 
 

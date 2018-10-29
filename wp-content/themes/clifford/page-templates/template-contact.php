@@ -33,7 +33,7 @@ get_header(); ?>
 		
 		<div class="contact_col">
 			
-			<img class="firm_img" alt="" src="<?php bloginfo('template_directory');?>/images/logo-mobile.svg"/>
+			<img alt="<?php echo get_bloginfo( 'name' ); ?>" class="firm_img" alt="" src="<?php bloginfo('template_directory');?>/images/logo-mobile.svg"/>
 			
 			<span class="contact_page_address"><?php the_field( 'firm_street_address','option'); ?></span><!-- contact_page_address -->
 			

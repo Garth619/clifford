@@ -102,7 +102,9 @@ get_header(); ?>
 	
 	<div class="case_results_wrapper">
 		
+		<div class='exist_message'><span>Sorry this match was not found, please try again</span></div>
 		
+		<div class='no_selection_message'><span>It looks like nothing was selected. Please try again</span></div>
 		
 		
 			<?php 
@@ -183,7 +185,7 @@ get_header(); ?>
 				?>
 					
 
-        <div class="single_case_result <?php echo $term_string; ?>">
+        <div id="single_cr" class="single_case_result <?php echo $term_string; ?>">
 			
 					<div class="single_cr_inner">
 				

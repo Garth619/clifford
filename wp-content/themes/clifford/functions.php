@@ -298,27 +298,6 @@ function prefix_url_rewrite_templates() {
 add_action( 'template_redirect', 'prefix_url_rewrite_templates' );
 
 
-/* only shows attorney's current case results on template-caseresults_attorneys.php by hiding the other ones with css */
-
-/*
-function internal_att_print() {
-	
-	$attorney_queryvar = get_query_var( 'attorney_name');
-	
-	if($attorney_queryvar) {
-   
-		echo '<style>.single_case_result:not(.' . $attorney_queryvar . ') {display: none;}</style>';
- 
- 	}
-  
-}
-
-add_action( 'wp_head', 'internal_att_print' );
-*/
-
-
-
-
 /* Enqueued Scripts
 -------------------------------------------------------------- */
 
@@ -327,7 +306,7 @@ add_action( 'wp_head', 'internal_att_print' );
  function load_my_styles_scripts() {
   
     
-    wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' ); 
+    // wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' ); 
     
 
     // disables jquery then registers it again to go into footer
@@ -384,16 +363,8 @@ add_action( 'wp_head', 'internal_att_print' );
 /* CSS in Header for Lighthouse
 -------------------------------------------------------------- */
 
-	
-/*
-	.single_case_result:not(.<?php echo $attorneyname;?>) {
-		display: none;
-	}
-*/
 
- 
 
-/*
 
 function internal_css_print() {
    echo '<style>';
@@ -405,6 +376,6 @@ function internal_css_print() {
 
 
 add_action( 'wp_head', 'internal_css_print' );
-*/
+
 
 

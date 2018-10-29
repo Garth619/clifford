@@ -658,8 +658,6 @@ $('.mobile_menu').on('click', function(e) {
  // pa sidebar view post links
 
 
- 
-
  $('.widget_recent_entries > ul').append('<li class="view_all"><a href="' + my_data.blog_homepage  + '">View All Posts</a></li>');
  $('.widget_categories > ul').append('<li class="view_all"><a href="' + my_data.blog_homepage  + '">View All Categories</a></li>');
  $('.widget_archive > ul').append('<li class="view_all"><a href="' + my_data.blog_homepage  + '">View Archive</a></li>');
@@ -749,6 +747,10 @@ $('.mobile_menu').on('click', function(e) {
 		// hide clear button after clicked 
 		
 		$(this).removeClass('open');
+		
+		// remove not found message
+		
+		$('.exist_message').removeClass('show');
     
   });
 	
@@ -764,8 +766,10 @@ $('.mobile_menu').on('click', function(e) {
 		
 		var dataAttorney = $(this).attr('data-att');
 		
+		// hides all single case results
 
 		$('.single_case_result').fadeOut(400);
+		
 		
 		// if submit button just has data-pa practice areas
 		
@@ -773,7 +777,7 @@ $('.mobile_menu').on('click', function(e) {
       console.log('has just pa specs');
       
       var runFilter = $('.' + dataPracticearea + '');
-    
+      
     } 
     
     // if submit button just has data-att attorneys
@@ -781,47 +785,45 @@ $('.mobile_menu').on('click', function(e) {
     if (!this.hasAttribute('data-pa') && this.hasAttribute('data-att')) {
       console.log('has just att specs');
       
-      
       var runFilter = $('.' + dataAttorney + '');
       
-    
     }
     
-    
-     // if submit button just data-pa practice areas and data-att attorneys
+    // if submit button has both data-pa practice areas and data-att attorneys
     
     
     if (this.hasAttribute('data-pa') && this.hasAttribute('data-att'))  {
       console.log('has both pa and att specs');
       
+      // setups the class structure to fadein the correct search results
       
       var runFilter = $('.' + dataPracticearea + '.' + dataAttorney +'');
       
-    } 
-    
-    
-    // work on
-    
-     if(!$('.single_case_result').hasClass(dataPracticearea) && !$('.single_case_result').hasClass(dataAttorney) ) {
-	      
-	      console.log('doesnt exsist my g');
-      
-      }
       
       
-      //if ($('html').is('.m320, .m768')) { ... }
-    
-    
+      	// if the css classes combo does not exist, show a not found message
+      	
+      	
+      	if($('.'+dataPracticearea+'.'+dataAttorney+'').length > 0) {
+	      	
+	      	$('.exist_message').removeClass('show');
+	      	
+      	}
+      	
+				else {
+	      	
+	      	$('.exist_message').addClass('show');
+      	
+      	}
+
+     }
+     			    
     // run case results filter
     
     $(runFilter).delay(600).fadeIn(400); 
 
-    
-    // run a results not found maybe?
 
-
-	
-	});
+});
 	
 	
 	
@@ -868,24 +870,6 @@ $('.mobile_menu').on('click', function(e) {
 	 	} 
 	
 	    
-   
-	
-	
-
-/*
-    if (window.location.href.indexOf(my_data.attorney_title) > -1) {
-       // console.log("URL contains att name");
-    
-			  alert( my_data.attorney_title);
-    
-    }
-*/
-
-	
-	
-
- 
-
 
 	
   

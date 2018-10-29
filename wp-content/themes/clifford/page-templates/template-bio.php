@@ -30,7 +30,26 @@ get_header(); ?>
 			
 			<span class="sidebar_att_title tablet"><?php the_field( 'position' ); ?></span><!-- sidebar_att_title -->
 			
-			<a class="att_results_button tablet" href="">View <?php the_field( 'first_name' ); ?>'s Results</a>
+			<?php 
+				
+				// gets current page's slug
+				
+				global $post;
+				$post_slug=$post->post_name;
+				
+				// gets the results page's slug from its page id
+				
+				$resultspost_id = 54; 
+				$resultspost = get_post($resultspost_id); 
+				$resultsslug = $resultspost->post_name;
+				
+				// create the url structure to echo below
+				
+				$att_caseresults = get_bloginfo('url').'/'.$resultsslug.'/'.$post_slug;
+				
+			?>
+			
+			<a class="att_results_button tablet" href="<?php echo $att_caseresults;?>">View <?php the_field( 'first_name' ); ?>'s Results</a>
 		
 			<?php the_field( 'att_bio_content' ); ?>
 			
