@@ -275,6 +275,7 @@ span.att_video_title {
 						color:$greentwo;
 						position: relative;
 						cursor: pointer;
+						border:none;
 						&:hover {
 							&:after {
 								opacity: 1;
@@ -354,6 +355,7 @@ span.att_video_title {
 			.post_single_slide {
 				a {
 					display: block;
+					border:none;
 					.post_single_slide_inner {
 						position: relative;
 						max-width:118px;

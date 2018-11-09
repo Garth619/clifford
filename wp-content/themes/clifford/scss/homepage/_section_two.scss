@@ -9,6 +9,8 @@
 	padding:36px 65px 30px;
 	justify-content: space-between;
 	background:$greytwo;
+	position: relative;
+	z-index:2;
 	span.sec_two_top_title {
 		text-transform: uppercase;
 		font-family: $aktiv;

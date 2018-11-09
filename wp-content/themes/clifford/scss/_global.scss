@@ -90,6 +90,9 @@ span.brown {
 		// margin-bottom:27px;
 		margin-bottom:5px;
 		display: block;
+		a {
+			border:none;
+		}
 	}
 	h3 {
 		text-transform: uppercase;
@@ -106,12 +109,26 @@ span.brown {
 		color:$browntwo;
 		font-weight: 700;
 		font-size:18px;
+		padding-bottom:20px;
+	}
+	hr {
+		height: 0;
+		border-width: 1px 0 0 0; 
+		border-color: #c97f5a;
+		border-style: solid;
+		margin: 40px 0;
+	}
+	img {
+		max-width:800px;
 	}
 	a {
 		color:$browntwo;
 		transition: all 200ms ease-in-out;
-		display: inline-block;
+		display: inline;
 		text-decoration: none;
+		border-bottom: 1px solid #c97f5a;
+    padding-bottom: 3px;
+/*
 		&:after {
 			content:"";
 			display: block;
@@ -123,6 +140,7 @@ span.brown {
 			opacity: 1;
 			transition: all 100ms ease-in-out;
 		}
+*/
 		&:hover {
 			color:$greenone;
 			&:after {

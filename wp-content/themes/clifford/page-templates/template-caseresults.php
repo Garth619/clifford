@@ -111,7 +111,7 @@ get_header(); ?>
 				
 				// cpt loop
 				
-				$mymain_query = new WP_Query( array('post_type' => 'case_results') ); 
+				$mymain_query = new WP_Query( array('post_type' => 'case_results','posts_per_page' => -1) ); 
 				
 				while($mymain_query->have_posts()) : $mymain_query->the_post();  
 				

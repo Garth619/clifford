@@ -100,6 +100,7 @@ body.blog {
 			a {
 				color:$greenone;
 				transition: all 200ms ease-in-out;
+				border:none;
 				&:hover {
 					color:$browntwo;
 				}
@@ -125,6 +126,7 @@ a.view_post {
 	letter-spacing: 0.2em;
 	margin-top:25px;
 	transition: all 200ms ease-in-out;
+	border:none;
 	&:hover {
 		color:$browntwo;
 		&:after {
@@ -160,6 +162,7 @@ a.view_post {
 			a {
 				color:$greentwo;
 				transition: all 200ms ease-in-out;
+				border:none;
 				&:after {
 					display: none;
 				}
