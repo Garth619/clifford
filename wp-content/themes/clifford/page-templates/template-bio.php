@@ -47,9 +47,11 @@ get_header(); ?>
 				
 				$att_caseresults = get_bloginfo('url').'/'.$resultsslug.'/'.$post_slug;
 				
-			?>
+				if(get_field('display_case_results_button')) : ?>
+
+				<a class="att_results_button tablet" href="<?php echo $att_caseresults;?>">View <?php the_field( 'first_name' ); ?>'s Results</a>
 			
-			<a class="att_results_button tablet" href="<?php echo $att_caseresults;?>">View <?php the_field( 'first_name' ); ?>'s Results</a>
+				<?php endif;?>
 		
 			<?php the_field( 'att_bio_content' ); ?>
 			
@@ -64,24 +66,18 @@ get_header(); ?>
 							<li class="title">
 					
 								<a class="" href="#"><?php the_sub_field( 'title' ); ?></a>
-					
-									<?php if(get_sub_field('bullet_list')): ?>
-					
-										<ul class="sub_list">
-							
-											<?php while(has_sub_field('bullet_list')): ?>
-					 
-												<li><?php the_sub_field( 'single_bullet' ); ?></li>
-					    
-												<?php endwhile; ?>
-						
-										</ul>
-					 
-									<?php endif; ?>
+									
+									<div class="sub_list">
+										
+										<?php the_sub_field( 'content_block' ); ?>
+										
+									</div>
+									
+								</li><!-- title -->
 					
 							<?php endwhile; ?>
 				
-						</ul>
+						</ul><!-- slidetoggle_list -->
 				
 				</div><!-- att_slidetoggle -->
 			 

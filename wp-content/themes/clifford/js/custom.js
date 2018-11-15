@@ -217,6 +217,8 @@ $('.sp_slider').slick({
   slidesToScroll: 1,
 	arrows:false,
 	dots:true,
+  autoplay: true,
+  autoplaySpeed: 2000,
 	mobileFirst:true,
 	responsive: [
     {
@@ -549,7 +551,7 @@ $('.att_bio_awards').slick({
 	
 	$('.att_slidetoggle ul.slidetoggle_list > li.title > a').on('click', function(e) {
 		
-		$(this).next('ul.sub_list').slideToggle(300);
+		$(this).next('.sub_list').slideToggle(300);
 		
 		$(".att_slidetoggle ul.slidetoggle_list > li.title > a[href='#']").removeAttr("href");
 	  

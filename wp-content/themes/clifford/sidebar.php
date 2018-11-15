@@ -1,6 +1,4 @@
-
-	<div class="sidebar_wrapper">
-		
+<div class="sidebar_wrapper">
 		
 		<div class="sidebar">
 			

@@ -39,11 +39,13 @@
 				
 				$att_caseresults = get_bloginfo('url').'/'.$resultsslug.'/'.$post_slug;
 				
-			?>
 			
+				if(get_field('display_case_results_button')) : ?>
 			
+					<a class="att_results_button desktop" href="<?php echo $att_caseresults;?>">View <?php the_field( 'first_name' ); ?>'s Results</a>
 			
-			<a class="att_results_button desktop" href="<?php echo $att_caseresults;?>">View <?php the_field( 'first_name' ); ?>'s Results</a>
+				<?php endif;?>
+			
 			
 			<?php if(get_field('award_logos')):?>
 			
