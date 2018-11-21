@@ -835,7 +835,7 @@ $('.mobile_menu').on('click', function(e) {
 	
 		if(my_data.attorney_title !== '')  {
 	 	
-	 		console.log("URL contains att name, so run the filter");
+	 		console.log("URL contains att name, so run the filter" +my_data.attorney_title+ "");
 	 		
 	 		// adds data-att to submit button 
 	 		

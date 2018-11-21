@@ -48,7 +48,7 @@
 						
 						<div class="accolades_desktop_image">
 				
-							<img class="dekstop" data-src="<?php bloginfo('template_directory');?>/images/aw-01.png"/>
+							<img class="dekstop" data-src="/wp-content/uploads/2018/11/bestlawyers-2019.png" alt="Best Lawyers"/>
 					
 						</div><!-- accolades_desktop_image -->
 				
@@ -58,7 +58,7 @@
 					
 						<div class="accolades_laptop_layout">
 							
-							<img class="laptop" data-src="<?php bloginfo('template_directory');?>/images/aw-01.png"/>
+							<img class="laptop" data-src="/wp-content/uploads/2018/11/bestlawyers-2019.png" alt="Best Lawyers"/>
 						
 							<div class="accolades_laptop_inner_layout">
 							

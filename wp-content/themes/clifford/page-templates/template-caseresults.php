@@ -208,8 +208,12 @@ get_header(); ?>
 						<div class="cr_hover_inner">
 				
 							<span class="cr_date"><?php the_field( 'cr_date' ); ?></span><!-- cr_date -->
-				
-							<span class="cr_description"><?php the_field( 'cr_description' ); ?></span><!-- cr_description -->
+							
+							
+							<?php $excerpt = wp_trim_words( get_field('cr_description' ), $num_words = 12, $more = '...' ); ?>
+							
+							<span class="cr_description"><?php echo $excerpt; ?></span><!-- cr_description -->
+							
 							
 							<a class="cr_readmore" href="<?php the_permalink();?>">Read More</a>
 				

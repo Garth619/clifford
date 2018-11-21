@@ -115,7 +115,7 @@ get_header();
 				
 				// cpt loop
 				
-				$mymain_query = new WP_Query( array('post_type' => 'case_results') ); 
+				$mymain_query = new WP_Query( array('post_type' => 'case_results','posts_per_page' => -1) ); 
 				
 				while($mymain_query->have_posts()) : $mymain_query->the_post();  
 				
@@ -212,8 +212,10 @@ get_header();
 						<div class="cr_hover_inner">
 				
 							<span class="cr_date"><?php the_field( 'cr_date' ); ?></span><!-- cr_date -->
+							
+							<?php $excerpt = wp_trim_words( get_field('cr_description' ), $num_words = 12, $more = '...' ); ?>
 				
-							<span class="cr_description"><?php the_field( 'cr_description' ); ?></span><!-- cr_description -->
+							<span class="cr_description"><?php echo $excerpt; ?></span><!-- cr_description -->
 							
 							<a class="cr_readmore" href="<?php the_permalink();?>">Read More</a>
 				
